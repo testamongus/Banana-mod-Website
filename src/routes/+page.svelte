@@ -652,10 +652,10 @@
             </div>
             <div class="footer-section">
                 <p>
-                    Cool stuff
+                    Community
                 </p>
-                <a target="_blank" href={LINK.wiki}>
-                    PenguinMod Community Wiki
+                <a target="_blank" href="https://scratch.mit.edu/studios/33532977/">
+                    Snail IDE Group
                 </a>
             </div>
             <div class="footer-section">

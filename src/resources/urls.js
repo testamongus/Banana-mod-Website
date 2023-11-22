@@ -75,6 +75,11 @@ export default {
     discord: "https://discord.gg/NZ9MBMYTZh",
 
     /**
+     * Snail IDE's group (for the funny)
+     */
+    group: "https://scratch.mit.edu/studios/33532977/",
+
+    /**
      * Scratch's website
      */
     scratch: "https://scratch.mit.edu",

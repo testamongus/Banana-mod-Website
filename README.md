@@ -1,5 +1,5 @@
 # snail-ide-home
-not permanent
+The website for Snail IDE besides the editor
 
 # building instructions
 npm i --force

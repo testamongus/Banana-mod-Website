@@ -10,7 +10,7 @@
 </script>
 
 <head>
-    <title>PenguinMod - {$page.status}</title>
+    <title>Snail IDE - {$page.status}</title>
 </head>
 
 <NavigationBar />
@@ -21,7 +21,7 @@
 
     <h1>Whoops!</h1>
     <p>
-        Something's not quite right. Maybe you should <a href="../">go back?</a>
+        Something's not quite right. Maybe you should <a href="../">go back?</a><br>
         <a href="https://info.flagcounter.com/c39u"><img src="https://s01.flagcounter.com/count2/c39u/bg_FFFFFF/txt_000000/border_CCCCCC/columns_8/maxflags_250/viewers_0/labels_1/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
     </p>
 

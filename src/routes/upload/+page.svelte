@@ -804,7 +804,7 @@
                         id="FILERI"
                         type="file"
                         class="hidden-picker"
-                        accept=".pmp,.pm,.sb3,.sb2,.sb,.goobert"
+                        accept=".pmp,.pm,.sb3,.sb2,.sb,.goobert, .snail"
                         on:change={projectFilePicked}
                     />
                     <label

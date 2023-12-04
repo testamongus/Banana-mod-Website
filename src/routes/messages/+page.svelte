@@ -390,7 +390,7 @@
                     {:else if message.type === "remix"}
                         <p>
                             <a
-                                href={`https://studio.penguinmod.com/#${message.remixId}`}
+                                href={`https://snail-ide.js.org//#${message.remixId}`}
                                 target="_blank"
                             >
                                 {String(
@@ -412,7 +412,7 @@
                     {:else if message.type === "restored"}
                         <p>
                             <a
-                                href={`https://studio.penguinmod.com/#${message.projectId}`}
+                                href={`https://snail-ide.js.org//#${message.projectId}`}
                                 target="_blank"
                             >
                                 {String(

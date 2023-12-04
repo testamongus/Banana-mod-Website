@@ -163,7 +163,7 @@ Reasons your project might be removed are:
 - Including logos or designs without their owner's explicit permission
 - Using other people's artwork or music without their explicit permission
 
-If you are a company or individual and believe your copyright has been violated, [please check contact methods here.](https://studio.penguinmod.com/contact.html)
+If you are a company or individual and believe your copyright has been violated, [please check contact methods here.](https://snail-ide.js.org//contact.html)
 
 ## Preventing or Removing access to parts of the site
 You may not remove or prevent access to any part of the project or website.

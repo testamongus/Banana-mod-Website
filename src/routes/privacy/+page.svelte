@@ -1,7 +1,7 @@
 <script>
     import { onMount } from "svelte";
     onMount(() => {
-        window.location.href = "https://studio.penguinmod.com/privacy.html";
+        window.location.href = "https://snail-ide.js.org//privacy.html";
     });
 </script>
 
@@ -10,7 +10,7 @@
 </head>
 <div>
     If you are not redirected automatically,
-    <a href="https://studio.penguinmod.com/privacy.html">click here</a>
+    <a href="https://snail-ide.js.org//privacy.html">click here</a>
 </div>
 
 <style>

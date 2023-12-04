@@ -92,7 +92,7 @@
         switch (type) {
             case "upload":
             case "remixed":
-                return `https://studio.penguinmod.com/#${content.id}`;
+                return `https://snail-ide.js.org//#${content.id}`;
             case "posted":
                 return `/profile?user=${author}&post=${content.id}`;
             default:
@@ -103,7 +103,7 @@
     onMount(async () => {
         const projectId = Number(location.hash.replace("#", ""));
         if (!isNaN(projectId) && projectId != 0) {
-            location.href = `https://studio.penguinmod.com/#${projectId}`;
+            location.href = `https://snail-ide.js.org//#${projectId}`;
             return;
         }
 
@@ -233,7 +233,7 @@
         hasImage={false}
         hasButton={true}
         buttonText={"View"}
-        buttonHref={"https://studio.penguinmod.com/privacy.html"}
+        buttonHref={"https://snail-ide.js.org//privacy.html"}
     /> -->
     <StatusAlert />
 
@@ -248,7 +248,7 @@
                     />
                 </h1>
                 <h1>
-                    Built off of <a href="https://penguinmod.com" style="color:#fff;">PenguinMod</a>
+                    Built off of <a href="https://snail-ide.vercel.app" style="color:#fff;">PenguinMod</a>
                 </h1>
                 <Button
                     label="<img src='/tryit.svg' width='32px' style='margin-right:8px'></img>"
@@ -684,7 +684,7 @@
                         lang={currentLang}
                     />
                 </p>
-                <a href={"https://penguinmod.com/donate"}>PenguinMod</a>
+                <a href={"https://snail-ide.vercel.app/donate"}>PenguinMod</a>
                 <a target="_blank" href={LINK.donate.turbowarp}>TurboWarp</a>
                 <a target="_blank" href={LINK.donate.scratch}>Scratch</a>
             </div>

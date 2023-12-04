@@ -791,11 +791,11 @@
                 <div class="card-projects">
                     <iframe
                         title="Guidelines Page"
-                        src="https://studio.penguinmod.com/PenguinMod-Guidelines/PROJECTS"
+                        src="https://snail-ide.js.org//PenguinMod-Guidelines/PROJECTS"
                     />
                 </div>
                 <a
-                    href="https://studio.penguinmod.com/PenguinMod-Guidelines/PROJECTS"
+                    href="https://snail-ide.js.org//PenguinMod-Guidelines/PROJECTS"
                     style="margin-top:6px;color:dodgerblue"
                     target="_blank"
                 >
@@ -840,7 +840,7 @@
                 {#if selectedProjectName}
                     <a
                         target="_blank"
-                        href={`https://studio.penguinmod.com/#${lastSelectedProjectId}`}
+                        href={`https://snail-ide.js.org//#${lastSelectedProjectId}`}
                         style="color: dodgerblue"
                     >
                         <p>
@@ -1173,7 +1173,7 @@
                                 }}
                             >
                                 <img
-                                    src={`https://projects.penguinmod.com/api/pmWrapper/iconUrl?id=${content.id}`}
+                                    src={`https://backend.nmsderp.repl.co//api/pmWrapper/iconUrl?id=${content.id}`}
                                     alt={content.name}
                                 />
                                 <div
@@ -1192,9 +1192,9 @@
                                     <p>
                                         View project at
                                         <a
-                                            href={`https://studio.penguinmod.com/#${content.id}`}
+                                            href={`https://snail-ide.js.org//#${content.id}`}
                                         >
-                                            {`https://studio.penguinmod.com/#${content.id}`}
+                                            {`https://snail-ide.js.org//#${content.id}`}
                                         </a>
                                         or
                                         <button

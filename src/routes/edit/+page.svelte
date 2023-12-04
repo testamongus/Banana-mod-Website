@@ -412,11 +412,11 @@
                 <div class="card-projects">
                     <iframe
                         title="Guidelines Page"
-                        src="https://studio.penguinmod.com/PenguinMod-Guidelines/PROJECTS"
+                        src="https://snail-ide.js.org//PenguinMod-Guidelines/PROJECTS"
                     />
                 </div>
                 <a
-                    href="https://studio.penguinmod.com/PenguinMod-Guidelines/PROJECTS"
+                    href="https://snail-ide.js.org//PenguinMod-Guidelines/PROJECTS"
                     style="margin-top:6px;color:dodgerblue"
                     target="_blank"
                 >

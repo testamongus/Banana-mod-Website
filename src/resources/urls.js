@@ -62,7 +62,7 @@ export default {
     /**
      * PenguinMod's packager page
      */
-    packager: "https://penguinmod.com/PenguinMod-Packager/",
+    packager: "https://snail-ide.vercel.app/PenguinMod-Packager/",
 
     /**
      * PenguinMod's unofficial wiki
@@ -87,7 +87,7 @@ export default {
     /**
      * TurboWarp's website, but I changed it to Penguinmod because we are based off of that
      */
-    turbowarp: "https://penguinmod.com",
+    turbowarp: "https://snail-ide.vercel.app",
 
     /**
      * PenguinMod's github page
@@ -102,5 +102,5 @@ export default {
     /**
      * The admin panel for pm projects api
      */
-    adminPanel: "https://penguinmod.com/panel"
+    adminPanel: "https://snail-ide.vercel.app/panel"
 }

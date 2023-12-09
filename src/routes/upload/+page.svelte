@@ -734,7 +734,7 @@
                                         on:click={() => placeEmojiInTextbox(emoji)}
                                     >
                                         <img
-                                            src={`https://library.penguinmod.com/files/emojis/${emoji}.png`}
+                                            src={`https://snail-ide-object-libraries.vercel.app/files/emojis/${emoji}.png`}
                                             alt={`:${emoji}:`}
                                             title={`:${emoji}:`}
                                             draggable="false"

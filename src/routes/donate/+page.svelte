@@ -21,7 +21,7 @@
 </script>
 
 <head>
-    <title>PenguinMod - Donate</title>
+    <title>Snail IDE - Donate</title>
 </head>
 
 <NavigationBar />
@@ -115,11 +115,14 @@
                 <a class="small" target="_blank" href={LINK.donate.turbowarp}>
                     TurboWarp
                 </a>
+                <a class="small" target="_blank" href={'https://penguinmod.com/donate'}>
+                    PenguinMod
+                </a>
             </div>
             <div class="section-details">
-                <p style="text-align: center;">For completely free:</p>
+                <p style="text-align: center;">Your Donating Could:</p>
                 <div class="detail-card" style="background: dodgerblue">
-                    <p>What Donating Can Do</p>
+                    <p>Help</p>
                     <h1>Allow For</h1>
                     <p>more project files</p>
                 </div>
@@ -129,7 +132,7 @@
                 </div>
                 <div class="detail-card" style="background: #ffb300">
                     <p>You Could Also Help</p>
-                    <h1>Make our Servers Faster</h1>
+                    <h1>With Making our Servers Faster</h1>
                 </div>
             </div>
         </div>

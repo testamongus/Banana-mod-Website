@@ -40,7 +40,7 @@
             </h1>
             <p>
                 <LocalizedText
-                    text="Help PenguinMod pay for our servers, link & more!"
+                    text="Help Snail IDE pay for our servers, link & more!"
                     key="donate.description"
                     lang={currentLang}
                 />
@@ -55,27 +55,10 @@
         <div class="section-discussions">
             <div class="section-discussion">
                 <p>
-                    PenguinMod helps people around the world create the games
+                    Snail-IDE helps people around the world create the games
                     that they want and share the fun stuff they make with the
-                    community.
+                    community. But we host with Repl.it, and to get the best experience out of the website, we would have to use cycles which aren't free.
                 </p>
-                <p>
-                    In the last month, <b>
-                        <i>20k+ new people found PenguinMod</i>
-                    </b>
-                    and
-                    <br />
-                    we sent our website to <b><i>50k+</i></b> returning users
-                    from
-                    <b>Japan</b>, <b>Russia</b>, the <b>United Kingdom</b> and more!
-                    🎉
-                </p>
-                <p>
-                    We would appreciate if you could donate below to help us pay
-                    for our domain and server costs! 😀
-                </p>
-
-                <div style="height: 16px;" />
 
                 <!-- donation buttons -->
                 <div class="donation-section">
@@ -83,29 +66,15 @@
                         <p class="small">Donate using</p>
                         <a
                             target="_blank"
-                            href="https://www.paypal.com/donate/?hosted_button_id=6UJFR8W3V7KYC"
+                            href="https://replit.com/@nmsderp/backend?v=1"
                             style="text-decoration: none !important;"
                         >
                             <button
                                 class="donation-container"
-                                title="PayPal - The safer, easier way to pay online!"
+                                title="Repl.it Page"
                             >
-                                <img src="/paypal.png" alt="PayPal" />
-                                <span>PayPal / Card</span>
-                            </button>
-                        </a>
-                        <br />
-                        <a
-                            target="_blank"
-                            href="https://www.cash.app/$JeremyGamer13"
-                            style="text-decoration: none !important;"
-                        >
-                            <button
-                                class="donation-container"
-                                title="Cash App - Do more with your money"
-                            >
-                                <img src="/cashapp.png" alt="Cash App" />
-                                <span>Cash App</span>
+                                <img src="/repl.png" alt="Repl.it" />
+                                <span>Send Repl.it Cycles</span>
                             </button>
                         </a>
                     </div>
@@ -122,15 +91,14 @@
 
                 <p class="small">
                     <LocalizedText
-                        text="PenguinMod is not affiliated with Scratch, TurboWarp, the Scratch Team, or the Scratch Foundation."
+                        text="Snail IDE is not affiliated with Scratch, TurboWarp, the Scratch Team, or the Scratch Foundation."
                         key="home.footer.notaffiliated"
                         dontlink={true}
                         lang={currentLang}
                     />
                 </p>
                 <p class="small">
-                    You can always donate to our parent projects Scratch or
-                    TurboWarp too to help them stay online.
+                    You can always donate to our parent projects Scratch, PenguinMod or TurboWarp too to help them stay online.
                 </p>
                 <br />
                 <p class="small">
@@ -151,19 +119,17 @@
             <div class="section-details">
                 <p style="text-align: center;">For completely free:</p>
                 <div class="detail-card" style="background: dodgerblue">
-                    <p>We host and serve</p>
-                    <h1>1.5k+</h1>
-                    <p>projects</p>
+                    <p>What Donating Can Do</p>
+                    <h1>Allow For</h1>
+                    <p>more project files</p>
                 </div>
                 <div class="detail-card" style="background: darkviolet">
-                    <p>We send</p>
-                    <h1>30 GB+</h1>
-                    <p>of content monthly</p>
+                    <p>It Can Also Help</p>
+                    <h1>Keep the Server up 24/7</h1>
                 </div>
                 <div class="detail-card" style="background: #ffb300">
-                    <p>We handle</p>
-                    <h1>5M+</h1>
-                    <p>requests monthly</p>
+                    <p>You Could Also Help</p>
+                    <h1>Make our Servers Faster</h1>
                 </div>
             </div>
         </div>
@@ -204,7 +170,7 @@
     }
 
     .section-info {
-        background: #00c3ffad;
+        background: #672df0ad;
         height: 12rem;
         color: white;
         display: flex;

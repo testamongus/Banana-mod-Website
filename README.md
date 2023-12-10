@@ -1,6 +1,5 @@
 # snail-ide-home
-The website for Snail IDE besides the editor
-This is not linked to our servers yet
+SnailShare, share your Snail IDE projects with the community
 
 # building instructions
 npm i --force

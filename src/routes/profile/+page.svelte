@@ -212,7 +212,7 @@
 </script>
 
 <head>
-    <title>PenguinMod - {user ? user : "Profile"}</title>
+    <title>Snail IDE - {user ? user : "Profile"}</title>
 </head>
 
 <NavigationBar />

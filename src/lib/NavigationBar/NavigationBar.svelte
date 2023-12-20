@@ -25,6 +25,15 @@
 	let messageCount = 0;
 	let canRankUp = false;
 
+	
+    let isLiveTests = false;
+
+    //bring back livetests (seriously where the hell did it go? swore it was here)
+    onMount(async () => { 
+        const urlParams = new URLSearchParams(window.location.search);
+        isLiveTests = urlParams.has("livetests");
+    })
+
 	function loggedInCheck() {
 		const privateCode = localStorage.getItem("PV");
 		if (!privateCode) {
@@ -255,7 +264,21 @@
 		</BarPage>
 	</div>
 	<BarSearch placeholder={searchBar} />
-	
+	{#if isLiveTests}
+	<BarButton
+		highlighted="true"
+		link={LINK.discord}
+		noredirect="true"
+		classActor={"discordButton"}
+	>
+		<div class="discord-button-text">
+			Join our Guilded!
+		</div>
+		<div class="discord-button-icon">
+			<img src="/discord_white.png" alt="Discord" />
+		</div>
+	</BarButton>
+	{/if}
 	{#if loggedIn === true}
 		<BarPage
 			link="/messages"

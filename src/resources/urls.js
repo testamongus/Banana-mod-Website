@@ -70,9 +70,9 @@ export default {
     wiki: "https://penguinmod.fandom.com/wiki/Penguinmod",
 
     /**
-     * PenguinMod's Discord invite (unused)
+     * Snail IDE's Guild. Only visible in Livetests until snail man approves of it.
      */
-    discord: "https://discord.gg/NZ9MBMYTZh",
+    discord: "https://www.guilded.gg/i/2V1VLBXE",
 
     /**
      * Snail IDE's group (for the funny)

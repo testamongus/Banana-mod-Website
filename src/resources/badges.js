@@ -15,5 +15,6 @@ export default {
     likes: "likes_many",
     followers: "followers_many",
     amongus: "sussy",
-    purple: "purple"
+    purple: "purple",
+    cool_award: "cool_award.png"
 };

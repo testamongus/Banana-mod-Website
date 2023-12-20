@@ -489,7 +489,7 @@
                 class="emoji-picker-button"
             >
                 <img
-                    src={`https://library.penguinmod.com/files/emojis/${emojiPickerRandomEmoji}.png`}
+                    src={`https://snail-ide-object-libraries.vercel.app/files/emojis/${emojiPickerRandomEmoji}.png`}
                     alt="Emoji"
                     title="Pick an emoji"
                     on:dragstart={(ev) => {

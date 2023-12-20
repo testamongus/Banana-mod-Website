@@ -11,7 +11,7 @@
     if (!importLocation) return;
 
     const urlObject = new URL(importLocation);
-    if (!urlObject.host.endsWith("penguinmod.com")) {
+    if (!urlObject.host.endsWith("snail-ide.js.org")) {
       return;
     }
 

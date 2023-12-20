@@ -16,5 +16,5 @@ export default {
     followers: "followers_many",
     amongus: "sussy",
     purple: "purple",
-    cool_award: "cool_award.png"
+    cool_award: "cool_award"
 };

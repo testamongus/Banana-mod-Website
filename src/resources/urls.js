@@ -105,7 +105,7 @@ export default {
     adminPanel: "https://snail-ide.vercel.app/panel",
 
     /**
-     * The admin panel for pm projects api
+     * donate to use yipeee
      */
-    doante: "https://snail-ide.vercel.app/donate"
+    donate: "https://snail-ide.vercel.app/donate"
 }

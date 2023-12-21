@@ -258,6 +258,19 @@
 			/>
 		</BarPage>
 	</div>
+	<BarButton
+		highlighted="true"
+		link={LINK.donate}
+		noredirect="true"
+		classActor={"donateButton"}
+	>
+		<div class="donate-button-text">
+			Donate
+		</div>
+		<div class="discord-button-icon">
+			<img src="/discord_white.png" alt="Discord" />
+		</div>
+	</BarButton>
 	<div class="only-launcher">
 		<BarPage id="__home_navigation_create_button">
 			<img src="/create.png" alt="Create" />

@@ -102,5 +102,10 @@ export default {
     /**
      * The admin panel for pm projects api
      */
-    adminPanel: "https://snail-ide.vercel.app/panel"
+    adminPanel: "https://snail-ide.vercel.app/panel",
+
+    /**
+     * The admin panel for pm projects api
+     */
+    doante: "https://snail-ide.vercel.app/donate"
 }

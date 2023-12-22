@@ -1,4 +1,4 @@
-let OriginApiUrl = "https://backend.nmsderp.repl.co";
+let OriginApiUrl = "https://snailshare-server.onrender.com";
 // OriginApiUrl = "http://localhost:8080";
 
 class ProjectApi {

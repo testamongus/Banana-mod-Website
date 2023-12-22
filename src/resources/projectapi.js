@@ -1,4 +1,4 @@
-let OriginApiUrl = "https://snailshare-api.glitch.me";
+let OriginApiUrl = "https://backend.nmsderp.repl.co";
 // OriginApiUrl = "http://localhost:8080";
 
 class ProjectApi {

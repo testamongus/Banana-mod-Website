@@ -285,7 +285,7 @@
             {:else}
                 <img
                     class="project-picture"
-                    src={`https://snailshare-api.glitch.me/api/pmWrapper/iconUrl?id=${pageDetails.id}`}
+                    src={`https://backend.nmsderp.repl.co/api/pmWrapper/iconUrl?id=${pageDetails.id}`}
                     alt={pageDetails.id}
                 />
             {/if}

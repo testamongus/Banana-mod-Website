@@ -258,7 +258,7 @@
 			/>
 		</BarPage>
 	</div>
-	<BarButton
+	<!--<BarButton
 		highlighted="true"
 		link={LINK.donate}
 		noredirect="true"
@@ -270,7 +270,7 @@
 		<div class="discord-button-icon">
 			<img src="/discord_white.png" alt="Discord" />
 		</div>
-	</BarButton>
+	</BarButton>!-->
 	<div class="only-launcher">
 		<BarPage id="__home_navigation_create_button">
 			<img src="/create.png" alt="Create" />

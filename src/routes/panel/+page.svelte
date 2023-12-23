@@ -1173,7 +1173,7 @@
                                 }}
                             >
                                 <img
-                                    src={`https://backend.nmsderp.repl.co/api/pmWrapper/iconUrl?id=${content.id}`}
+                                    src={`https://snailshare-backend.glitch.me/api/pmWrapper/iconUrl?id=${content.id}`}
                                     alt={content.name}
                                 />
                                 <div

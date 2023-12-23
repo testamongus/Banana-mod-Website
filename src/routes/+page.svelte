@@ -226,14 +226,11 @@
     />
     <Alert
         onlyShowID={"repl.it:being-dumb"}
-        text={"Repl.it (Our project server hosting service) is doing something that will have an impact on our service."}
+        text={"YooHoo! We have succesfully migrated our servers to Glitch!"}
         textBreakup={true}
         textColor={"white"}
         hasImage={false}
         backColor={"#009900"}
-        hasButton={true}
-        buttonText={"Learn more"}
-        buttonHref={"https://snail-ide.vercel.app/repl.html"}
     />
     <!-- TODO: re-add this, but only have it appear for new users after they login on a date before the alert -->
     <!-- <Alert

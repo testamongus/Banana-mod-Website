@@ -258,6 +258,19 @@
 			/>
 		</BarPage>
 	</div>
+	<BarButton
+		highlighted="true"
+		link={LINK.status}
+		noredirect="true"
+		classActor={"statusButton"}
+	>
+		<div class="status-button-text">
+			Status Page
+		</div>
+		<div class="discord-button-icon">
+			<img src="/discord_white.png" alt="Discord" />
+		</div>
+	</BarButton>
 	<!--<BarButton
 		highlighted="true"
 		link={LINK.donate}

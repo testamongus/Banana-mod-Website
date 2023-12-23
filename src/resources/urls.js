@@ -107,5 +107,9 @@ export default {
     /**
      * donate to use yipeee
      */
-    donate: "https://snail-ide.vercel.app/donate"
+    donate: "https://snail-ide.vercel.app/donate",
+/**
+     * our status page lol
+     */
+    status: "https://snail-ide.betteruptime.com/",
 }

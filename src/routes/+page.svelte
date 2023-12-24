@@ -121,12 +121,6 @@
             .catch(() => {
                 ghcommitsFailed = true;
             });
-        fetch(`${LINK.basicApi}updates`).then((res) => {
-            res.json().then((updatess) => {
-                // currently multiple updates are not supported
-                updates = [updatess];
-            });
-        });
 
         ProjectApi.getMaxProjects(15, false, true).then((projs) => {
             projects.today = projs;

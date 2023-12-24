@@ -27,26 +27,6 @@
 
     // Icons
     import PenguinConfusedSVG from "../icons/Penguin/confused.svelte";
-
-    fetch('https://updates-api.vercel.app/author-image.png')
-      .then((response) => response.text())
-      .then((data) => setAuthorImage(data));
-
-    // Fetch author's name
-    fetch('https://updates-api.vercel.app/update-author.txt')
-      .then((response) => response.text())
-      .then((data) => setAuthorName(data));
-
-    // Fetch update text
-    fetch('https://updates-api.vercel.app/update-info.txt')
-      .then((response) => response.text())
-      .then((data) => setUpdateText(data));
-
-    // Fetch update image
-    fetch('https://updates-api.vercel.app/update-image.png')
-      .then((response) => response.text())
-      .then((data) => setUpdateImage(data));
-
     let loggedIn = null;
     let langDecided = false;
     let currentLang = "en";
@@ -381,16 +361,16 @@
             >
                 <div class="category-content">
                             <UserDisplay
-                                link={setUpdateImage}
+                                link='https://pastebin.com/raw/Z5JK35XT'
                                 userLink={`https://discord.com/channels/1033551490331197462/1038252360184643674`}
-                                text={setUpdateText}
-                                author={setAuthorName}
-                                image={setUpdateImage}
+                                text="This is the Snail IDE beta website!"
+                                author="thepython555"
+                                image="https://avatars.githubusercontent.com/u/144301348?s=400&u=2fa307618936cb8abdbf53fb2e40e8977ee9c56d&v=4"
                             />
-                            <a target="_blank" href={setUpdateImage}>
+                            <a target="_blank" href="https://i.ibb.co/b6rC7vF/snailidewebsite.png">
                                 <button class="update-image-wrapper">
                                     <img
-                                        src="https://updates-api.vercel.app/update-image.png"
+                                        src="https://i.ibb.co/b6rC7vF/snailidewebsite.png"
                                         alt="Screenshot"
                                         class="update-image"
                                     />

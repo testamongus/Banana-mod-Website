@@ -361,8 +361,6 @@
                 seemore={`https://discord.com/channels/1033551490331197462/1038252360184643674`}
             >
                 <div class="category-content">
-                    {#if updates.length > 0}
-                        {#each updates as update}
                             <UserDisplay
                                 link="https://pastebin.com/raw/Z5JK35XT"
                                 userLink={`https://discord.com/channels/1033551490331197462/1038252360184643674`}
@@ -379,10 +377,6 @@
                                     />
                                 </button>
                             </a>
-                        {/each}
-                    {:else}
-                        <LoadingSpinner />
-                    {/if}
                 </div>
             </ContentCategory>
         

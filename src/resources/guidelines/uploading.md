@@ -1,8 +1,8 @@
 # Project Uploading & Updating guidelines
-These guidelines **only apply to PenguinMod's project sharing**.
+These guidelines **only apply to Snail IDE's project sharing**.
 If you are packaging your project for release on other websites, you should follow their rules instead.
 
-Also, let us know of any necessary changes we should make by talking to us in our [Discord server](https://discord.gg/NZ9MBMYTZh) or making an issue on our [GitHub](https://github.com/PenguinMod/PenguinMod-Home/issues).
+Also, let us know of any necessary changes we should make by talking to us at my [Scratch Page](https://scratch.mit.edu/users/Mr_rudy/) or making an issue on our [GitHub](https://github.com/Snail-IDE/Snail-IDE-Website/issues).
 
 ## Base requirements for a project
 Uploading empty or default projects will get your project removed.
@@ -22,37 +22,41 @@ If you keep uploading the same project multiple times, you may not be able to po
 (depending on if you already got punished for it).
 
 ## Projects uploaded that were shared on Scratch (Scratch Reuploads)
-If you are just taking a Scratch project that was shared on Scratch and uploading it onto PenguinMod, please note the following:
+If you are just taking a Scratch project that was shared on Scratch and uploading it onto Snail IDE, please note the following:
 
-- The PenguinMod version must have a change in the code (ex: changing a costume would not be enough)
+- The Snail IDE version must have a change in the code (ex: changing a costume would not be enough)
 - The code change should be meaningful (ex: a bug fix not in the Scratch version wouldn't count as a meaningful change)
 
 This means like something extra should have been added, or something important in the project was changed like a gameplay difference or added difficulty.
 
 If you are not following any of the above changes:
-- The PenguinMod project has to be a devlog or small message about the project you are planning to upload with PenguinMod-specific changes
-- The PenguinMod project can have changes planned later (in this case, the above rules would be considered after you have updated the project)
+- The Snail IDE project has to be a devlog or small message about the project you are planning to upload with Snail IDE-specific changes
+- The Snail IDE project can have changes planned later (in this case, the above rules would be considered after you have updated the project)
 
-## PenguinMod Forks / Mods
-If your project only works outside of PenguinMod, don't upload it to our site.
-All PenguinMod projects should actually work on PenguinMod, we don't want to approve something that crashes the site instantly.
+## Showing Face or "Face Reveals"
+We do not allow any personal information shown on our site. Please do not use your face at all. It is fine to use for example a famous celebirty's face. (If there is no copyright against it) if you show your face on a thumbnail we will just remove your thumbnail from the server. If it is inside your project we will remove the entire project. This does not include linking to your youtube channel that uses your face we will not do anything there.
 
-*(Note for developers: If we get a lot of projects uploaded from your mod that don't work on PenguinMod, we'll likely end up blocking your site from the API. See [here for details](https://github.com/PenguinMod/penguinmod.github.io/blob/develop/FORKING.md).)*
+
+## Snail IDE Forks / Mods
+If your project only works outside of Snail IDE, don't upload it to our site.
+All Snail IDE projects should actually work on Snail IDE, we don't want to approve something that crashes the site instantly.
+
+*(Note for developers: If we get a lot of projects uploaded from your mod that don't work on Snail IDE, we'll likely end up blocking your site from the API. See [here for details](https://github.com/PenguinMod/penguinmod.github.io/blob/develop/FORKING.md).)*
 
 ## "Chatroom" Projects or Projects based around online chatting
 ```warning
-As of November 14th, 2023, PenguinMod has decided to ban uploaded projects based around chatting with other users.
+As of November 14th, 2023, PenguinMod has decided to ban uploaded projects based around chatting with other users. We use this rule aswell.
 ```
 
 Please do not upload these types of projects anymore.
 Old projects may also be reported and taken down, but you will not receive punishment for them.
 
-These types of projects are no longer allowed due to the PenguinMod team not being able to control these spaces properly,
+These types of projects are no longer allowed due to the Snail IDE team not being able to control these spaces properly,
 and we do not believe we will be able to keep these types of projects safe for everyone in the future.
 
 ## Projects with an online chat feature
 ```warning
-As of November 14th, 2023, PenguinMod has decided to ban uploaded projects based around chatting with other users.
+As of November 14th, 2023, PenguinMod has decided to ban uploaded projects based around chatting with other users. We use this rule aswell.
 ```
 This section is talking about projects that have online chat, but aren't focused around it.
 
@@ -97,10 +101,7 @@ Downloading malicious material may be an executable application or DLL that cont
 Your account will be instantly banned and you may be reported to the Scratch Team or security services if your project does this.
 
 ## Profanity / Curse words
-Swearing is allowed, but you shouldn't swear too much (ex: not every 2 sentences, not more than 2 swear words per sentence).
-If you do need more, you may censor the profanity or add a warning that the project contains it.
-
-Projects may not use profanity inside of their title, instructions, notes & credits, or thumbnail.
+We have decided to completly ban profanity, using profanity around the site at all will cause your project to be deleted, but if it gets too bad you will be banned from Snail IDE.
 
 ## Limits on Blood and Violence
 If your project contains large amounts of blood, it must have a warning somewhere at the start of the project and in the project instructions.
@@ -154,21 +155,21 @@ You **can** however, link to Patreon or Shopify.
 Let us know of any other sites we can allow if you need them.
 
 ## Copyright
-PenguinMod will remove your project if we are told that it violates copyright rules for any specific company.
+Snail IDE will remove your project if we are told that it violates copyright rules for any specific company.
 Any company or business also reserves the right to take down your project if they believe it violates their copyright.
 We will also remove your project if it contains pirated content or material.
 
 Reasons your project might be removed are:
-- Using another PenguinMod user's content without their permission
+- Using another Snail IDE user's content without their permission
 - Including logos or designs without their owner's explicit permission
 - Using other people's artwork or music without their explicit permission
 
-If you are a company or individual and believe your copyright has been violated, [please check contact methods here.](https://snail-ide.js.org//contact.html)
+If you are a company or individual and believe your copyright has been violated, [please check contact methods here.](https://snail-ide.js.org/contact.html)
 
 ## Preventing or Removing access to parts of the site
 You may not remove or prevent access to any part of the project or website.
 This includes things like the Pause or Stop button.
-If the moderators can not access the project and its contents from within the site, it will be removed.
+If the moderators can not access the project and its contents from within the site, it will be removed. The first time you do this the project will get removed, the second time it will once again get removed, but the third time may result in a ban. (Depends on the situation)
 
 Examples of what you can not do:
 - Removing or preventing the use of the "See Inside" button

@@ -218,7 +218,7 @@
         buttonHref={"https://snail-ide.js.org/editor.html"}
     />
     <Alert
-        onlyShowID={"repl.it:being-dumb"}
+        onlyShowID={"newyear:countdown"}
         text={"Check out our 2024 New Years Countdown! (Credit to: yffji and DirtBikeDude180 on Scratch)"}
         textBreakup={true}
         textColor={"white"}

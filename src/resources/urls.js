@@ -112,4 +112,8 @@ export default {
      * our status page lol
      */
     status: "https://snail-ide.betteruptime.com/",
+/**
+     * direct page to upload
+     */
+    upload_project: "https://snail-ide.vercel.app/upload"
 }

@@ -271,6 +271,19 @@
 			<img src="/discord_white.png" alt="Discord" />
 		</div>
 	</BarButton>
+	<BarButton
+		highlighted="true"
+		link={LINK.upload_project}
+		noredirect="true"
+		classActor={"uploadButton"}
+	>
+		<div class="upload-button-text">
+			Upload
+		</div>
+		<div class="discord-button-icon">
+			<img src="/discord_white.png" alt="Discord" />
+		</div>
+	</BarButton>
 	<!--<BarButton
 		highlighted="true"
 		link={LINK.donate}

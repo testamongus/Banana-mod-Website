@@ -339,25 +339,25 @@
                             <p class="small" style="margin-block:4px">
                                 {#if fullProfile.admin === true}
                                     <LocalizedText
-                                        text="King Penguin"
+                                        text="The Ultimate Snail"
                                         key="profile.ranking.admin"
                                         lang={currentLang}
                                     />
                                 {:else if fullProfile.approver === true}
                                     <LocalizedText
-                                        text="Guard Penguin"
+                                        text="True Snail"
                                         key="profile.ranking.mod"
                                         lang={currentLang}
                                     />
                                 {:else if fullProfile.rank === 1}
                                     <LocalizedText
-                                        text="Penguin"
+                                        text="Snail"
                                         key="profile.ranking.ranked"
                                         lang={currentLang}
                                     />
                                 {:else}
                                     <LocalizedText
-                                        text="Newborn Penguin"
+                                        text="Baby Snail"
                                         key="profile.ranking.new"
                                         lang={currentLang}
                                     />

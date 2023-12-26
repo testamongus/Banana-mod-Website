@@ -364,16 +364,16 @@
             >
                 <div class="category-content">
                             <UserDisplay
-                                link='https://pastebin.com/raw/Z5JK35XT'
+                                link='https://snail-ide.vercel.app/news/snail-rebrand.PNG'
                                 userLink={`https://discord.com/channels/1033551490331197462/1038252360184643674`}
-                                text="This is the Snail IDE beta website!"
-                                author="thepython555"
-                                image="https://avatars.githubusercontent.com/u/144301348?s=400&u=2fa307618936cb8abdbf53fb2e40e8977ee9c56d&v=4"
+                                text="We have rebranded the profile rankings"
+                                author="nmsderp/Mr_rudy"
+                                image="https://avatars.githubusercontent.com/u/130254323?v=4"
                             />
-                            <a target="_blank" href="https://i.ibb.co/b6rC7vF/snailidewebsite.png">
+                            <a target="_blank" href="https://snail-ide.vercel.app/news/snail-rebrand.PNG">
                                 <button class="update-image-wrapper">
                                     <img
-                                        src="https://i.ibb.co/b6rC7vF/snailidewebsite.png"
+                                        src="https://snail-ide.vercel.app/news/snail-rebrand.PNG"
                                         alt="Screenshot"
                                         class="update-image"
                                     />

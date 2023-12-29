@@ -472,7 +472,7 @@
 </script>
 
 <head>
-    <title>PenguinMod - Upload</title>
+    <title>Snail IDE - Upload</title>
 </head>
 
 <NavigationBar />

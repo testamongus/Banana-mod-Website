@@ -1,3 +1,5 @@
+> Remeber Snail IDE allows anybody to use the website for free, act accordinaly. We accept everyone on this website. 
+
 # Project Uploading & Updating guidelines
 These guidelines **only apply to Snail IDE's project sharing**.
 If you are packaging your project for release on other websites, you should follow their rules instead.

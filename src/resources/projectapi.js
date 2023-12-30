@@ -9,6 +9,7 @@ class ProjectApi {
 
     static OriginApiUrl = OriginApiUrl;
     static CachedDonators = {};
+    static CachedCool = {};
 
     static getUserBadges(user) {
         return new Promise((resolve, reject) => {
@@ -72,6 +73,15 @@ class ProjectApi {
         const badges = await ProjectApi.getUserBadges(user);
         ProjectApi.CachedDonators[user] = badges.includes('donator');
         return badges.includes('donator');
+    }
+    static async isCool(user) {
+        if (user in ProjectApi.CachedCool) {
+            return ProjectApi.CachedCool[user];
+        }
+        console.log("getting badges for", user);
+        const badges = await ProjectApi.getUserBadges(user);
+        ProjectApi.CachedCool[user] = badges.includes('cool-award');
+        return badges.includes('cool-award');
     }
     static getProjects(page, oldFirst) {
         return new Promise((resolve, reject) => {
@@ -211,6 +221,9 @@ class ProjectApi {
     }
     isDonator() {
         return ProjectApi.isDonator(this.username);
+    }
+    isCool() {
+        return ProjectApi.isCool(this.username);
     }
 
     getMyProjects(page) {

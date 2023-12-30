@@ -36,6 +36,7 @@
     let badges = [];
     let focusedBadge = -1;
     let isDonator = false;
+    let isCool = false;
     let isFollowingUser = false;
     let followerCount = null;
     let fullProfile = {};
@@ -69,6 +70,7 @@
             fullProfile = proffile;
             badges = fullProfile.badges;
             isDonator = fullProfile.donator;
+            isCool = fullProfile.cool;
             followerCount = fullProfile.followers;
         });
 
@@ -278,7 +280,7 @@
                                     class="profile-picture"
                                 />
                                 <div class="user-after-image">
-                                    {#if isDonator}
+                                    {#if isDonator || isCool}
                                         <h1 class="donator-color">{user}</h1>
                                     {:else}
                                         <h1>{user}</h1>
@@ -298,6 +300,7 @@
                                         <button
                                             class={`follower-button
                                                 ${isDonator ? ' follower-button-donator' : ''}
+                                                ${isCool ? ' follower-button-donator' : ''}
                                                 ${isFollowingUser ? ' follower-button-following' : ''}`}
                                             on:click={safeFollowUser}
                                         >

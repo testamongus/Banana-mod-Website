@@ -13,6 +13,7 @@
     export let showdate = false;
     export let featured = false;
     export let fromDonator = false;
+    export let fromCool = false;
     export let owner;
     export let date = 0;
     export let style = "";
@@ -168,7 +169,7 @@
             <a
                 href={projectAuthorLink}
                 target={openNewtab ? "_blank" : "_self"}
-                class={"text author" + (fromDonator ? " donator-name" : "")}
+                class={"text author" + (fromDonator ? (fromCool ? " donator-name" : "") : "")}
             >
                 {owner}
                 {#if fromDonator}
@@ -178,6 +179,17 @@
                         height="16"
                         title={Translations.text(
                             "profile.badge.donator",
+                            currentLang
+                        )}
+                    />
+                {/if}
+                {#if fromCool}
+                    <img
+                        src="/badges/cool_award.png"
+                        alt="Cool Award"
+                        height="16"
+                        title={Translations.text(
+                            "profile.badge.cool_award",
                             currentLang
                         )}
                     />

@@ -49,6 +49,8 @@
   });
 </script>
 
+<title>Snail IDE - Studio Management</title>
+
 <style>
   /* Your provided styles here (dumo178: omg guyz its chatgpt*/
 

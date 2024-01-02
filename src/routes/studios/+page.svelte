@@ -9,7 +9,7 @@
     let studioProjects = [];
     let projectUrlInput = "";
     let studioImage = null;
-    let addedStudios = [];
+    let addedProjects = [];
   
     const loadProjects = () => {
       ProjectClient.getProjects(/* specify your page and oldFirst parameters */)
@@ -24,14 +24,14 @@
     const addProjectToStudio = () => {
       if (projectUrlInput && projectUrlInput.startsWith("https://snail-ide.js.org/#")) {
         studioProjects.push({ url: projectUrlInput });
-        addedStudios.push({ url: projectUrlInput, image: studioImage });
+        addedProjects.push({ url: projectUrlInput, image: studioImage });
         projectUrlInput = "";
       }
     };
   
     const removeProjectFromStudio = (index) => {
       studioProjects.splice(index, 1);
-      addedStudios.splice(index, 1);
+      addedProjects.splice(index, 1);
     };
   
     const handleImageUpload = (event) => {
@@ -94,12 +94,12 @@
     <button on:click={saveStudio}>Save Studio</button>
   
     <section>
-      <h2>Added Studios</h2>
-      {#each addedStudios as studio, index (studio.url)}
+      <h2>Added Projects</h2>
+      {#each addedProjects as project, index (project.url)}
         <div>
-          <h3>{studio.url}</h3>
-          {#if studio.image}
-            <img src={studio.image} alt="Studio Image" />
+          <h3>{project.url}</h3>
+          {#if project.image}
+            <img src={project.image} alt="Project Image" />
           {/if}
         </div>
       {/each}

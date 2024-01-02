@@ -117,7 +117,7 @@
 
 <main>
   <NavigationMargin />
-  <h1>Snail IDE Studio</h1>
+  <h1>Create a Studio</h1>
 
   <section>
     <h2>Studio Image</h2>

@@ -22,7 +22,7 @@
     };
   
     const addProjectToStudio = () => {
-      if (projectUrlInput && projectUrlInput.startsWith("https://snail-ide.js.org/#")) {
+      if (projectUrlInput && projectUrlInput.startsWith("https://snail-ide.js.org/")) {
         studioProjects.push({ url: projectUrlInput });
         addedProjects.push({ url: projectUrlInput, image: studioImage });
         projectUrlInput = "";

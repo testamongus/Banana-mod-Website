@@ -18,18 +18,24 @@
   };
 
   const addProjectToStudio = () => {
-    if (projectUrlInput && projectUrlInput.startsWith("https://snail-ide.js.org/")) {
-      studioProjects.push({ url: projectUrlInput });
-      addedProjects.push({ url: projectUrlInput, image: studioImage });
+    if (projectUrlInput.trim() !== "") {
+      const urls = projectUrlInput.split('\n').map(url => url.trim());
+      urls.forEach(url => {
+        if (url.startsWith("https://snail-ide.js.org/") && !studioProjects.some(project => project.url === url)) {
+          studioProjects.push({ url });
+          addedProjects = [...studioProjects];
+        }
+      });
+
       projectUrlInput = "";
-      saveStudioToJson(); // Save studio to JSON in the background when a new item is added
+      saveStudioToJson(); // Save studio to JSON in the background when new items are added
     }
   };
 
   const removeProjectFromStudio = (index) => {
     studioProjects.splice(index, 1);
-    addedProjects.splice(index, 1);
-    saveStudioToJson(); // Save studio to JSON in the background when an item is removed
+    addedProjects = [...studioProjects];
+    saveStudioToJson();
   };
 
   const handleImageUpload = (event) => {
@@ -37,11 +43,17 @@
     if (file) {
       const reader = new FileReader();
       reader.onload = () => {
-        studioImage = reader.result; // Set studioImage as Data URL
-        saveStudioToJson(); // Save studio to JSON in the background when image is changed
+        studioImage = reader.result;
+        saveStudioToJson();
       };
       reader.readAsDataURL(file);
     }
+  };
+
+  const submitStudio = () => {
+    // Add code for submitting the studio data
+    console.log("Studio data submitted:", studioProjects, studioImage);
+    // You can add an API call or other logic to handle the submission
   };
 
   onMount(() => {
@@ -52,10 +64,39 @@
 <title>Snail IDE - Studio Management</title>
 
 <style>
-  /* Your provided styles here (dumo178: omg guyz its chatgpt*/
-
   :root {
     font-family: Arial;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  h1 {
+    color: #333;
+  }
+
+  section {
+    margin-bottom: 20px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    cursor: pointer;
+    margin-bottom: 5px;
+  }
+
+  textarea {
+    width: 100%;
   }
 </style>
 
@@ -87,7 +128,7 @@
 
   <section>
     <h2>Add Project to Studio</h2>
-    <input type="text" bind:value={projectUrlInput} placeholder="Enter project URL" />
+    <textarea bind:value={projectUrlInput} placeholder="Enter project URLs (one per line)"></textarea>
     <button on:click={addProjectToStudio}>Add to Studio</button>
   </section>
 
@@ -103,20 +144,18 @@
     {/each}
   </section>
 
-  <section>
-    <h2>Added Projects List</h2>
-    <ul>
-      {#each addedProjects as project (project.url)}
-        <li>{project.url}</li>
-      {/each}
-    </ul>
-  </section>
-
   {#if studioJsonUrl}
     <section>
-      <h2>Studio JSON Data</h2>
-      <p>View or copy the JSON data:</p>
-      <textarea rows="10" readonly>{studioJsonUrl}</textarea>
+      <h3>All Projects:</h3>
+      <ul>
+        {#each addedProjects as project, index (project.url)}
+          <li on:click={() => removeProjectFromStudio(index)}>
+            {project.url}
+          </li>
+        {/each}
+      </ul>
     </section>
   {/if}
+
+  <button on:click={submitStudio}>Submit</button>
 </main>

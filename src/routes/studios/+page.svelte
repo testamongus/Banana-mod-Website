@@ -50,7 +50,11 @@
 </script>
 
 <style>
-  /* Your provided styles here */
+  /* Your provided styles here (dumo178: omg guyz its chatgpt*/
+
+  :root {
+    font-family: Arial;
+  }
 </style>
 
 <NavigationBar />

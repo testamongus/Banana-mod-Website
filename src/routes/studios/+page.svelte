@@ -51,9 +51,22 @@
   };
 
   const submitStudio = () => {
-    // Add code for submitting the studio data
-    console.log("Studio data submitted:", studioProjects, studioImage);
-    // You can add an API call or other logic to handle the submission
+    fetch('https://snailstudios.glitch.me/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ projects: studioProjects, image: studioImage }),
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Studio data submitted:', data);
+      // You can handle the response here, e.g., show a success message
+    })
+    .catch(error => {
+      console.error('Error submitting studio data:', error);
+      // Handle the error, e.g., show an error message
+    });
   };
 
   onMount(() => {

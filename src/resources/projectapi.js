@@ -31,25 +31,36 @@ class ProjectApi {
     }
     static loggedInCheck() {
         return new Promise((resolve, reject) => {
-          const privateCode = localStorage.getItem("PV");
-          if (!privateCode) {
-            resolve({ loggedIn: false });
-            return;
-          }
+            const privateCode = localStorage.getItem("PV");
     
-          Authentication.usernameFromCode(privateCode)
-            .then(({ username, isAdmin: isAdminn, isApprover: isApproverr }) => {
-              if (username) {
-                resolve({ loggedIn: true, username, isAdmin: isAdminn, isApprover: isApproverr });
-              } else {
+            if (!privateCode) {
                 resolve({ loggedIn: false });
-              }
-            })
-            .catch(() => {
-              resolve({ loggedIn: false });
-            });
+                return;
+            }
+    
+            // Make a request to the server-side endpoint
+            fetch(`https://snailshare-backend.glitch.me/api/users/usernameFromCode?privateCode=${privateCode}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Failed to fetch username. Status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    resolve({
+                        loggedIn: true,
+                        username: data.username,
+                        isAdmin: data.isAdmin,
+                        isApprover: data.isApprover
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching username:', error);
+                    resolve({ loggedIn: false });
+                });
         });
-      }
+    }
+    
     static getFollowerCount(user) {
         return new Promise((resolve, reject) => {
             const url = `${OriginApiUrl}/api/users/getFollowerCount?username=${user}`;

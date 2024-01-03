@@ -57,34 +57,34 @@
   };
 
   const submitStudio = () => {
-  ProjectApi.loggedInCheck().then(({ loggedIn, username }) => {
-    if (loggedIn) {
-      const authorUsername = username;
+    ProjectApi.loggedInCheck().then(({ loggedIn, username }) => {
+      if (loggedIn) {
+        const authorUsername = username;
 
-      fetch('https://snailstudios.glitch.me/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ 
-          projects: studioProjects, 
-          image: studioImage,
-          author: authorUsername, 
-        }),
-      })
-        .then(response => response.json())
-        .then(data => {
-          console.log('Studio data submitted:', data);
+        fetch('https://snailstudios.glitch.me/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ 
+            projects: studioProjects, 
+            image: studioImage,
+            author: authorUsername, 
+          }),
         })
-        .catch(error => {
-          console.error('Error submitting studio data:', error);
-        });
-    } else {
-      // Handle the case where the user is not logged in
-      console.log('User is not logged in');
-    }
-  });
-};
+          .then(response => response.json())
+          .then(data => {
+            console.log('Studio data submitted:', data);
+          })
+          .catch(error => {
+            console.error('Error submitting studio data:', error);
+          });
+      } else {
+        // Handle the case where the user is not logged in
+        console.log('User is not logged in');
+      }
+    });
+  };
 
 
   const initiateAuthentication = async () => {

@@ -3,12 +3,11 @@
   import NavigationBar from "$lib/NavigationBar/NavigationBar.svelte";
   import ProjectApi from '../../resources/projectapi.js';
   import NavigationMargin from "$lib/NavigationBar/NavMargin.svelte";
+  
   const projectApi = new ProjectApi("yourPrivateCode", "yourUsername");
 
-
-  // Update the authentication endpoint to use the CORS proxy
   const authEndpoint = 'https://corsproxy.io/' +
-  'https://auth.itinerary.eu.org/auth/?redirect=https%3A%2F%2Fsnailstudios.glitch.me%2Fhandle-auth&name=Scratch Auth Tutorial';
+    'https://auth.itinerary.eu.org/auth/?redirect=https%3A%2F%2Fsnailstudios.glitch.me%2Fhandle-auth&name=Scratch Auth Tutorial';
 
   let studioProjects = [];
   let projectUrlInput = "";
@@ -35,7 +34,7 @@
       });
 
       projectUrlInput = "";
-      saveStudioToJson(); // Save studio to JSON in the background when new items are added
+      saveStudioToJson(); 
     }
   };
 
@@ -58,39 +57,41 @@
   };
 
   const submitStudio = () => {
-    // Use the username from ProjectApi
-    const authorUsername = projectApi.username;
+  ProjectApi.loggedInCheck().then(({ loggedIn, username }) => {
+    if (loggedIn) {
+      const authorUsername = username;
 
-    fetch('https://snailstudios.glitch.me/submit', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ 
-        projects: studioProjects, 
-        image: studioImage,
-        author: authorUsername, // Include the author's username in the JSON data
-      }),
-    })
-      .then(response => response.json())
-      .then(data => {
-        console.log('Studio data submitted:', data);
-        // You can handle the response here, e.g., show a success message
+      fetch('https://snailstudios.glitch.me/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ 
+          projects: studioProjects, 
+          image: studioImage,
+          author: authorUsername, 
+        }),
       })
-      .catch(error => {
-        console.error('Error submitting studio data:', error);
-        // Handle the error, e.g., show an error message
-      });
-  };
+        .then(response => response.json())
+        .then(data => {
+          console.log('Studio data submitted:', data);
+        })
+        .catch(error => {
+          console.error('Error submitting studio data:', error);
+        });
+    } else {
+      // Handle the case where the user is not logged in
+      console.log('User is not logged in');
+    }
+  });
+};
 
 
-  // Update the initiation of authentication to use the CORS proxy
   const initiateAuthentication = async () => {
     try {
-      // ye
       const response = await fetch(authEndpoint);
       const data = await response.json();
-      window.location.href = data.url; // Redirect the user to the provided URL
+      window.location.href = data.url;
     } catch (error) {
       console.error('Error initiating authentication:', error);
     }

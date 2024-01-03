@@ -29,6 +29,27 @@ class ProjectApi {
                 });
         });
     }
+    static loggedInCheck() {
+        return new Promise((resolve, reject) => {
+          const privateCode = localStorage.getItem("PV");
+          if (!privateCode) {
+            resolve({ loggedIn: false });
+            return;
+          }
+    
+          Authentication.usernameFromCode(privateCode)
+            .then(({ username, isAdmin: isAdminn, isApprover: isApproverr }) => {
+              if (username) {
+                resolve({ loggedIn: true, username, isAdmin: isAdminn, isApprover: isApproverr });
+              } else {
+                resolve({ loggedIn: false });
+              }
+            })
+            .catch(() => {
+              resolve({ loggedIn: false });
+            });
+        });
+      }
     static getFollowerCount(user) {
         return new Promise((resolve, reject) => {
             const url = `${OriginApiUrl}/api/users/getFollowerCount?username=${user}`;
@@ -299,6 +320,7 @@ class ProjectApi {
                 });
         });
     }
+
     isFollowingUser(username, returnRawInfo) {
         return new Promise((resolve, reject) => {
             const url = `${OriginApiUrl}/api/users/isFollowing?username=${this.username}&target=${username}&passcode=${this.privateCode}`;

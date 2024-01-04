@@ -4,18 +4,44 @@
   
     let studio = {};
   
+    const fetchStudioData = async (studioId) => {
+      let attempts = 0;
+      const maxAttempts = 3; // Set the maximum number of attempts
+  
+      while (attempts < maxAttempts) {
+        try {
+          const response = await fetch(`https://snailstudios.glitch.me/get-studios`);
+          const studios = await response.json();
+  
+          studio = studios[studioId];
+  
+          return true; // Data fetched successfully
+        } catch (error) {
+          attempts++;
+  
+          if (attempts === maxAttempts) {
+            console.error("Failed to fetch studio data:", error);
+            return false; // Maximum attempts reached, data not found
+          }
+  
+          // Wait for 10 seconds before retrying
+          await new Promise(resolve => setTimeout(resolve, 10000));
+        }
+      }
+    };
+  
     onMount(async () => {
       const urlParams = new URLSearchParams(window.location.search);
       const studioId = urlParams.get('id');
   
       if (studioId) {
-        // Fetch studio data based on the provided ID
-        const response = await fetch(`https://snailstudios.glitch.me/get-studios`);
-        const studios = await response.json();
+        const dataFetched = await fetchStudioData(studioId);
   
-        studio = studios[studioId];
+        if (!dataFetched) {
+          console.error("Studio data not found after multiple attempts.");
+          return; // Exit if data not found
+        }
   
-        // Resize the image to 480x360
         const img = new Image();
         img.src = studio.image;
         img.onload = () => {
@@ -26,7 +52,6 @@
           ctx.drawImage(img, 0, 0, 480, 360);
           studio.image = canvas.toDataURL('image/png');
   
-          // Fetch and update project images
           studio.projects.forEach(async (project) => {
             const projectId = project.url.split('#').pop();
             const projectResponse = await fetch(`https://snailshare-backend.glitch.me/api/pmWrapper/iconUrl?id=${projectId}`);
@@ -34,15 +59,14 @@
             const projectImageUrl = URL.createObjectURL(projectImageBlob);
             project.image = projectImageUrl;
   
-            // Force Svelte to re-render after updating project image
             studio.projects = [...studio.projects];
           });
         };
       }
     });
-  </script>
-  
-  <style>
+</script>
+
+<style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -82,25 +106,24 @@
       max-width: 200px;
       height: auto;
     }
-  </style>
-  
-  <NavigationBar />
-  
-  <div class="container">
+</style>
+
+<NavigationBar />
+
+<div class="container">
     {#if studio.name}
-      <div class="studio-container">
+    <div class="studio-container">
         <h1>{studio.name}</h1>
         <img class="studio-image" src={studio.image} alt={studio.name} />
   
         {#each studio.projects as project (project.url)}
-          <div class="project">
+        <div class="project">
             <img class="project-image" src={project.image} alt="Project Image" />
             <a href={project.url} target="_blank" rel="noopener noreferrer">{project.url}</a>
-          </div>
+        </div>
         {/each}
-      </div>
+    </div>
     {:else}
-      <p>No studio found</p>
+    <p>No studio found</p>
     {/if}
-  </div>
-  
+</div>

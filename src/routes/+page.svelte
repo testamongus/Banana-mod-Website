@@ -217,17 +217,6 @@
         buttonText={"Try it"}
         buttonHref={"https://snail-ide.js.org/editor.html"}
     />
-    <Alert
-        onlyShowID={"newyear:countdown"}
-        text={"Check out our 2024 New Years Countdown! (Credit to: yffji and DirtBikeDude180 on Scratch)"}
-        textBreakup={true}
-        textColor={"white"}
-        hasImage={false}
-        hasButton={true}
-        buttonText={"Open"}
-        buttonHref={"https://snail-ide.vercel.app/2024.html"}
-        backColor={"#009900"}
-    />
     <!-- TODO: re-add this, but only have it appear for new users after they login on a date before the alert -->
     <!-- <Alert
         onlyShowID={"privacee:_1"}

@@ -6,7 +6,7 @@
 
   const fetchStudioData = async (studioId) => {
     let attempts = 0;
-    const maxAttempts = 3; // Set the maximum number of attempts
+    const maxAttempts = 3;
 
     while (attempts < maxAttempts) {
       try {
@@ -14,17 +14,15 @@
         const studios = await response.json();
 
         studio = studios[studioId];
-
-        return true; // Data fetched successfully
+        return true;
       } catch (error) {
         attempts++;
 
         if (attempts === maxAttempts) {
           console.error("Failed to fetch studio data:", error);
-          return false; // Maximum attempts reached, data not found
+          return false;
         }
 
-        // Wait for 10 seconds before retrying
         await new Promise(resolve => setTimeout(resolve, 10000));
       }
     }
@@ -39,7 +37,7 @@
 
       if (!dataFetched) {
         console.error("Studio data not found after multiple attempts.");
-        return; // Exit if data not found
+        return;
       }
 
       const img = new Image();
@@ -106,24 +104,49 @@
     max-width: 200px;
     height: auto;
   }
+
+  .studio-description {
+    margin-top: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+
+  .author-info {
+    margin-top: 10px;
+    text-align: center;
+    font-style: italic;
+  }
 </style>
 
 <NavigationBar />
 
 <div class="container">
   {#if studio.name}
-  <div class="studio-container">
+    <div class="studio-container">
       <h1>{studio.name}</h1>
+      
+      {#if studio.author}
+        <p class="author-info">Author: {studio.author}</p>
+      {/if}
+
       <img class="studio-image" src={studio.image} alt={studio.name} />
 
+      {#if studio.desc}
+        <h2>Description:</h2>
+        <p class="studio-description">{studio.desc}</p>
+      {:else}
+        <p class="studio-description">This studio was made before descriptions were added. You will be able to fix this once studio editing is added.</p>
+      {/if}
+
       {#each studio.projects as project (project.url)}
-      <div class="project">
+        <div class="project">
           <img class="project-image" src={project.image} alt="Project Image" />
           <a href={project.url} target="_blank" rel="noopener noreferrer">{project.url}</a>
-      </div>
+        </div>
       {/each}
-  </div>
+    </div>
   {:else}
-  <p>No studio found</p>
+    <p>No studio found</p>
   {/if}
 </div>

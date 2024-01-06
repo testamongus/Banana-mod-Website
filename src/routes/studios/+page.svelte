@@ -9,7 +9,8 @@
   const authEndpoint = 'https://corsproxy.io/' +
     'https://auth.itinerary.eu.org/auth/?redirect=https%3A%2F%2Fsnailstudios.glitch.me%2Fhandle-auth&name=Scratch Auth Tutorial';
 
-  let studioName = ""; // Added variable to store the name of the studio
+  let studioName = "";
+  let studioDesc = "";
   let studioProjects = [];
   let projectUrlInput = "";
   let studioImage = null;
@@ -17,7 +18,7 @@
   let studioJsonUrl = "";
 
   const saveStudioToJson = () => {
-    const studioData = { name: studioName, projects: studioProjects, image: studioImage };
+    const studioData = { name: studioName, desc:studioDesc, projects: studioProjects, image: studioImage };
     const jsonString = JSON.stringify(studioData, null, 2);
 
     const blob = new Blob([jsonString], { type: 'application/json' });
@@ -69,6 +70,7 @@
           },
           body: JSON.stringify({ 
             name: studioName,
+            desc: studioDesc,
             projects: studioProjects, 
             image: studioImage,
             author: authorUsername, 
@@ -151,6 +153,7 @@
   <section>
     <h2>Studio Name</h2>
     <input type="text" bind:value={studioName} placeholder="Enter studio name" />
+    <textarea bind:value={studioDesc} rows="15" placeholder="Enter studio description"></textarea>
   </section>
 
   <section>

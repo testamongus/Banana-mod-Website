@@ -441,13 +441,7 @@
                             {/if}
                         {/each}
                     {:else if ghcommitsFailed}
-                        <p>
-                            <LocalizedText
-                                text="Failed to load commits."
-                                key="home.sections.githubcommits.failed.generic"
-                                lang={currentLang}
-                            />
-                        </p>
+                        <p>We are working on migrating the commits history to Glitch.</p>
                     {:else if ghcommitsLoaded}
                         <p style="text-align: center;">
                             <LocalizedText

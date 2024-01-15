@@ -349,20 +349,20 @@
                     "home.sections.whatsnew",
                     currentLang
                 )}
-                seemore={`https://discord.com/channels/1033551490331197462/1038252360184643674`}
+                seemore={`https://scratch.mit.edu/users/Mr_rudy`}
             >
                 <div class="category-content">
                             <UserDisplay
-                                link='https://snail-ide.vercel.app/news/effects.PNG'
-                                userLink={`https://discord.com/channels/1033551490331197462/1038252360184643674`}
-                                text="New effects tab"
+                                link='https://snail-ide.vercel.app/news/ai.png'
+                                userLink={`https://scratch.mit.edu/users/Mr_rudy`}
+                                text="New ml5 Related Extensions"
                                 author="nmsderp/Mr_rudy"
                                 image="https://avatars.githubusercontent.com/u/130254323?v=4"
                             />
-                            <a target="_blank" href="https://snail-ide.vercel.app/news/effects.PNG">
+                            <a target="_blank" href="https://snail-ide.vercel.app/news/ai.png">
                                 <button class="update-image-wrapper">
                                     <img
-                                        src="https://snail-ide.vercel.app/news/effects.PNG"
+                                        src="https://snail-ide.vercel.app/news/ai.png"
                                         alt="Screenshot"
                                         class="update-image"
                                     />

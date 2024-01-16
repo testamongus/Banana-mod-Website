@@ -3,6 +3,7 @@
     import Authentication from "../../resources/authentication.js";
     import ProjectApi from "../../resources/projectapi.js";
     import EmojiList from "../../resources/emojis.js";
+    import Swal from 'sweetalert2';
 
     const ProjectClient = new ProjectApi();
 
@@ -213,7 +214,17 @@
             project: projectData,
         })
             .then((projectId) => {
-                window.open(`${LINK.base}#${projectId}`);
+                Swal.fire({
+                    title: 'Project Succesfuly Uploaded!',
+                    text: "Click the button below to view your project.",
+                    confirmButtonText: "Take me to my project",
+                    icon: "success",
+                    allowOutsideClick: false,
+                    preConfirm: () => {
+                        window.location.href = `${LINK.base}#${projectId}`;
+                    }
+                })
+                
             })
             .catch((err) => {
                 const message = TranslationHandler.text(

@@ -138,7 +138,7 @@
 </script>
 
 <head>
-    <title>PenguinMod - My Stuff</title>
+    <title>Snail IDE - My Stuff</title>
 </head>
 
 <NavigationBar />

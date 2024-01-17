@@ -295,6 +295,7 @@
                                 ).replace("$1", followerCount)}
                             </p>
                             <div>
+                                
                                 {#if !(loggedIn && user === loggedInUser)}
                                     {#key isFollowingUser}
                                         <button
@@ -322,6 +323,21 @@
                                         </button>
                                     {/key}
                                 {/if}
+                                <button
+                                class={`follower-button
+                                    ${isDonator ? ' follower-button-donator' : ''}
+                                    ${isCool ? ' follower-button-donator' : ''}
+                                    ${isFollowingUser ? ' follower-button-following' : ''}`}
+                                            on:click={window.location.href = `https://scratch.mit.edu/users/${user}`}
+                                        >
+                                                <LocalizedText
+                                                    text="Scratch"
+                                                    key="profile.scratch"
+                                                    dontlink={true}
+                                                    lang={currentLang}
+                                                />
+                                        </button>
+                                
                             </div>
                         </div>
                         </div>

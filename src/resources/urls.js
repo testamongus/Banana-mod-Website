@@ -97,7 +97,7 @@ export default {
     /**
      * PenguinMod's basic API
      */
-    basicApi: "https://snailbasicapi.nmsderp.repl.co/",
+    basicApi: "https://snailbasic-api.onrender.com/",
 
     /**
      * The admin panel for pm projects api

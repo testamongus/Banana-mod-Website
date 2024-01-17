@@ -232,15 +232,11 @@
                     currentLang
                 );
                 if (!message)
-                    return alert(
-                        String(
-                            TranslationHandler.text(
-                                "uploading.error.unknown",
-                                currentLang
-                            )
-                        ).replace("$1", err)
-                    );
-                alert(message);
+                    return Swal.fire({
+                            icon: 'error',
+                            title: 'Error',
+                            text: "Maybe, try adding a thumbnail. If it still dosen't work check the console, and create an issue."
+                        })
             });
     }
 

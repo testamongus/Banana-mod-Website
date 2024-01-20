@@ -682,9 +682,9 @@
                         lang={currentLang}
                     />
                 </p>
-                <a href={"https://snail-ide.vercel.app/donate"}>PenguinMod</a>
-                <a target="_blank" href={LINK.donate.turbowarp}>TurboWarp</a>
-                <a target="_blank" href={LINK.donate.scratch}>Scratch</a>
+                <a href={"https://penguinmod.com/donate"}>PenguinMod</a>
+                <a target="_blank" href={'https://docs.turbowarp.org/donate'}>TurboWarp</a>
+                <a target="_blank" href={'https://www.scratchfoundation.org/donate'}>Scratch</a>
             </div>
         </div>
     </div>

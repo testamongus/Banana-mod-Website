@@ -231,6 +231,16 @@
     />
     <StatusAlert />
 
+    <Alert
+        onlyShowID={"uhoh:_1"}
+        text={"Our server will be down for a couple days, we are running out of Glitch storage."}
+        textBreakup={true}
+        textColor={"white"}
+        backColor={"#009900"}
+        hasImage={false}
+    />
+    <StatusAlert />
+
     {#if loggedIn === false}
         <div class="section-info">
             <div style="margin-left: 8rem;">

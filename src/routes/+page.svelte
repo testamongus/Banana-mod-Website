@@ -353,16 +353,16 @@
             >
                 <div class="category-content">
                             <UserDisplay
-                                link='https://snail-ide.vercel.app/news/ai.png'
+                                link='https://snail-ide.vercel.app/news/imageai.PNG'
                                 userLink={`https://scratch.mit.edu/users/Mr_rudy`}
-                                text="New ml5 Related Extensions"
+                                text="Snail IDE now supports AI image generation via the new PenguinGPT Extension. (Replaces ChatGPT)"
                                 author="nmsderp/Mr_rudy"
                                 image="https://avatars.githubusercontent.com/u/130254323?v=4"
                             />
-                            <a target="_blank" href="https://snail-ide.vercel.app/news/ai.png">
+                            <a target="_blank" href="https://snail-ide.vercel.app/imageai.PNG">
                                 <button class="update-image-wrapper">
                                     <img
-                                        src="https://snail-ide.vercel.app/news/ai.png"
+                                        src="https://snail-ide.vercel.app/imageai.PNG"
                                         alt="Screenshot"
                                         class="update-image"
                                     />

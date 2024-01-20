@@ -359,10 +359,10 @@
                                 author="nmsderp/Mr_rudy"
                                 image="https://avatars.githubusercontent.com/u/130254323?v=4"
                             />
-                            <a target="_blank" href="https://snail-ide.vercel.app/imageai.PNG">
+                            <a target="_blank" href="https://snail-ide.vercel.app/news/imageai.PNG">
                                 <button class="update-image-wrapper">
                                     <img
-                                        src="https://snail-ide.vercel.app/imageai.PNG"
+                                        src="https://snail-ide.vercel.app/news/imageai.PNG"
                                         alt="Screenshot"
                                         class="update-image"
                                     />

@@ -236,7 +236,7 @@
         text={"Our server will be down for a couple days, we are running out of Glitch storage."}
         textBreakup={true}
         textColor={"white"}
-        backColor={"#009900"}
+        backColor={"#FF0000"}
         hasImage={false}
     />
     <StatusAlert />

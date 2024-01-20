@@ -232,11 +232,14 @@
     <StatusAlert />
 
     <Alert
-        onlyShowID={"uhoh:_1"}
+        onlyShowID={"uhoh:_2"}
         text={"Our server will be down for a couple days, we are running out of Glitch storage."}
         textBreakup={true}
         textColor={"white"}
         backColor={"#FF0000"}
+        hasButton={true}
+        buttonText={"Help Us"}
+        buttonHref={'https://scratch.mit.edu/projects/953802103'}
         hasImage={false}
     />
     <StatusAlert />

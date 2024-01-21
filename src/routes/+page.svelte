@@ -217,20 +217,6 @@
         buttonText={"Try it"}
         buttonHref={"https://snail-ide.js.org/editor.html"}
     />
-    <!-- TODO: re-add this, but only have it appear for new users after they login on a date before the alert -->
-     <Alert
-        onlyShowID={"privacee:_1"}
-        text={"Our privacy policy has been updated."}
-        textBreakup={true}
-        textColor={"white"}
-        backColor={"#009900"}
-        hasImage={false}
-        hasButton={true}
-        buttonText={"View"}
-        buttonHref={"https://snail-ide.js.org/privacy.html"}
-    />
-    <StatusAlert />
-
     <Alert
         onlyShowID={"wowawesomeamazingcool:_2"}
         text={"Our server will be down for a couple days, we are rewriting the server!"}

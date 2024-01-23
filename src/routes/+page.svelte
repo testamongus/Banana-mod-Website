@@ -218,12 +218,14 @@
         buttonHref={"https://snail-ide.js.org/editor.html"}
     />
     <Alert
-        onlyShowID={"wowawesomeamazingcool:_2"}
+        onlyShowID={"wowawesomeamazingcoo:_2"}
         text={"Our server will be down for a couple days, we are rewriting the server!"}
         textBreakup={true}
         textColor={"white"}
         backColor={"#008f00"}
-        hasButton={false}
+        hasButton={true}
+        buttonText={"View Progress"}
+        buttonHref={"https://scratch.mit.edu/studios/34522995/comments"}
         hasImage={false}
     />
     <StatusAlert />

@@ -1,4 +1,4 @@
-<script context="module" lang="ts">
+<script context="module">
     export async function load({ params, query }) {
       // Check if the current domain is snail-ide.vercel.app
       if (window.location.hostname === 'snail-ide.vercel.app') {

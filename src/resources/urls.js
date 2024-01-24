@@ -4,27 +4,27 @@ export default {
     /**
      * PenguinMod's normal page
      */
-    base: "https://snail-ide.js.org/",
+    base: "https://editor.snail-ide.com",
 
     /**
      * PenguinMod's editor page
      */
-    editor: "https://snail-ide.js.org/editor.html",
+    editor: "https://editor.snail-ide.com/editor.html",
 
     /**
      * PenguinMod's credits page
      */
-    credits: "https://snail-ide.js.org/credits.html",
+    credits: "https://editor.snail-ide.com/credits.html",
 
     /**
      * PenguinMod's terms of service page
      */
-    terms: "https://snail-ide.js.org/terms.html",
+    terms: "https://editor.snail-ide.com/terms.html",
 
     /**
      * PenguinMod's privacy policy page
      */
-    privacy: "https://snail-ide.js.org/privacy.html",
+    privacy: "https://editor.snail-ide.com/privacy.html",
 
     /**
      * PenguinMod's guideline pages for services
@@ -33,7 +33,7 @@ export default {
         /**
          * PenguinMod's project uploading guidelines
          */
-        projects: "https://snail-ide.js.org/PenguinMod-Guidelines/PROJECTS"
+        projects: "https://editor.snail-ide.com/PenguinMod-Guidelines/PROJECTS"
     },
 
     /**
@@ -57,12 +57,12 @@ export default {
     /**
      * PenguinMod's home page
      */
-    home: "https://home.penguinmod.com/",
+    home: "https://snail-ide.com",
 
     /**
      * PenguinMod's packager page
      */
-    packager: "https://snail-ide.vercel.app/PenguinMod-Packager/",
+    packager: "https://snail-ide.com/PenguinMod-Packager/",
 
     /**
      * PenguinMod's unofficial wiki
@@ -87,7 +87,7 @@ export default {
     /**
      * TurboWarp's website, but I changed it to Penguinmod because we are based off of that
      */
-    turbowarp: "https://snail-ide.vercel.app",
+    turbowarp: "https://snail-ide.com",
 
     /**
      * PenguinMod's github page
@@ -102,12 +102,12 @@ export default {
     /**
      * The admin panel for pm projects api
      */
-    adminPanel: "https://snail-ide.vercel.app/panel",
+    adminPanel: "https://snail-ide.com/panel",
 
     /**
      * donate to use yipeee
      */
-    donate: "https://snail-ide.vercel.app/donate",
+    donate: "https://snail-ide.com/donate",
 /**
      * our status page lol
      */

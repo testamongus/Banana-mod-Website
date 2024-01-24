@@ -97,7 +97,7 @@ export default {
     /**
      * PenguinMod's basic API
      */
-    basicApi: "https://snailbasicapi.up.railway.app/",
+    basicApi: "https://bapi.glitch.me/",
 
     /**
      * The admin panel for pm projects api

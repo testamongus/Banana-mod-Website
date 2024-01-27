@@ -1,4 +1,4 @@
-const emojiHtmlUrl = 'https://snail-ide-object-libraries.vercel.app/files/emojis';
+const emojiHtmlUrl = 'https://corsproxy.io/?https://snail-ide-object-libraries.vercel.app/files/emojis';
 
 class EmojiHandler {
     static emojis = [];

@@ -115,5 +115,9 @@ export default {
 /**
      * direct page to upload
      */
-    upload_project: "https://snail-ide.vercel.app/upload"
+    upload_project: "https://snail-ide.vercel.app/upload",
+    /**
+     * docs url
+     */
+    docs: "https://docs.snail-ide.com/donate",
 }

@@ -326,6 +326,13 @@
                     lang={currentLang}
                 />
             </Button>
+            <Button link={LINK.docs}>
+                <LocalizedText
+                    text="Docs"
+                    key="home.footer.sections.website.docs"
+                    lang={currentLang}
+                />
+            </Button>
             <Button label="GitHub" link={LINK.github} />
         </div>
     {/if}

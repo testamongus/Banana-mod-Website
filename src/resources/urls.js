@@ -119,5 +119,5 @@ export default {
     /**
      * docs url
      */
-    docs: "https://docs.snail-ide.com/donate",
+    docs: "https://docs.snail-ide.com/",
 }

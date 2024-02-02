@@ -19,7 +19,7 @@ export default {
     /**
      * PenguinMod's terms of service page
      */
-    terms: "https://editor.snail-ide.com/terms.html",
+    terms: "https://snail-ide.com/terms",
 
     /**
      * PenguinMod's privacy policy page

@@ -228,14 +228,24 @@
         buttonHref={"https://snail-ide.js.org/editor.html"}
     />
     <Alert
-        onlyShowID={"wowawesomeamazingcoo:_2"}
-        text={"Our server will be down for a couple days, we are rewriting the server!"}
+        onlyShowID={"wowawesomeamazingcoo:_3"}
+        text={"Our server is down, but will be back up soon!"}
         textBreakup={true}
         textColor={"white"}
         backColor={"#008f00"}
         hasButton={true}
         buttonText={"View Progress"}
         buttonHref={"https://scratch.mit.edu/studios/34522995/comments"}
+        hasImage={false}
+    />
+    <StatusAlert />
+    <Alert
+        onlyShowID={"ruby:_1"}
+        text={"All Ruby Dev Team extensions have been removed, this was requested by the developers."}
+        textBreakup={true}
+        textColor={"white"}
+        backColor={"#7E0C1A"}
+        hasButton={false}
         hasImage={false}
     />
     <StatusAlert />

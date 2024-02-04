@@ -240,11 +240,11 @@
     />
     <StatusAlert />
     <Alert
-        onlyShowID={"ruby:_1"}
-        text={"All Ruby Dev Team extensions have been removed, this was requested by the developers."}
+        onlyShowID={"ruby:_2"}
+        text={"G1nX (One of the lead ruby developers) gave us permission to readd the ruby extensions!"}
         textBreakup={true}
         textColor={"white"}
-        backColor={"#7E0C1A"}
+        backColor={"#089608"}
         hasButton={false}
         hasImage={false}
     />

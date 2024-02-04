@@ -97,7 +97,7 @@ export default {
     /**
      * PenguinMod's basic API
      */
-    basicApi: "https://bapi.glitch.me/",
+    basicApi: "https://sn-bapi.onrender.com/",
 
     /**
      * The admin panel for pm projects api

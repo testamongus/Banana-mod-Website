@@ -671,6 +671,9 @@
                 <a target="_blank" href="https://scratch.mit.edu/studios/33532977/">
                     Snail IDE Group
                 </a>
+                <a target="_blank" href="/forum">
+                    Unofficial Forum
+                </a>
             </div>
             <div class="footer-section">
                 <p>

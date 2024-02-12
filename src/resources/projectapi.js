@@ -1,4 +1,4 @@
-let OriginApiUrl = "https://snailshare-backend.glitch.me";
+let OriginApiUrl = "https://snailshare.xyz";
 // OriginApiUrl = "http://localhost:8080";
 
 class ProjectApi {
@@ -39,7 +39,7 @@ class ProjectApi {
             }
     
             // Make a request to the server-side endpoint
-            fetch(`https://snailshare-backend.glitch.me/api/users/usernameFromCode?privateCode=${privateCode}`)
+            fetch(`https://snailshare.xyz/api/users/usernameFromCode?privateCode=${privateCode}`)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error(`Failed to fetch username. Status: ${response.status}`);

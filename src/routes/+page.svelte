@@ -227,27 +227,7 @@
         buttonText={"Try it"}
         buttonHref={"https://snail-ide.js.org/editor.html"}
     />
-    <Alert
-        onlyShowID={"wowawesomeamazingcoo:_3"}
-        text={"Our server is down, but will be back up soon!"}
-        textBreakup={true}
-        textColor={"white"}
-        backColor={"#008f00"}
-        hasButton={true}
-        buttonText={"View Progress"}
-        buttonHref={"https://scratch.mit.edu/studios/34522995/comments"}
-        hasImage={false}
-    />
     <StatusAlert />
-    <Alert
-        onlyShowID={"ruby:_2"}
-        text={"G1nX (One of the lead ruby developers) gave us permission to readd the ruby extensions!"}
-        textBreakup={true}
-        textColor={"white"}
-        backColor={"#089608"}
-        hasButton={false}
-        hasImage={false}
-    />
     <StatusAlert />
 
     {#if loggedIn === false}

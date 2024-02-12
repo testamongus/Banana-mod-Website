@@ -52,7 +52,7 @@
 
         studio.projects.forEach(async (project) => {
           const projectId = project.url.split('#').pop();
-          const projectResponse = await fetch(`https://snailshare-backend.glitch.me/api/pmWrapper/iconUrl?id=${projectId}`);
+          const projectResponse = await fetch(`https://snailshare.xyz/api/pmWrapper/iconUrl?id=${projectId}`);
           const projectImageBlob = await projectResponse.blob();
           const projectImageUrl = URL.createObjectURL(projectImageBlob);
           project.image = projectImageUrl;

@@ -1,5 +1,4 @@
 <script>
-    // Components
     import NavigationBar from "$lib/NavigationBar/NavigationBar.svelte";
     import NavigationMargin from "$lib/NavigationBar/NavMargin.svelte";
     import LoadingSpinner from "$lib/LoadingSpinner/Spinner.svelte";
@@ -19,9 +18,9 @@
     <NavigationMargin />
 
     <div class="box">
-        <h1>Heads up!</h1>
-        <p>The Snail IDE forum is not created by the Snail IDE developers, and is made by a member of the Snail IDE community.</p>
-        <button on:click={goToForum}>Go</button>
+        <h1 style="font-size: 24px;">Heads up!</h1>
+        <p style="font-size: 18px;">The Snail IDE forum is not created by the Snail IDE developers, and is made by a member of the Snail IDE community.</p>
+        <button style="font-size: 20px; padding: 10px 20px;" on:click={goToForum}>Go</button>
     </div>
 </div>
 

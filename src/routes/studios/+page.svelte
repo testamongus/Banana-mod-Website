@@ -29,7 +29,7 @@
     if (projectUrlInput.trim() !== "") {
       const urls = projectUrlInput.split('\n').map(url => url.trim());
       urls.forEach(url => {
-        if (url.startsWith("https://snail-ide.js.org/") && !studioProjects.some(project => project.url === url)) {
+        if ((url.startsWith("https://snail-ide.js.org/") || url.startsWith("https://editor.snail-ide.com")) && !studioProjects.some(project => project.url === url)) {
           studioProjects.push({ url });
           addedProjects = [...studioProjects];
         }

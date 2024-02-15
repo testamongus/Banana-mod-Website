@@ -285,7 +285,7 @@
             {:else}
                 <img
                     class="project-picture"
-                    src={`https://snailshare.xyz/api/pmWrapper/iconUrl?id=${pageDetails.id}`}
+                    src={`https://snailidebackend.replit.app/api/pmWrapper/iconUrl?id=${pageDetails.id}`}
                     alt={pageDetails.id}
                 />
             {/if}

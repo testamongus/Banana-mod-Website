@@ -1173,7 +1173,7 @@
                                 }}
                             >
                                 <img
-                                    src={`https://snailshare.xyz/api/pmWrapper/iconUrl?id=${content.id}`}
+                                    src={`https://snailidebackend.replit.app/api/pmWrapper/iconUrl?id=${content.id}`}
                                     alt={content.name}
                                 />
                                 <div

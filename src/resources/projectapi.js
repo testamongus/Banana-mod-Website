@@ -1,4 +1,4 @@
-let OriginApiUrl = "https://snailidebackend.replit.app";
+let OriginApiUrl = "https://projects.snail-ide.com";
 // OriginApiUrl = "http://localhost:8080";
 
 class ProjectApi {
@@ -39,7 +39,7 @@ class ProjectApi {
             }
     
             // Make a request to the server-side endpoint
-            fetch(`https://snailidebackend.replit.app/api/users/usernameFromCode?privateCode=${privateCode}`)
+            fetch(`https://projects.snail-ide.com/api/users/usernameFromCode?privateCode=${privateCode}`)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error(`Failed to fetch username. Status: ${response.status}`);

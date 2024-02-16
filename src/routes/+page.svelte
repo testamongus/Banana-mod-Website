@@ -234,7 +234,7 @@
         text={"Our servers are fixed! You can do everything you could do before!"}
         textBreakup={true}
         textColor={"white"}
-        backColor={"##8528dd"}
+        backColor={"#340d59"}
         hasButton={false}
         hasImage={false}
     />

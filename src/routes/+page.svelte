@@ -229,6 +229,16 @@
     />
     <StatusAlert />
     <StatusAlert />
+    <Alert
+        onlyShowID={"sigma:_1"}
+        text={"Our servers are fixed! You can do everything you could do before!"}
+        textBreakup={true}
+        textColor={"white"}
+        backColor={"##8528dd"}
+        hasButton={false}
+        hasImage={false}
+    />
+    <StatusAlert />
 
     {#if loggedIn === false}
         <div class="section-info">

@@ -230,8 +230,8 @@
     <StatusAlert />
     <StatusAlert />
     <Alert
-        onlyShowID={"sigma:_1"}
-        text={"Our servers are fixed! You can do everything you could do before!"}
+        onlyShowID={"sigma:_2"}
+        text={"DO NOT UPLOAD PROJECTS RIGHT NOW, THERE IS A MAJOR ISSUE THAT MAKES THEM GET DELETED"}
         textBreakup={true}
         textColor={"white"}
         backColor={"#340d59"}

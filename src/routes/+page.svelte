@@ -231,7 +231,7 @@
     <StatusAlert />
     <Alert
         onlyShowID={"sigma:_3"}
-        text={"Our servers finnaly work, we are sorry for any projects that were deleted"}
+        text={"Our servers finaly work, we are sorry for any projects that were deleted"}
         textBreakup={true}
         textColor={"white"}
         backColor={"#340d59"}

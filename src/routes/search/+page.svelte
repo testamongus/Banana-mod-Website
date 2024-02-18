@@ -112,7 +112,7 @@
 </script>
 
 <head>
-    <title>PenguinMod - Search</title>
+    <title>Snail IDE - Search</title>
 </head>
 
 <NavigationBar />

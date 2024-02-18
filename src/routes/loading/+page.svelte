@@ -6,7 +6,7 @@
 </script>
 
 <head>
-    <title>PenguinMod - Loading</title>
+    <title>Snail IDE - Loading</title>
 </head>
 
 <NavigationBar />

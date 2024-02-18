@@ -448,7 +448,7 @@
 </script>
 
 <head>
-    <title>PenguinMod - Admin Panel</title>
+    <title>Snail IDE - Admin Panel</title>
 </head>
 
 <NavigationBar />

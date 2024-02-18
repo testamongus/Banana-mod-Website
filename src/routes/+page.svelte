@@ -251,7 +251,7 @@
                     />
                 </h1>
                 <h1>
-                    Built off of <a href="https://snail-ide.vercel.app" style="color:#fff;">PenguinMod</a>
+                    Built off of <a href="https://penguinmod.com" style="color:#fff;">PenguinMod</a>
                 </h1>
                 <Button
                     label="<img src='/tryit.svg' width='32px' style='margin-right:8px'></img>"

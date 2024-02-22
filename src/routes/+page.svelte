@@ -230,8 +230,8 @@
     <StatusAlert />
     <StatusAlert />
     <Alert
-        onlyShowID={"sigma:_3"}
-        text={"Our servers finaly work, we are sorry for any projects that were deleted"}
+        onlyShowID={"sigma:_4"}
+        text={"Featured project system is a bit broken right now, we're trying to fix it"}
         textBreakup={true}
         textColor={"white"}
         backColor={"#340d59"}

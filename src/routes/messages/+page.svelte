@@ -96,7 +96,7 @@
             );
             FileSaver.saveAs(
                 new Blob([projectFile]),
-                `Project_${projectId}.pmp`
+                `Project_${projectId}.snail`
             );
         } catch (err) {
             console.error(err);
@@ -207,7 +207,7 @@
 </script>
 
 <head>
-    <title>PenguinMod - Messages</title>
+    <title>Snail IDE - Messages</title>
 </head>
 
 <NavigationBar />
@@ -590,7 +590,7 @@
     }
 
     .section-info {
-        background: #00c3ffad;
+        background: #4400ffad;
         height: 8rem;
         color: white;
         display: flex;
@@ -699,10 +699,10 @@
     }
 
     :global(body.dark-mode) a {
-        color: dodgerblue;
+        color: rgb(113, 22, 218);
     }
     .fake-link {
-        color: dodgerblue;
+        color: rgb(98, 30, 255);
         text-decoration: underline;
         background: transparent;
         border: 0;

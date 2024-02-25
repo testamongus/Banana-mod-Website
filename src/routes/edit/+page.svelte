@@ -184,7 +184,7 @@
     });
 
     function updateProject() {
-        if (projectMetadata.featured) {
+            if (projectMetadata.featured) {
             const code = projectId;
             const continueEdit = prompt(
                 TranslationHandler.text(
@@ -199,30 +199,36 @@
             //         TranslationHandler.text("editing.confirm.normal", currentLang)
             //     );
             //     if (!continueEdit) return;
-        }
-        const newMetadata = {};
-        const data = {
+            }
+
+            const newMetadata = {};
+            const data = {
             newMeta: newMetadata,
-        };
-        if (components.projectName.value !== projectName) {
+            };
+
+            if (components.projectName.value !== projectName) {
             newMetadata.name = components.projectName.value;
-        }
-        if (
-            components.projectInstructions.value !==
-            projectMetadata.instructions
-        ) {
+            }
+            if (components.projectInstructions.value !== projectMetadata.instructions) {
             newMetadata.instructions = components.projectInstructions.value;
-        }
-        if (components.projectNotes.value !== projectMetadata.notes) {
+            }
+            if (components.projectNotes.value !== projectMetadata.notes) {
             newMetadata.notes = components.projectNotes.value;
-        }
-        if (newProjectImage) {
+            }
+
+            if (newProjectImage) {
             data.image = newProjectImage;
-        }
-        if (newProjectData) {
+            }
+            if (newProjectData) {
             data.project = newProjectData;
-        }
-        ProjectClient.updateProject(projectId, data)
+            }
+
+            // If the project is not featured, include the 'featured' property in the newMetadata
+            if (!projectMetadata.featured) {
+            newMetadata.featured = projectMetadata.featured;
+            }
+
+            ProjectClient.updateProject(projectId, data)
             .then(kickOut)
             .catch((err) => {
                 const message = TranslationHandler.text(
@@ -241,7 +247,8 @@
                 alert(message);
                 // alert(`Uh oh! An error occurred: ${err}`);
             });
-    }
+            }
+
 
     function filePicked(input) {
         return new Promise((resolve, reject) => {

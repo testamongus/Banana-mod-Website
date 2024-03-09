@@ -20,7 +20,7 @@
     <div class="box">
         <h1 style="font-size: 24px;">Heads up!</h1>
         <p style="font-size: 18px;">The Snail IDE forum is not created by the Snail IDE developers, and is made by a member of the Snail IDE community.</p>
-        <button style="font-size: 20px; padding: 10px 20px;" on:click={goToForum}>Go</button>
+        <button on:click={goToForum}>Go</button>
     </div>
 </div>
 
@@ -49,5 +49,13 @@
         background-color: purple;
         color: white;
         cursor: pointer;
+        font-size: 20px;
+        padding: 10px 20px;
+        border-radius: 10px;
+        transition-duration: 250ms;
+    }
+
+    button:hover {
+        background-color: rgb(111, 0, 111);
     }
 </style>

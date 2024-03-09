@@ -19,7 +19,7 @@ export default {
     /**
      * PenguinMod's terms of service page
      */
-    terms: "https://snail-ide.com/terms",
+    terms: "/terms",
 
     /**
      * PenguinMod's privacy policy page
@@ -62,7 +62,7 @@ export default {
     /**
      * PenguinMod's packager page
      */
-    packager: "https://snail-ide.com/PenguinMod-Packager/",
+    packager: "/PenguinMod-Packager/",
 
     /**
      * PenguinMod's unofficial wiki
@@ -87,7 +87,7 @@ export default {
     /**
      * TurboWarp's website, but I changed it to Penguinmod because we are based off of that
      */
-    turbowarp: "https://snail-ide.com",
+    turbowarp: "/",
 
     /**
      * PenguinMod's github page
@@ -102,12 +102,12 @@ export default {
     /**
      * The admin panel for pm projects api
      */
-    adminPanel: "https://snail-ide.com/panel",
+    adminPanel: "/panel",
 
     /**
      * donate to use yipeee
      */
-    donate: "https://snail-ide.com/donate",
+    donate: "/donate",
 /**
      * our status page lol
      */
@@ -115,7 +115,7 @@ export default {
 /**
      * direct page to upload
      */
-    upload_project: "https://snail-ide.vercel.app/upload",
+    upload_project: "/upload",
     /**
      * docs url
      */

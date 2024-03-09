@@ -167,7 +167,7 @@
             <div class="login-prompt">
                 <p>
                     <LocalizedText
-                        text="Please log in to view your PenguinMod projects."
+                        text="Please log in to view your Snail IDE projects."
                         key="mystuff.login"
                         lang={currentLang}
                     />
@@ -297,7 +297,7 @@
     }
 
     .section-info {
-        background: #00c3ffad;
+        background: #6025ebad;
         height: 6rem;
         color: white;
         display: flex;

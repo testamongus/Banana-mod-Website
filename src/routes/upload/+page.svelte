@@ -1012,7 +1012,7 @@
     }
 
     .section-info {
-        background: #00c3ffad;
+        background: #6025ebad;
         height: 6rem;
         color: white;
         display: flex;
@@ -1171,7 +1171,7 @@
 
     .file-picker {
         display: block;
-        background-color: #00c3ff;
+        background-color: var(--penguinmod-color);
         color: white;
         border-radius: 1000px;
         width: 100%;

@@ -28,7 +28,6 @@
 	
     let isLiveTests = false;
 
-    //bring back livetests (seriously where the hell did it go? swore it was here)
     onMount(async () => { 
         const urlParams = new URLSearchParams(window.location.search);
         isLiveTests = urlParams.has("livetests");
@@ -239,7 +238,7 @@
 </div>
 <div class="bar">
 	<a class="logo" href="/">
-		<img class="logo-image" src="/navicon.png" alt="PenguinMod" />
+		<img class="logo-image" src="/navicon.svg" alt="PenguinMod" />
 	</a>
 	<div style="margin-right: 12px;" />
 	<div class="logo-launcher-margin" />

@@ -569,7 +569,7 @@
                         />
                         <p>
                             <LocalizedText
-                                text="Whoops! Our server's having some problems. Try again later. Or if your on a school computer, https://snailshare.xyz is blocked."
+                                text="Whoops! Our server's having some problems. Try again later. Or if your on a school computer, https://snailshare.xyz may be blocked."
                                 key="home.server.error"
                                 lang={currentLang}
                             />

@@ -238,7 +238,7 @@
 </div>
 <div class="bar">
 	<a class="logo" href="/">
-		<img class="logo-image" src="/navicon.svg" alt="PenguinMod" />
+		<img class="logo-image" src="/navicon.svg" alt="Snail IDE" />
 	</a>
 	<div style="margin-right: 12px;" />
 	<div class="logo-launcher-margin" />
@@ -413,7 +413,7 @@
 		height: 100%;
 	}
 	.logo-image {
-		margin-top: 10%;
+		margin-top: 15%;
 		height: 80%;
 		transition: 0.15s ease all;
 	}

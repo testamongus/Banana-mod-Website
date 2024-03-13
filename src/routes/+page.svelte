@@ -569,10 +569,17 @@
                         />
                         <p>
                             <LocalizedText
-                                text="Whoops! Our server's having some problems. Try again later. Or if your on a school computer, https://snailshare.xyz may be blocked."
+                                text="Whoops! Our server's having some problems. Try again later. Or if you're on a school computer, https://snailshare.xyz may be blocked. You can still make a project."
                                 key="home.server.error"
                                 lang={currentLang}
                             />
+                            <Button link={LINK.editor}>
+                                <LocalizedText
+                                    text="Create a project"
+                                    key="home.footer.sections.website.createAProject"
+                                    lang={currentLang}
+                                />
+                            </Button>
                         </p>
                     </div>
                 {:else}
@@ -605,10 +612,17 @@
                         />
                         <p>
                             <LocalizedText
-                                text="Whoops! Our server's having some problems. Try again later."
+                                text="Whoops! Our server's having some problems. Try again later. Or if you're on a school computer, https://snailshare.xyz may be blocked. You can still make a project."
                                 key="home.server.error"
                                 lang={currentLang}
                             />
+                            <Button link={LINK.editor}>
+                                <LocalizedText
+                                    text="Create a project"
+                                    key="home.footer.sections.website.createAProject"
+                                    lang={currentLang}
+                                />
+                            </Button>
                         </p>
                     </div>
                 {:else}

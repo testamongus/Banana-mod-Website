@@ -48,7 +48,11 @@
 				messageCount = 0;
 			});
 	}
-	Authentication.onAuthentication(() => window.close());
+	Authentication.onAuthentication(() => {
+        try {
+            window.close()
+        } catch {}
+    });
 
     function signIn() {
         Authentication.authenticate();

@@ -186,3 +186,6 @@ This also applies if you are using multiple audio clips to play loud/unpleasant 
 
 If you do want to use loud audio, you must display a warning screen that the user must interact with to continue.
 Stating loud sounds are in the project using the title, instructions or notes is not sufficent.
+
+## Bots
+Do not use bots to spam votes, loves, or views on a project, we log IP addresses for safety, if we see you are spamming projects via bots, you have a high risk of being banned, the project you are botting won't be banned but the person who botted will be.

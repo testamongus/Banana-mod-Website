@@ -134,50 +134,6 @@
     font-style: italic;
   }
 
-  /* Additional styles for comments section */
-  .comments-section {
-    margin-top: 30px;
-  }
-
-  .comments-form {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .comments-form input[type="text"] {
-    width: 60%;
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-right: 10px;
-  }
-
-  .comments-form button {
-    padding: 8px 16px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-  }
-
-  .comments-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .comments-list li {
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
 </style>
 
 <!-- Navigation bar component -->
@@ -212,18 +168,4 @@
   {:else}
     <p>No studio found</p>
   {/if}
-
-  <!-- Comments section -->
-  <div class="comments-section">
-    <h2>Comments:</h2>
-    <div class="comments-form">
-      <input type="text" id="comment-input" placeholder="Add a comment...">
-      <button on:click={addComment}>Add Comment</button>
-    </div>
-    <ul class="comments-list">
-      {#each comments as comment, index}
-        <li key={index}>{comment}</li>
-      {/each}
-    </ul>
-  </div>
 </div>

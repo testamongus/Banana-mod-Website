@@ -117,7 +117,7 @@
   }
 
   h1 {
-    color: #333;
+    color: #ffffff;
   }
 
   section {
@@ -149,6 +149,7 @@
 <main>
   <NavigationMargin />
   <h1>Create a Studio</h1>
+  <h1>WARNING: This is a beta feature, there is still many things that need to be made for this like comments, editing studios and more!</h1>
 
   <section>
     <h2>Studio Name</h2>

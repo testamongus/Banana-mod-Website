@@ -193,3 +193,6 @@ Stating loud sounds are in the project using the title, instructions or notes is
 
 ## Bots
 Do not use bots to spam votes, loves, or views on a project, we log IP addresses for safety, if we see you are spamming projects via bots, you have a high risk of being banned, the project you are botting won't be banned but the person who botted will be.
+
+## Project License
+When you upload a project to Snail IDE, your project is under the GNU General Public License v3.0, if you choose to package your project and release it somewhere else, it is whatever license you want. (Some places may have different rules, please respect them)

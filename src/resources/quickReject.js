@@ -26,7 +26,8 @@ const data = {
     "Attempts to sell an untrusted product": "Your project was rejected because you are attempting to sell products through it without using one of the services specified in the Uploading Guidelines. We fully respect that you are trying to profit, but we want to be sure our users are not being scammed and receive the promised product.",
     "Contains loud sounds": "Your project was rejected because it contains loud sounds above the boundary in the sound editor. You must place a loud sound warning either as a warning screen or remove the loud sounds entirely.",
     "Piracy": "Your project was rejected because it contains or enables downloading of stolen copyrighted or paid content. This is a serious offense and you may get your account banned or limited.",
-    "Unsafe Chat": "Your project was rejected because it uses a chat system, please only use prebuilt messages for chat. Even if it is moderated, it will be removed."
+    "Unsafe Chat": "Your project was rejected because it uses a chat system, please only use prebuilt messages for chat. Even if it is moderated, it will be removed.",
+    "Only consists of an image": "The Snail IDE rules have updated, and uploading a project based on a single image is no longer allowed.",
 };
 
 const getTopLevel = () => {

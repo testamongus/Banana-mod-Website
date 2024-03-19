@@ -1,4 +1,4 @@
-> Remeber Snail IDE allows anybody to use the website for free, act accordinaly. We accept everyone on this website. 
+> Remeber Snail IDE allows anybody to use the website for free, act accordingly. We accept everyone on this website. 
 
 # Project Uploading & Updating guidelines
 These guidelines **only apply to Snail IDE's project sharing**.
@@ -7,10 +7,13 @@ If you are packaging your project for release on other websites, you should foll
 Also, let us know of any necessary changes we should make by talking to us at my [Scratch Page](https://scratch.mit.edu/users/Mr_rudy/) or making an issue on our [GitHub](https://github.com/Snail-IDE/Snail-IDE-Website/issues).
 
 ## Base requirements for a project
+```warning
+As of March 19th, 2024, Snail IDE has decided to ban uploaded projects based around a single image.
+```
 Uploading empty or default projects will get your project removed.
 Please do not do this multiple times as your account will be limited if we see you doing this.
-
-Projects that are based around using an iframe to display other websites or projects will be removed.
+Projects that are based around using an iframe to display other websites or projects will be removed.   
+Projects that only have an image will be removed.   
 This is a rule because the only purpose of this is to show content that is not yours or can be viewed anyways in your browser.
 *(This may not apply to projects uploaded before October 6th, 2023 due to communication issues.)*
 

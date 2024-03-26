@@ -271,4 +271,13 @@
     .feature {
         background: rgba(255, 229, 107, 0.25);
     }
+    .like:hover {
+        box-shadow: 0 0 20px 10px rgba(255, 106, 200, 0.25);
+    }
+
+    .feature:hover {
+        box-shadow: 0 0 20px 10px rgba(255, 229, 107, 0.25);
+    }
+    /* Having view may make people think they can click it */
+    
 </style>

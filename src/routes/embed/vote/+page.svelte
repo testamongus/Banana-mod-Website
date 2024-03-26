@@ -262,6 +262,8 @@
         color: rgb(255, 229, 107);
     } */
 
+    /* button colors: */
+
     .like {
         background: rgba(255, 106, 200, 0.25);
     }
@@ -271,6 +273,7 @@
     .feature {
         background: rgba(255, 229, 107, 0.25);
     }
+    /* button effects: */
     .like:hover {
         box-shadow: 0 0 20px 10px rgba(255, 106, 200, 0.25);
     }
@@ -278,6 +281,8 @@
     .feature:hover {
         box-shadow: 0 0 20px 10px rgba(255, 229, 107, 0.25);
     }
-    /* Having view may make people think they can click it */
+    .view:hover {
+        box-shadow: 0 0 20px 10px rgba(0, 169, 255, 0.25);
+    }
     
 </style>

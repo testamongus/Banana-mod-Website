@@ -274,15 +274,27 @@
         background: rgba(255, 229, 107, 0.25);
     }
     /* button effects: */
+    .transition {
+    transition: box-shadow 0.3s ease;
+    }
+    
+    .like:hover,
+    .feature:hover,
+    .view:hover {
+        box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0);
+    }
+    
     .like:hover {
         box-shadow: 0 0 20px 10px rgba(255, 106, 200, 0.25);
     }
-
+    
     .feature:hover {
         box-shadow: 0 0 20px 10px rgba(255, 229, 107, 0.25);
     }
+    
     .view:hover {
         box-shadow: 0 0 20px 10px rgba(0, 169, 255, 0.25);
     }
+
     
 </style>

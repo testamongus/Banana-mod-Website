@@ -140,7 +140,7 @@
 <div class="main">
     {#if loaded}
         <div title="Like this project" class="parent button-text">
-            <button class="like" on:click={love}>
+            <button class="like animate" on:click={love}>
                 <img
                     src="/heart.svg"
                     alt="Like"
@@ -152,7 +152,7 @@
             <p>{likes + Number(userLiked)}</p>
         </div>
         <div title="Vote to Feature this project" class="parent button-text">
-            <button class="feature" on:click={vote}>
+            <button class="feature animate" on:click={vote}>
                 <img
                     src="/feature.svg"
                     alt="Vote to Feature"
@@ -166,7 +166,7 @@
             </p>
         </div>
         <div title="Project views" class="parent button-text">
-            <button class="view">
+            <button class="view animate">
                 <img
                     src="/view.svg"
                     alt="View Count"
@@ -295,6 +295,8 @@
     .view:hover {
         box-shadow: 0 0 20px 10px rgba(0, 169, 255, 0.25);
     }
+
+    .animate {transition: 0.5s;}
 
     
 </style>

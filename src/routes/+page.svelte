@@ -240,15 +240,13 @@
     />
     <StatusAlert />
     <Alert
-        onlyShowID={"matpat:_24"}
-        text={"Check out the Snail IDE MatPat Game Jam 2024!"}
+        onlyShowID={"matpat:_25"}
+        text={"The MatPat Game Jam submissions will be ranked sometime next week! Thanks for submitting!"}
         textBreakup={true}
         textColor={"white"}
         backColor={"#7DDA58"}
-        hasButton={true}
+        hasButton={false}
         hasImage={false}
-        buttonText={"Click Here For More"}
-        buttonHref={"https://editor.snail-ide.com/#891618953165"}
     />
     <StatusAlert />
 

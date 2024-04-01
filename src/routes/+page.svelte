@@ -201,7 +201,10 @@
       }
     }
   
-
+    const isItAprilFoolDay = () => {
+		var now = new Date();
+		return (now.getMonth() == 3 && now.getDate() == 1);
+	}
     
     
 </script>
@@ -628,6 +631,9 @@
                 {/if}
             </div>
         </ContentCategory>
+        {#if isItAprilFoolDay()}
+        <img src="https://penguinmod.com/cat/dave.png" alt="dave" />
+        {/if}
     </div>
 
     <div class="footer">

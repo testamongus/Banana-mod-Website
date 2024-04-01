@@ -179,6 +179,11 @@
 			}
 		});
 	});
+
+	const isItAprilFoolDay = () => {
+		var now = new Date();
+		return (now.getMonth() == 3 && now.getDate() == 1);
+	}
 </script>
 
 <div style="display: none;" class="languageSelect" bind:this={languageMenu}>
@@ -238,7 +243,11 @@
 </div>
 <div class="bar">
 	<a class="logo" href="/">
-		<img class="logo-image" src="/navicon.svg" alt="Snail IDE" />
+		{#if isItAprilFoolDay()}
+			<img class="logo-image" src="https://www.ba4x.pro/bleh.png" alt="Snail IDE" />
+		{:else}
+			<img class="logo-image" src="/navicon.svg" alt="Snail IDE" />
+		{/if}
 	</a>
 	<div style="margin-right: 12px;" />
 	<div class="logo-launcher-margin" />
@@ -372,6 +381,250 @@
 	{/if}
 </div>
 
+{#if isItAprilFoolDay()}
+<style>
+	:root {
+		--penguinmod-color: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(0,212,255,1) 100%);
+	}
+	:global(body.dark-mode) {
+		--penguinmod-color: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(0,212,255,1) 100%);
+	}
+
+	.bar {
+		position: fixed;
+		width: 100%;
+		left: 0px;
+		top: 0px;
+		background: var(--penguinmod-color);
+		height: 3rem;
+		color: white;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: nowrap;
+		box-sizing: border-box;
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-size: 0.75rem;
+		font-weight: bold;
+		min-width: 1000px;
+		z-index: 1000;
+	}
+	:global(body.launcher-mode) .bar {
+		width: 5rem;
+		height: 100%;
+		min-width: initial;
+		min-height: 360px;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	.logo {
+		height: 100%;
+	}
+	.logo-image {
+		margin-top: 15%;
+		height: 80%;
+		transition: 0.15s ease all;
+	}
+	.logo-image:hover {
+		margin-top: 5%;
+		height: 90%;
+		transition: 0.15s ease all;
+	}
+	.logo-launcher-margin {
+		width: 0;
+		height: 0;
+	}
+	:global(body.launcher-mode) .logo {
+		position: absolute;
+		top: 8px;
+		height: initial;
+		width: 100%;
+	}
+	:global(body.launcher-mode) .logo-image {
+		height: initial;
+		margin-top: 20%;
+		margin-left: 20%;
+		width: 60%;
+	}
+	:global(body.launcher-mode) .logo-image:hover {
+		height: initial;
+		margin-top: 15%;
+		margin-left: 15%;
+		width: 70%;
+	}
+	:global(body.launcher-mode) .logo-launcher-margin {
+		height: 90px;
+	}
+
+	.discord-button-icon {
+		display: none;
+	}
+	.discord-button-icon > img {
+		width: 2rem;
+		padding: 2px 0;
+	}
+	:global(body.launcher-mode) .discord-button-icon {
+		display: initial;
+	}
+	:global(body.launcher-mode) .discord-button-text {
+		display: none;
+	}
+
+	.languageSelect {
+		position: fixed;
+		width: 256px;
+		max-height: 300px;
+		overflow: auto;
+		background: white;
+		box-shadow: 0px 0px 8px black;
+		outline: #222 1px solid;
+		z-index: 9999999;
+	}
+	.languageOption {
+		width: 100%;
+		/* margin: 4px 0px; */
+		/* border-radius: 4px; */
+		background: white;
+		border: 0;
+		font-size: 1rem;
+		text-align: left;
+		cursor: pointer;
+	}
+	:global(html[dir="rtl"]) .languageOption {
+		text-align: right;
+	}
+	.languageCount {
+		/* width: 100%; */
+		/* text-align: center; */
+		font-weight: bold;
+		font-size: 12px;
+		margin-left: 4px;
+		margin-bottom: 0px;
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+
+	:global(body.dark-mode) .languageSelect {
+		background: #222;
+		outline: white 1px solid;
+	}
+	:global(body.dark-mode) .languageOption {
+		color: white;
+		background: #222;
+	}
+
+	.languageOption:hover {
+		background: dodgerblue !important;
+		color: white;
+	}
+
+	.message-badge {
+		position: absolute;
+		background: red;
+		color: white;
+		font-weight: bold;
+		border-radius: 1000px;
+		width: 16px;
+		height: 16px;
+		top: 0px;
+		right: 0px;
+	}
+	.rankup-badge {
+		display: inline-block;
+		text-align: center;
+		background: red;
+		color: white;
+		font-weight: bold;
+		border-radius: 1000px;
+		width: 16px;
+		height: 16px;
+	}
+
+	.profile-picture {
+		border-radius: 4px;
+		width: 30px;
+		height: 30px;
+		margin-right: 8px;
+	}
+	:global(html[dir="rtl"]) .profile-picture {
+		margin-right: initial;
+		margin-left: 8px;
+	}
+	.profile-dropdown {
+		background: transparent;
+		border-radius: 4px;
+		padding: 0 10px;
+		border: 0;
+		margin: 0;
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+
+		cursor: pointer;
+		user-select: none;
+	}
+	.profile-dropdown > p {
+		font-weight: bold;
+		font-size: 0.85rem;
+		color: white;
+	}
+
+	.profile-dropdown:hover,
+	.profile-dropdown:focus {
+		background: rgba(0, 0, 0, 0.15);
+	}
+
+	.profile-dropdown-menu {
+		position: fixed;
+		background: var(--penguinmod-color);
+		border-radius: 4px;
+		border: 1px solid rgba(0, 0, 0, 0.15);
+		padding: 4px 0;
+		border-top: 0;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		z-index: 9999;
+	}
+	.profile-dropdown-menu button {
+		background: transparent;
+		font-weight: bold;
+		font-size: 0.85rem;
+		text-align: left;
+		width: 100%;
+		color: white;
+		border: 0;
+		padding: 8px 8px;
+		padding-right: 4px;
+		margin: 4px 0;
+		text-decoration: none;
+		cursor: pointer;
+		user-select: none;
+	}
+	:global(html[dir="rtl"]) .profile-dropdown-menu button {
+		text-align: right;
+	}
+	.profile-dropdown-menu button:hover {
+		background: rgba(0, 0, 0, 0.15);
+	}
+
+	.only-non-launcher {
+		display: initial;
+	}
+	.only-launcher {
+		display: none;
+	}
+	:global(body.launcher-mode) .only-non-launcher {
+		display: none;
+	}
+	:global(body.launcher-mode) .only-launcher {
+		display: initial;
+	}
+</style>
+{:else}
 <style>
 	:root {
 		--penguinmod-color: #57039C;
@@ -614,3 +867,4 @@
 		display: initial;
 	}
 </style>
+{/if}

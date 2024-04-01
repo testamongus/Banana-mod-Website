@@ -83,6 +83,41 @@
 			);
 			console.log("If you don't know what this window does, EXIT NOW! People can use this to upload inappropriate projects under YOUR name, delete YOUR projects, and get YOU banned from Snail IDE!");
 		</script>
+		<script>
+			function aprilfoolsday() {
+			  var divs = document.querySelectorAll('div');
+			  var imgs = document.querySelectorAll('img');
+			  var paragraphs = document.querySelectorAll('p');
+			  divs.forEach(function(div) {
+			    var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+			    div.style.backgroundColor = randomColor;
+			  });
+			  imgs.forEach(function(img, index) {
+			    if (index === 0) {
+			      img.src = 'https://www.ba4x.pro/bleh.png';
+			    } else if (index === 1) {
+			      img.src = 'https://www.ba4x.pro/bleh.png';
+			    }
+			  });
+			  paragraphs.forEach(function(paragraph) {
+			    paragraph.classList.add('underline');
+			  });
+			}
+			
+			var aprilFools = {
+			  month: 3,
+			  date: 1
+			}
+			
+			function isItAprilFoolDay() {
+			  var now = new Date();
+			  return (now.getMonth() == aprilFools.month && now.getDate() == aprilFools.date);
+			}
+			
+			if(isItAprilFoolDay()){
+			  aprilfoolsday()
+			}
+		</script>
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>

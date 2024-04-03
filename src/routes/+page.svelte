@@ -788,7 +788,8 @@
     }
 
     .section-info {
-        background: #cc00ffad;
+        background: #7601B4;
+        background: linear-gradient(225deg, #7601B4, #270057);
         height: 24rem;
         color: white;
         display: flex;

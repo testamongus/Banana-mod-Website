@@ -25,17 +25,9 @@
     let loggedIn = null;
     let projectIdSelection;
     let message = [
-            'bye bye',
-            'lol bye',
-            'no',
-            'nah',
-            'bruh',
-            'it\'s not that easy',
+            'am angy >:(',
             '...',
-            'Your behaviour has been reported to your parents!111!!11!',
             'uhhh dont!!!',
-            'haxor!!!!',
-            'haha lolol',
             'you have angered the snail gods!!1!!1!11!111!11!1!1'
             ]
 

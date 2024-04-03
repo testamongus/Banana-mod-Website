@@ -24,8 +24,22 @@
 
     let loggedIn = null;
     let projectIdSelection;
+    let antiScriptKiddie = [
+            'bye bye script kiddie',
+            'bro thought it was that easy 💀',
+            'lmao bye',
+            'no',
+            'nah',
+            'bruh',
+            'it\'s not that easy',
+            '💀💀💀💀💀💀💀💀💀💀💀💀',
+            '...'
+            ]
 
     function kickOut() {
+        alert(
+            antiScriptKiddie[Math.floor(Math.random() * antiScriptKiddie.length)]
+        )
         location.href = location.origin + "/bx-tv1.mp4";
     }
 

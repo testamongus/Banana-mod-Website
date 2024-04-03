@@ -24,7 +24,7 @@
 
     let loggedIn = null;
     let projectIdSelection;
-    let antiScriptKiddie = [
+    let message = [
             'bye bye',
             'lol bye',
             'no',
@@ -41,7 +41,7 @@
 
     function kickOut() {
         alert(
-            antiScriptKiddie[Math.floor(Math.random() * antiScriptKiddie.length)]
+            message[Math.floor(Math.random() * message.length)]
         )
         location.href = location.origin + "/bx-tv1.mp4";
     }

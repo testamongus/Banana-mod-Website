@@ -220,7 +220,7 @@
 
     <Alert
         onlyShowID={"donatee:_1"}
-        text={"Snail IDE is a good free-to-use visual coding website/game engine based off of PenguinMod."}
+        text={"Snail IDE is a powerful free-to-use visual coding website/game engine based off of PenguinMod."}
         textBreakup={true}
         textColor={"white"}
         hasImage={true}

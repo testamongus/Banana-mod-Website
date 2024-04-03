@@ -789,7 +789,7 @@
 
     .section-info {
         background: #7601B4;
-        background: linear-gradient(225deg, #7601B4, #270057);
+        background: linear-gradient(225deg, #8900d3, #270057);
         height: 24rem;
         color: white;
         display: flex;

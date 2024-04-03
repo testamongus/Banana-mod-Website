@@ -24,17 +24,8 @@
 
     let loggedIn = null;
     let projectIdSelection;
-    let message = [
-            'am angy >:(',
-            '...',
-            'uhhh dont!!!',
-            'you have angered the snail gods!!1!!1!11!111!11!1!1'
-            ]
 
     function kickOut() {
-        alert(
-            message[Math.floor(Math.random() * message.length)]
-        )
         location.href = location.origin + "/bx-tv1.mp4";
     }
 

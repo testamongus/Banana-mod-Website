@@ -33,7 +33,11 @@
             'bruh',
             'it\'s not that easy',
             '💀💀💀💀💀💀💀💀💀💀💀💀',
-            '...'
+            '...',
+            'stop being such a script kiddie',
+            'Your behaviour has been reported to your parents.',
+            'Go to sleep, you need to wake up for school tomorrow.',
+            'give up being a script kiddie'
             ]
 
     function kickOut() {

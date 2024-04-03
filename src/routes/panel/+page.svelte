@@ -25,7 +25,7 @@
     let loggedIn = null;
     let projectIdSelection;
     let antiScriptKiddie = [
-            'bye bye script kiddie',
+            'bye bye',
             'bro thought it was that easy 💀',
             'lol bye',
             'no',
@@ -34,10 +34,8 @@
             'it\'s not that easy',
             '💀💀💀💀💀💀💀💀💀💀💀💀',
             '...',
-            'stop being such a script kiddie',
-            'Your behaviour has been reported to your parents.',
-            'Go to sleep, you need to wake up for school tomorrow.',
-            'give up being a script kiddie',
+            'Your behaviour has been reported to your parents!111!!11!',
+            'uhhh dont!!!',
             'haxor!!!!',
             'haha lolol'
             ]

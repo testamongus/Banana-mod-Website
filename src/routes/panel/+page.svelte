@@ -27,7 +27,7 @@
     let antiScriptKiddie = [
             'bye bye script kiddie',
             'bro thought it was that easy 💀',
-            'lmao bye',
+            'lol bye',
             'no',
             'nah',
             'bruh',
@@ -37,7 +37,9 @@
             'stop being such a script kiddie',
             'Your behaviour has been reported to your parents.',
             'Go to sleep, you need to wake up for school tomorrow.',
-            'give up being a script kiddie'
+            'give up being a script kiddie',
+            'haxor!!!!',
+            'haha lolol'
             ]
 
     function kickOut() {

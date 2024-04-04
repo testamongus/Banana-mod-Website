@@ -840,7 +840,7 @@
                 {#if selectedProjectName}
                     <a
                         target="_blank"
-                        href={`https://snail-ide.js.org//#${lastSelectedProjectId}`}
+                        href={`https://editor.snail-ide.com/#${lastSelectedProjectId}`}
                         style="color: dodgerblue"
                     >
                         <p>
@@ -1192,9 +1192,9 @@
                                     <p>
                                         View project at
                                         <a
-                                            href={`https://snail-ide.js.org//#${content.id}`}
+                                            href={`https://editor.snail-ide.com/#${content.id}`}
                                         >
-                                            {`https://snail-ide.js.org//#${content.id}`}
+                                            {`https://editor.snail-ide.com/#${content.id}`}
                                         </a>
                                         or
                                         <button

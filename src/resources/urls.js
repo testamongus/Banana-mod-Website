@@ -120,4 +120,9 @@ export default {
      * docs url
      */
     docs: "https://docs.snail-ide.com/",
+    /**
+     * feedback url
+     * you can change this to something else if you want
+     */
+    feedback: "https://scratch.mit.edu/discuss/topic/689165/#reply"
 }

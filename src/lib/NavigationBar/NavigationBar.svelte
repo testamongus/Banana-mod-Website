@@ -266,31 +266,34 @@
 			/>
 		</BarPage>
 	</div>
-	<BarButton
-		highlighted="true"
+	<BarPage
 		link={LINK.status}
-		noredirect="true"
-		classActor={"statusButton"}
 	>
-		<div class="status-button-text">
-			Status Page
-		</div>
-		<div class="discord-button-icon">
-			<img src="/discord_white.png" alt="Discord" />
-		</div>
-	</BarButton>
+		<LocalizedText
+				text="Status Page"
+				key="navigation.statusPage"
+				lang={currentLang}
+		/>
+
+	</BarPage>
+	<BarPage link={LINK.upload_project}>
+		<LocalizedText
+				text="Upload"
+				key="navigation.upload"
+				lang={currentLang}
+		/>
+	</BarPage>
 	<BarButton
 		highlighted="true"
-		link={LINK.upload_project}
+		link={LINK.feedback}
 		noredirect="true"
-		classActor={"uploadButton"}
+		classActor={"feedbackButton"}
 	>
-		<div class="upload-button-text">
-			Upload
-		</div>
-		<div class="discord-button-icon">
-			<img src="/discord_white.png" alt="Discord" />
-		</div>
+		<LocalizedText
+				text="Snail IDE Feedback"
+				key="navigation.feedback"
+				lang={currentLang}
+		/>
 	</BarButton>
 	<!--<BarButton
 		highlighted="true"

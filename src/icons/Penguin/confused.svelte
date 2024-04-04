@@ -5,7 +5,7 @@
 </script>
 
 
-<img style={'width: ${width};height: ${height};'} src="https://snail-ide.vercel.app/confusedsnail.png">
+<img style={'width: ${width};height: ${height};'} src="https://snail-ide.com/confusedsnail.png">
 
 <style>
     * {

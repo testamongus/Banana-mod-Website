@@ -264,7 +264,7 @@
                     />
                 </h1>
                 <h1>
-                    Built off of <a href="https://penguinmod.com" style="color:#fff;">PenguinMod</a>
+                    Built off of <a href="https://scratch.org" style="color:orange;">Scratch</a>, <a href="https://turbowarp.org" style="color:red;">TurboWarp</a>, and <a href="https://penguinmod.com" style="color:cyan;">PenguinMod</a>
                 </h1>
                 <Button
                     label="<img src='/tryit.svg' width='32px' style='margin-right:8px'></img>"

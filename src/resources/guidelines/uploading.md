@@ -1,10 +1,17 @@
-> Remeber Snail IDE allows anybody to use the website for free, act accordingly. We accept everyone on this website. 
+> Remember Snail IDE allows anybody to use the website for free, act accordingly. We accept everyone on this website. 
 
 # Project Uploading & Updating guidelines
 These guidelines **only apply to Snail IDE's project sharing**.
 If you are packaging your project for release on other websites, you should follow their rules instead.
 
 Also, let us know of any necessary changes we should make by talking to us at my [Scratch Page](https://scratch.mit.edu/users/Mr_rudy/) or making an issue on our [GitHub](https://github.com/Snail-IDE/Snail-IDE-Website/issues).
+
+## TL;DR
+<!-- Inspired by TurboWarp on a certain social media with an alien as its mascot -->
+We encourage you to read the whole guidelines, but, if you really don't want to:
+```warning
+Don't swear, troll, nor threaten each other. Please just be a decent human being. If you can't at least do these, please don't share your projects on Snail IDE. If you troll each other or violate any of these rules, action WILL be taken.
+```
 
 ## Base requirements for a project
 ```warning

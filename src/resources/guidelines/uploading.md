@@ -8,7 +8,7 @@ Also, let us know of any necessary changes we should make by talking to us at my
 
 ## TL;DR
 <!-- Inspired by TurboWarp on a certain social media with an alien as its mascot -->
-We encourage you to read the whole guidelines, but, if you really don't want to:
+We encourage you to read the whole guidelines, but, if you really don't want to read it:
 ```warning
 Don't swear, troll, nor threaten each other. Please just be a decent human being. If you can't at least do these, please don't share your projects on Snail IDE. If you troll each other or violate any of these rules, action WILL be taken.
 ```

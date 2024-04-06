@@ -631,9 +631,9 @@
                 {/if}
             </div>
         </ContentCategory>
-	<br />
+        {#if isItAprilFoolDay()}
         <img src="https://penguinmod.com/cat/dave.png" alt="dave" />
-	<br />
+        {/if}
     </div>
 
     <div class="footer">

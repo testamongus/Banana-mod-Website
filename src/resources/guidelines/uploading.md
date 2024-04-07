@@ -10,7 +10,7 @@ Also, let us know of any necessary changes we should make by talking to us at my
 <!-- Inspired by TurboWarp on a certain social media with an alien as its mascot -->
 We encourage you to read the whole guidelines, but, if you really don't want to read it:
 ```warning
-Don't swear, troll, nor threaten each other. Please just be a decent human being. If you can't at least do these, please don't share your projects on Snail IDE. If you troll each other or violate any of these rules, action WILL be taken.
+Don't swear, troll, nor threaten each other, because Snail IDE is available for children under 13. Please be a decent human being. If you can't at least do these, please don't share your projects on Snail IDE. If you troll each other or violate any of these rules, action WILL be taken.
 ```
 
 ## Base requirements for a project
@@ -114,7 +114,8 @@ Downloading malicious material may be an executable application or DLL that cont
 Your account will be instantly banned and you may be reported to the Scratch Team or security services if your project does this.
 
 ## Profanity / Curse words
-We have decided to completly ban profanity, using profanity around the site at all will cause your project to be deleted, but if it gets too bad you will be banned from Snail IDE.
+We have decided to completely ban profanity, using profanity around the site at all will cause your project to be deleted, but if it gets too bad you will be banned from Snail IDE.
+
 
 ## Limits on Blood and Violence
 If your project contains large amounts of blood, it must have a warning somewhere at the start of the project and in the project instructions.

@@ -22,20 +22,9 @@
             });
             throw new Error('no parents errrmm what the sigma');
         }
-        const post = (data) => {
-            opener.postMessage(
-                {
-                    ext: data,
-                },
-                'https://editor.snail-ide.com/editor.html'
-            );
-        }
-        post(extObj);
-        window.addEventListener("message", (e) => {
-            if (!e.data.source == "react-devtools-content-script") { //i hate this extension sm
-                loading = false;
-            }
-        });
+        let bc = new BroadcastChannel("extension");
+        bc.postMessage({extension: extObj});
+        bc.addEventListener("message", () => window.close());
     }
 </script>
 

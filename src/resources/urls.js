@@ -124,5 +124,5 @@ export default {
      * feedback url
      * you can change this to something else if you want
      */
-    feedback: "https://github.com/orgs/Snail-IDE/discussions"
+    feedback: "https://forum.snail-ide.com/"
 }

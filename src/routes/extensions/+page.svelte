@@ -26,6 +26,20 @@
         bc.postMessage({extension: extObj});
         bc.addEventListener("message", () => window.close());
     }
+
+    // Based on https://stackoverflow.com/a/41126244
+    const filter = (input, json) => {
+        let output = [];
+        for (var key in json) {
+            if (json[key].name.toLowerCase().includes(input.toLowerCase()) || input === '') {
+                output.push(json[key]);
+            }
+        }
+        return output;
+    }
+
+    let search = '';
+
 </script>
 
 <head>
@@ -39,6 +53,7 @@
 <div class="main">
     <NavigationMargin />
 
+    <input type="text" placeholder="Search..." value="" on:input={(e) => {search = e.target.value}}/>
     <div class="box">
         {#if loading}
             <div class="external-loading">
@@ -48,7 +63,7 @@
                 </p>
             </div>
         {/if}
-        {#each Extensions as ext}
+        {#each filter(search, Extensions) as ext}
             <Extension image={ext.iconURL ?? "/noicon.png"} name={ext.name} creator={ext.collaborator ?? ""} sendFunc={handleClick} description={ext.description} extObject={ext} />
         {/each}
     </div>
@@ -59,7 +74,11 @@
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
 
+    input{
+        margin-top: 8px;
+    }
     .main {
+        text-align: center;
         position: absolute;
         left: 0px;
         top: 0px;
@@ -67,11 +86,12 @@
         min-width: 1000px;
     }
     .box {
-        margin-top: 32px;
+        margin-top: 8px;
         width: 100%;
         display: flex;
         align-items: center;
         flex-wrap: wrap;
+        text-align: left;
     }
     .external-loading {
         background: rgba(0, 0, 0, 0.75);

@@ -2,8 +2,12 @@
     import NavigationBar from "$lib/NavigationBar/NavigationBar.svelte";
     import NavigationMargin from "$lib/NavigationBar/NavMargin.svelte";
     import LoadingSpinner from "$lib/LoadingSpinner/Spinner.svelte";
+    import Button from "$lib/Button/Button.svelte";
+    import LocalizedText from "$lib/LocalizedText/Node.svelte";
 
     import Authentication from "../../resources/authentication.js";
+
+    let currentLang = "en";
 
     // taken from NavigationBar.svelte
 
@@ -50,7 +54,7 @@
 	}
 	Authentication.onAuthentication(() => {
         try {
-            window.close()
+            window.close();
         } catch {}
     });
 
@@ -69,8 +73,28 @@
     <NavigationMargin />
 
     <div class="box">
-        <h1 style="font-size: 24px;">Sign in to your account/Join Snail IDE.</h1>
-        <button on:click={signIn}>Sign in/Join</button>
+        <img style="height: 250px;" alt="A snail creating a project." src="/snail-creating-project.svg">
+        <h1 style="font-size: 24px; margin: 4px;">
+            <LocalizedText
+                text="Sign in to your account/Join Snail IDE."
+                key="signIn.signInHeader"
+                lang={currentLang}
+            />
+        </h1>
+        <p>
+            <LocalizedText
+                text="Sign in/Join Snail IDE and share your amazing projects with the world!"
+                key="signIn.signInDescription"
+                lang={currentLang}
+            />
+        </p>
+        <Button on:click={signIn}>
+            <LocalizedText
+                text="Sign in/Join"
+                key="signIn.signInButton"
+                lang={currentLang}
+            />
+        </Button>
     </div>
 </div>
 
@@ -92,21 +116,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-
-    button {
-        border: none;
-        background-color: purple;
-        color: white;
-        cursor: pointer;
-        font-size: 20px;
-        padding: 10px 20px;
-        border-radius: 10px;
-        transition-duration: 250ms;
-    }
-
-    button:hover {
-        background-color: rgb(111, 0, 111);
     }
 </style>
 

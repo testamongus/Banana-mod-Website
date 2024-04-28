@@ -382,16 +382,16 @@
             >
                 <div class="category-content">
                             <UserDisplay
-                                link='https://snail-ide.vercel.app/news/emojis.PNG'
-                                userLink={`https://scratch.mit.edu/users/Mr_rudy`}
-                                text="Emojis finnaly work correrctly!"
-                                author="nmsderp/Mr_rudy"
-                                image="https://avatars.githubusercontent.com/u/130254323?v=4"
+                                link='https://content.snail-ide.com/news/removeExtension.png'
+                                userLink={`https://scratch.mit.edu/users/dumorando`}
+                                text="You can now remove extensions"
+                                author="dumorando"
+                                image="https://github.com/dumorando.png"
                             />
-                            <a target="_blank" href="https://snail-ide.vercel.app/news/emojis.PNG">
+                            <a target="_blank" href="https://content.snail-ide.com/news/removeExtension.png">
                                 <button class="update-image-wrapper">
                                     <img
-                                        src="https://snail-ide.vercel.app/news/emojis.PNG"
+                                        src="https://content.snail-ide.com/news/removeExtension.png"
                                         alt="Screenshot"
                                         class="update-image"
                                     />

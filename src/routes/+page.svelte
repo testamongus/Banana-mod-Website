@@ -242,7 +242,7 @@
         buttonText={"Give Feedback"}
         buttonHref={"https://editor.snail-ide.com/contact.html"}
         backColor={"#7DDA58"}
-        hasButton={false}
+        hasButton={true}
         hasImage={true}
     />
     <StatusAlert />

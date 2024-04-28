@@ -689,9 +689,9 @@
                     Community
                 </p>
                 <a target="_blank" href="https://scratch.mit.edu/studios/33532977/">
-                    Snail IDE Group
+                    Snail IDE Scratch Studio
                 </a>
-                <a target="_blank" href={LINK.feedback}>
+                <a target="_blank" href='https://docs.google.com/forms/d/e/1FAIpQLSd50Sx8FpGS0rucyFFUR3TrcumGpJJJZtKDrn8Hq7FYpKJiWA/viewform'>
                     Snail IDE Feedback
                 </a>
                 <a target="_blank" href="/forum">

@@ -233,23 +233,17 @@
     <StatusAlert />
     <StatusAlert />
     <Alert
-        onlyShowID={"sigma:_4"}
-        text={"Featured project system is a bit broken right now, we're trying to fix it"}
+        onlyShowID={"illdothematpatthingeventually:_26"}
+        text={"We need your feedback! Tell us what you want in Snail IDE and what you don't like."}
         textBreakup={true}
         textColor={"white"}
-        backColor={"#340d59"}
-        hasButton={false}
-        hasImage={false}
-    />
-    <StatusAlert />
-    <Alert
-        onlyShowID={"matpat:_25"}
-        text={"The MatPat Game Jam submissions will be ranked sometime next week! Thanks for submitting!"}
-        textBreakup={true}
-        textColor={"white"}
+        imgSrc={"/rankup.svg"}
+        imgAlt={"yipee"}
+        buttonText={"Give Feedback"}
+        buttonHref={"https://editor.snail-ide.com/contact.html"}
         backColor={"#7DDA58"}
         hasButton={false}
-        hasImage={false}
+        hasImage={true}
     />
     <StatusAlert />
 

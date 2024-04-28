@@ -237,7 +237,7 @@
         text={"We need your feedback! Tell us what you want in Snail IDE and what you don't like."}
         textBreakup={true}
         textColor={"white"}
-        imgSrc={"/rankup.svg"}
+        imgSrc={"https://raw.githubusercontent.com/Snail-IDE/Snail-IDE-Website/45888494daac72bb2efbdeb48baa50302d402d7f/static/penguins/donate.svg"}
         imgAlt={"yipee"}
         buttonText={"Give Feedback"}
         buttonHref={"https://editor.snail-ide.com/contact.html"}

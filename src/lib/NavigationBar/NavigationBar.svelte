@@ -283,18 +283,6 @@
 				lang={currentLang}
 		/>
 	</BarPage>
-	<BarButton
-		highlighted="true"
-		link={LINK.feedback}
-		noredirect="true"
-		classActor={"feedbackButton"}
-	>
-		<LocalizedText
-				text="Snail IDE Feedback"
-				key="navigation.feedback"
-				lang={currentLang}
-		/>
-	</BarButton>
 	<!--<BarButton
 		highlighted="true"
 		link={LINK.donate}

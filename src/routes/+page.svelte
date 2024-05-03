@@ -233,17 +233,15 @@
     <StatusAlert />
     <StatusAlert />
     <Alert
-        onlyShowID={"illdothematpatthingeventually:_26"}
-        text={"We need your feedback! Tell us what you want in Snail IDE and what you don't like."}
+        onlyShowID={"illdothematpatthingeventually:_27"}
+        text={"Wanna be able to show your games to friends without uploading them to the public, try out this new feature!"}
         textBreakup={true}
         textColor={"white"}
-        imgSrc={"https://raw.githubusercontent.com/Snail-IDE/Snail-IDE-Website/45888494daac72bb2efbdeb48baa50302d402d7f/static/penguins/donate.svg"}
-        imgAlt={"yipee"}
-        buttonText={"Give Feedback"}
-        buttonHref={"https://editor.snail-ide.com/contact.html"}
+        buttonText={"Try It!"}
+        buttonHref={"https://opensnail.snail-ide.com/tempshare.html"}
         backColor={"#7DDA58"}
         hasButton={true}
-        hasImage={true}
+        hasImage={false}
     />
     <StatusAlert />
 

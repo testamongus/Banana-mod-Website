@@ -217,7 +217,7 @@
 
 <div class="main">
     <NavigationMargin />
-
+    <StatusAlert />
     <Alert
         onlyShowID={"donatee:_1"}
         text={"Snail IDE is a powerful free-to-use visual coding website/game engine based off of PenguinMod."}
@@ -234,7 +234,7 @@
     <StatusAlert />
     <Alert
         onlyShowID={"illdothematpatthingeventually:_27"}
-        text={"Wanna be able to show your games to friends without uploading them to the public, try out this new feature!"}
+        text={"Wanna be able to show your projects to friends without uploading them to the public, try out this new feature!"}
         textBreakup={true}
         textColor={"white"}
         buttonText={"Try It!"}

@@ -106,7 +106,7 @@
             return;
         }
 
-        fetch(`${LINK.basicApi}commits`)
+        fetch(`${LINK.commitsHistory}`)
             .then((res) => {
                 res.json()
                     .then((commits) => {

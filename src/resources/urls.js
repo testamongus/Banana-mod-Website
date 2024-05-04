@@ -97,7 +97,12 @@ export default {
     /**
      * PenguinMod's basic API
      */
-    basicApi: "https://sn-bapi.onrender.com/",
+    basicApi: "https://sn-bapi.onrender.com/", //deprecated
+
+    /**
+     * Snail IDE's commits history thing
+     */
+    commitsHistory: "https://sn-bapi.vercel.app/api/commits",
 
     /**
      * The admin panel for pm projects api

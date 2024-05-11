@@ -686,7 +686,13 @@
                 <a target="_blank" href='https://docs.google.com/forms/d/e/1FAIpQLSd50Sx8FpGS0rucyFFUR3TrcumGpJJJZtKDrn8Hq7FYpKJiWA/viewform'>
                     Snail IDE Feedback
                 </a>
-                <a target="_blank" href="/forum">
+		<a target="_blank" href='https://opensnail.snail-ide.com/tempshare.html'>
+                    Temp Share
+                </a>
+		<a target="_blank" href='http://snailwiki.great-site.net/index.php/Main_Page'>
+                    Wiki
+                </a>
+                <a target="_blank" href="/">
                     Unofficial Forum
                 </a>
             </div>

@@ -233,12 +233,12 @@
     <StatusAlert />
     <StatusAlert />
     <Alert
-        onlyShowID={"illdothematpatthingeventually:_27"}
-        text={"Wanna be able to show your projects to friends without uploading them to the public, try out this new feature!"}
+        onlyShowID={"illdothematpatthingeventually:_28"}
+        text={"We have made an offical Snail IDE Wiki!"}
         textBreakup={true}
         textColor={"white"}
         buttonText={"Try It!"}
-        buttonHref={"https://opensnail.snail-ide.com/tempshare.html"}
+        buttonHref={"http://snailwiki.great-site.net/index.php/Main_Page"}
         backColor={"#7DDA58"}
         hasButton={true}
         hasImage={false}

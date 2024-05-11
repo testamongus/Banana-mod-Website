@@ -26,6 +26,7 @@
 
     let projectName = "";
     let currentLang = "en";
+    let setThumbnail = false;
     onMount(() => {
         Language.forceUpdate();
     });
@@ -189,6 +190,7 @@
         input = input.target;
         const imageUrl = await filePicked(input);
         projectImage = imageUrl;
+        setThumbnail = true;
     }
     async function projectFilePicked(input) {
         input = input.target;
@@ -215,7 +217,7 @@
         })
             .then((projectId) => {
                 Swal.fire({
-                    title: 'Project Succesfuly Uploaded!',
+                    title: 'Project Successfuly Uploaded!',
                     text: "Click the button below to view your project.",
                     confirmButtonText: "Take me to my project",
                     icon: "success",
@@ -231,12 +233,22 @@
                     `uploading.error.${String(err).toLowerCase()}`,
                     currentLang
                 );
-                if (!message)
-                    return Swal.fire({
+                if (!message) {
+                    if (String(err).toLowerCase().includes("unknown") && setThumbnail) {
+                        return Swal.fire({
                             icon: 'error',
-                            title: 'Error',
-                            text: "Maybe, try adding a thumbnail. If it still dosen't work check the console, and create an issue."
+                            title: "Error uploading project",
+                            text: 'Thumbnail not chosen'
                         })
+                    } else {
+                        return Swal.fire({
+                            icon: 'error',
+                            title: 'Error uploading project',
+                            text: message
+                        })
+                    }
+                }
+                    
             });
     }
 

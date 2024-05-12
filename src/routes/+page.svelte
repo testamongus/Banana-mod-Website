@@ -232,6 +232,7 @@
     />
     <StatusAlert />
     <StatusAlert />
+    <!--
     <Alert
         onlyShowID={"serversgoingdownohgodders:_28"}
         text={"the server might go down sporadically because we're deploying a new server update rn"}
@@ -242,6 +243,7 @@
         imgSrc={"/alert_icon.svg"}
         hasImage={true}
     />
+    -->
     <StatusAlert />
 
     {#if loggedIn === false}

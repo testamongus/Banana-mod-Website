@@ -232,6 +232,7 @@
     />
     <StatusAlert />
     <StatusAlert />
+    <!--
     <Alert
         onlyShowID={"illdothematpatthingeventually:_28"}
         text={"We have made an offical Snail IDE Wiki!"}
@@ -243,6 +244,7 @@
         hasButton={true}
         hasImage={false}
     />
+    -->
     <StatusAlert />
 
     {#if loggedIn === false}
@@ -374,16 +376,16 @@
             >
                 <div class="category-content">
                             <UserDisplay
-                                link='https://content.snail-ide.com/news/removeExtension.png'
+                                link='https://content.snail-ide.com/news/wiki.png'
                                 userLink={`https://scratch.mit.edu/users/dumorando`}
-                                text="You can now remove extensions"
+                                text="There's now a Snail IDE Wiki"
                                 author="dumorando"
                                 image="https://github.com/dumorando.png"
                             />
-                            <a target="_blank" href="https://content.snail-ide.com/news/removeExtension.png">
+                            <a target="_blank" href="https://content.snail-ide.com/news/wiki.png">
                                 <button class="update-image-wrapper">
                                     <img
-                                        src="https://content.snail-ide.com/news/removeExtension.png"
+                                        src="https://content.snail-ide.com/news/wiki.png"
                                         alt="Screenshot"
                                         class="update-image"
                                     />

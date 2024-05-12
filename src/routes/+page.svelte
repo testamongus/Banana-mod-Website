@@ -232,19 +232,16 @@
     />
     <StatusAlert />
     <StatusAlert />
-    <!--
     <Alert
-        onlyShowID={"illdothematpatthingeventually:_28"}
-        text={"We have made an offical Snail IDE Wiki!"}
+        onlyShowID={"serversgoingdownohgodders:_28"}
+        text={"the server might go down sporadically because we're deploying a new server update rn"}
         textBreakup={true}
-        textColor={"white"}
-        buttonText={"Try It!"}
-        buttonHref={"http://snailwiki.great-site.net/index.php/Main_Page"}
-        backColor={"#7DDA58"}
-        hasButton={true}
-        hasImage={false}
+        textColor={"black"}
+        backColor={"#FFD900"}
+        hasButton={false}
+        imgSrc={"/alert_icon.svg"}
+        hasImage={true}
     />
-    -->
     <StatusAlert />
 
     {#if loggedIn === false}

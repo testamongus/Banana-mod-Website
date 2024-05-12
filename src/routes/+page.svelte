@@ -693,7 +693,7 @@
 		<a target="_blank" href='http://snailwiki.great-site.net/index.php/Main_Page'>
                     Wiki
                 </a>
-                <a target="_blank" href="/">
+                <a target="_blank" href="/forum">
                     Unofficial Forum
                 </a>
             </div>

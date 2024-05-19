@@ -34,7 +34,7 @@
     };
   
     const handlePostComment = () => {
-      const passcode = localStorage.getItem('pv');
+      const passcode = localStorage.getItem('PV');
   
       if (!passcode) {
         error = 'Passcode not found in local storage';

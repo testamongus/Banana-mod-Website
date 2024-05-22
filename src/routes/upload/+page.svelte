@@ -230,7 +230,7 @@
             })
             .catch((err) => {
                 const message = TranslationHandler.text(
-                    `uploading.error.${String(err).toLowerCase()}`,
+                    `uploading.error.${String(err)}.toLowerCase()}`,
                     currentLang
                 );
                 if (!message) {

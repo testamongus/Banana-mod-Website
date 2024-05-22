@@ -244,7 +244,7 @@
                         return Swal.fire({
                             icon: 'error',
                             title: 'Error uploading project',
-                            text: message
+                            text: `Friendly message: ${message} | Technical message: ${String(err)}`
                         })
                     }
                 }

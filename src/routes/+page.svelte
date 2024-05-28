@@ -232,18 +232,17 @@
     />
     <StatusAlert />
     <StatusAlert />
-    <!--
     <Alert
-        onlyShowID={"serversgoingdownohgodders:_28"}
-        text={"the server might go down sporadically because we're deploying a new server update rn"}
+        onlyShowID={"aghhfdggfjdfg:_28"}
+        text={"Important stuff"}
         textBreakup={true}
         textColor={"black"}
         backColor={"#FFD900"}
-        hasButton={false}
+        hasButton={true}
+        buttonHref={"data:text/plain;charset=utf-8;base64,T3ZlciB0aGUgcGFzdCBTbmFpbCBJREUgaGFzIGhhZCBtYW55IGNvbnRyb3ZlcnNpZXMgKG1vc3RseSBtZSAoTXJfcnVkeSksIGJlaW5nIGR1bWIgc2luY2UgSSBkaWRuJ3QgdW5kZXJzdGFuZCBsaWNlbnNlcyB0aGF0IG11Y2ggYmFjayB0aGVuLCBidXQgbm93IEkgdW5kZXJzdGFuZCBpdCBtb3JlLikgRnVubnkgZW5vdWdoIEkgaGF2ZSB0byBzYXkgdGhhbmsgeW91IHRvIEcxbnggZm9yIHNheWluZyBzb21ldGhpbmcsIGl0IG1hZGUgbWUgcmVhbGl6ZSB0aGF0IEkgbWVzc2VkIHVwLiBBbHNvIHRoYW5rIHlvdSBKZXJlbXlHYW1lcjEzIGZvciBzdGlsbCBiZWluZyBzdXBwb3J0aXZlIGV2ZW4gdGhvdWdoIEkgbWVzc2VkIHVwIHNvIG1hbnkgdGltZXMuIEkgdW5kZXJzdGFuZCBwZW9wbGUgZ2V0dGluZyBhbmdyeSBvdmVyIHRoZSBleHRlbnNpb24gdGhlaWZ0LCBJIGhhdmUgYXNrZWQgZXZlcnkgY3JlYXRvciBvZiB0aGUgZXh0ZW5zaW9ucyB0aGF0IEkgd2Fzbid0IHN1cmUgaWYgdGhleSB3ZXJlIGNvb2wgd2l0aCB0aGUgZXh0ZW5zaW9ucyBiZWluZyB0aGVyZSwgYW5kIHNvIGN1cnJlbnRseSB3ZSBhcmUgZmluZS4gSWYgeW91IGhhdmUgYW4gaXNzdWUgd2l0aCBhbiBleHRlbnNpb24sIHBsZWFzZSBqdXN0IHRlbGwgbWUu"}
         imgSrc={"/alert_icon.svg"}
         hasImage={true}
     />
-    -->
     <StatusAlert />
 
     {#if loggedIn === false}

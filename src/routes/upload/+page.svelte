@@ -3,6 +3,7 @@
     import Authentication from "../../resources/authentication.js";
     import ProjectApi from "../../resources/projectapi.js";
     import EmojiList from "../../resources/emojis.js";
+    import StatusAlert from "$lib/Alert/StatusAlert.svelte";
     import Swal from 'sweetalert2';
 
     const ProjectClient = new ProjectApi();
@@ -492,6 +493,16 @@
 
 <head>
     <title>Snail IDE - Upload</title>
+    <Alert
+        onlyShowID={"aghhfdggfjdfg:_28"}
+        text={"If you cannot upload we recommend disabling the Grammarly extension, it seems to be blocking requests to our server."}
+        textBreakup={true}
+        textColor={"black"}
+        backColor={"#FFD900"}
+        imgSrc={"/alert_icon.svg"}
+        hasImage={true}
+    />
+    <StatusAlert />
 </head>
 
 <NavigationBar />

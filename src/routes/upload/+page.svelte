@@ -3,7 +3,6 @@
     import Authentication from "../../resources/authentication.js";
     import ProjectApi from "../../resources/projectapi.js";
     import EmojiList from "../../resources/emojis.js";
-    import StatusAlert from "$lib/Alert/StatusAlert.svelte";
     import Swal from 'sweetalert2';
 
     const ProjectClient = new ProjectApi();

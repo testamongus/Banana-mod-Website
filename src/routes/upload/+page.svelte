@@ -492,7 +492,6 @@
 
 <head>
     <title>Snail IDE - Upload</title>
-    <h2>If you cannot upload try disabling Grammarly if you have it.</h2>
 </head>
 
 <NavigationBar />
@@ -874,6 +873,7 @@
                             lang={currentLang}
                         />
                     </label>
+                    <p>If you cannot upload try disabling Grammarly if you have it.</p>
                 </div>
             </div>
             <div style="display:flex;flex-direction:row;margin-top:48px">

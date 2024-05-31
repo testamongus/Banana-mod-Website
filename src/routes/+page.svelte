@@ -233,16 +233,14 @@
     <StatusAlert />
     <StatusAlert />
     <Alert
-        onlyShowID={"aghhfdggfjdfg:_28"}
-        text={"Important stuff"}
+        onlyShowID={"event:1"}
+        text={"Snail IDE Live Event"}
         textBreakup={true}
-        textColor={"black"}
-        backColor={"#FFD900"}
+        textColor={"white"}
+        backColor={"#6200EA"}
         hasButton={true}
-        buttonText={"Click Here"}
-        buttonHref={"https://snail-ide.com/silly.txt"}
-        imgSrc={"/alert_icon.svg"}
-        hasImage={true}
+        buttonText={"Learn More"}
+        buttonHref={"https://snail-ide.com/liveevent"}
     />
     <StatusAlert />
 

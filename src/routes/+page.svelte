@@ -375,7 +375,7 @@
                             <UserDisplay
                                 link='https://www.snail-ide.com/liveevent'
                                 userLink={`https://github.com/nmsderp`}
-                                text="There's now a Snail IDE Wiki"
+                                text="There will be a Snail IDE Live Event!"
                                 author="nmsderp"
                                 image="https://github.com/nmsderp.png"
                             />

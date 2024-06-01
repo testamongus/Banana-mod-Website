@@ -373,16 +373,16 @@
             >
                 <div class="category-content">
                             <UserDisplay
-                                link='https://content.snail-ide.com/news/wiki.png'
-                                userLink={`https://scratch.mit.edu/users/dumorando`}
+                                link='https://www.snail-ide.com/liveevent'
+                                userLink={`https://github.com/nmsderp`}
                                 text="There's now a Snail IDE Wiki"
-                                author="dumorando"
-                                image="https://github.com/dumorando.png"
+                                author="nmsderp"
+                                image="https://github.com/nmsderp.png"
                             />
-                            <a target="_blank" href="https://content.snail-ide.com/news/wiki.png">
+                            <a target="_blank" href="https://content.snail-ide.com/news/liveevent.PNG">
                                 <button class="update-image-wrapper">
                                     <img
-                                        src="https://content.snail-ide.com/news/wiki.png"
+                                        src="https://content.snail-ide.com/news/liveevent.PNG"
                                         alt="Screenshot"
                                         class="update-image"
                                     />

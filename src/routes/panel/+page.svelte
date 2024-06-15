@@ -702,6 +702,13 @@
                         >
                             Piracy
                         </Button>
+                        <Button
+                            color="gray"
+                            on:click={(rejectingTextboxArea.value =
+                                QuickReject["Only consists of an image"])}
+                        >
+                            Only consists of an image
+                        </Button>
                     </div>
                 </div>
                 <div style="display:flex;flex-direction:row;padding:1em">

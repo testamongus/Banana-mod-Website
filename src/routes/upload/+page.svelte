@@ -138,6 +138,7 @@
             // when WE get a post from PM
             window.addEventListener("message", (e) => {
                 if (e.origin !== importLocation) {
+                    console.log(`${e.origin} | ${importLocation}`);
                     return;
                 }
                 const data = e.data && e.data.p4;

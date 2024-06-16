@@ -137,6 +137,7 @@
             }
             // when WE get a post from PM
             window.addEventListener("message", (e) => {
+                console.log(e.data);
                 const data = e.data && e.data.p4;
                 if (!data) {
                     return;

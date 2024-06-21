@@ -234,13 +234,10 @@
     <StatusAlert />
     <Alert
         onlyShowID={"event:1"}
-        text={"Snail IDE Live Event"}
+        text={"The Live Event went so well, thank you for joining!"}
         textBreakup={true}
         textColor={"white"}
         backColor={"#6200EA"}
-        hasButton={true}
-        buttonText={"Learn More"}
-        buttonHref={"https://snail-ide.com/liveevent"}
     />
     <StatusAlert />
 

@@ -93,16 +93,8 @@
         </p>
         <Button on:click={signIn}>
             <LocalizedText
-                text="Sign in with  Scratch"
+                text="Sign in/Join"
                 key="signIn.signInButton"
-                lang={currentLang}
-            />
-        </Button>
-        <br>
-        <Button on:click={discord}>
-            <LocalizedText
-                text="Sign in with Discord"
-                key="signIn.discord"
                 lang={currentLang}
             />
         </Button>

@@ -93,7 +93,7 @@
         </p>
         <Button on:click={signIn}>
             <LocalizedText
-                text="Sign in with Scratch"
+                text="Sign in with  Scratch"
                 key="signIn.signInButton"
                 lang={currentLang}
             />

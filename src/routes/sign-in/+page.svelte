@@ -61,6 +61,9 @@
     function signIn() {
         Authentication.authenticate();
     }
+    function discord() {
+        window.location.href = "http://www.snail-ide.com/hi.html";
+    }
 </script>
 
 <head>
@@ -90,8 +93,16 @@
         </p>
         <Button on:click={signIn}>
             <LocalizedText
-                text="Sign in/Join"
+                text="Sign in with Scratch"
                 key="signIn.signInButton"
+                lang={currentLang}
+            />
+        </Button>
+        <br>
+        <Button on:click={discord}>
+            <LocalizedText
+                text="Sign in with Discord"
+                key="signIn.discord"
                 lang={currentLang}
             />
         </Button>

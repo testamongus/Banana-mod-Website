@@ -233,11 +233,14 @@
     <StatusAlert />
     <StatusAlert />
     <Alert
-        onlyShowID={"event:1"}
-        text={"The Live Event went so well, thank you for joining!"}
+        onlyShowID={"tos-update:1"}
+        text={"The Terms of Service has been updated. Please take a moment to read it."}
         textBreakup={true}
         textColor={"white"}
         backColor={"#6200EA"}
+        hasButton={true}
+        buttonText={"Read"}
+        buttonHref={"https://www.snail-ide.com/terms"}
     />
     <StatusAlert />
 

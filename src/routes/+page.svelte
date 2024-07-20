@@ -369,21 +369,21 @@
                     "home.sections.whatsnew",
                     currentLang
                 )}
-                seemore={`https://scratch.mit.edu/users/Mr_rudy`}
+                seemore={`https://github.com/snail-ide/`}
             >
                 <div class="category-content">
                             <UserDisplay
-                                link='https://www.snail-ide.com/liveevent'
+                                link='https://editor.snail-ide.com/#6399683222841'
                                 userLink={`https://github.com/nmsderp`}
-                                text="There will be a Snail IDE Live Event!"
+                                text="NCS is on Snail IDE"
                                 author="nmsderp"
-                                image="https://github.com/nmsderp.png"
+                                image="https://snailshare.xyz/api/pmWrapper/iconUrl?id=6399683222841"
                             />
-                            <a target="_blank" href="https://content.snail-ide.com/news/liveevent.PNG">
+                            <a target="_blank" href="https://snailshare.xyz/api/pmWrapper/iconUrl?id=6399683222841">
                                 <button class="update-image-wrapper">
                                     <img
-                                        src="https://content.snail-ide.com/news/liveevent.PNG"
-                                        alt="Screenshot"
+                                        src="https://snailshare.xyz/api/pmWrapper/iconUrl?id=6399683222841"
+                                        alt="NCS is on Snail IDE!"
                                         class="update-image"
                                     />
                                 </button>

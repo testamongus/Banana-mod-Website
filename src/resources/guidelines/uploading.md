@@ -204,3 +204,5 @@ Do not use bots to spam votes, loves, or views on a project, we log IP addresses
 
 ## Project License
 When you upload a project to Snail IDE, your project is under the GNU General Public License v3.0, if you choose to package your project and release it somewhere else, it is whatever license you want. (Some places may have different rules, please respect them)
+## NCS
+When using NCS songs you MUST credit the artist, go to [ncs.io](https://ncs.io) and search the song. If you do not credit the artist you are at risk of getting your project taken down.

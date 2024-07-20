@@ -377,7 +377,7 @@
                                 userLink={`https://github.com/nmsderp`}
                                 text="NCS is on Snail IDE"
                                 author="nmsderp"
-                                image="https://snailshare.xyz/api/pmWrapper/iconUrl?id=6399683222841"
+                                image="https://avatars.githubusercontent.com/u/130254323?v=4"
                             />
                             <a target="_blank" href="https://snailshare.xyz/api/pmWrapper/iconUrl?id=6399683222841">
                                 <button class="update-image-wrapper">

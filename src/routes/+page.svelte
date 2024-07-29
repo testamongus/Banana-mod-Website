@@ -232,6 +232,7 @@
     />
     <StatusAlert />
     <StatusAlert />
+<!--
     <Alert
         onlyShowID={"tos-update:1"}
         text={"The Terms of Service has been updated. Please take a moment to read it."}
@@ -243,6 +244,7 @@
         buttonHref={"https://www.snail-ide.com/terms"}
     />
     <StatusAlert />
+-->
 
     {#if loggedIn === false}
         <div class="section-info">

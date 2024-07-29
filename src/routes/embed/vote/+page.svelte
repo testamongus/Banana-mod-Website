@@ -151,7 +151,7 @@
             </button>
             <p>{likes + Number(userLiked)}</p>
         </div>
-        <div title="Vote to Feature this project" class="parent button-text">
+        <!--<div title="Vote to Feature this project" class="parent button-text">
             <button class="feature animate" on:click={vote}>
                 <img
                     src="/feature.svg"
@@ -164,7 +164,7 @@
             <p>
                 {votes - Number(userVotedOnLoad) + Number(userVoted)}
             </p>
-        </div>
+        </div>!-->
         <div title="Project views" class="parent button-text">
             <button class="view animate">
                 <img
@@ -176,6 +176,7 @@
             </button>
             <p>{views}</p>
         </div>
+        <center>The feature button will be temporary removed, check back soon!</center>
     {:else}
         <LoadingSpinner />
     {/if}

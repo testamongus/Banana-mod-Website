@@ -228,7 +228,7 @@
             })
             .catch((err) => {
                 const message = TranslationHandler.text(
-                    `uploading.error.${String(err)}.toLowerCase()}`,
+                    `uploading.error.${String(err).toLowerCase()}}`,
                     currentLang
                 );
                 if (!message) {
@@ -242,7 +242,7 @@
                         return Swal.fire({
                             icon: 'error',
                             title: 'Error uploading project',
-                            text: `Friendly message: ${message} | Technical message: ${String(err)}`
+                            text: `Friendly message: ${message ?? 'Unknown error'} | Technical message: ${String(err)}`
                         })
                     }
                 }

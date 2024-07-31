@@ -91,12 +91,11 @@
     // }
     const downloadRejectedProject = async (projectId) => {
         try {
-            const projectFile = await ProjectClient.getRejectedProjectFile(
-                projectId
-            );
+            const projectFile =
+                await ProjectClient.getRejectedProjectFile(projectId);
             FileSaver.saveAs(
                 new Blob([projectFile]),
-                `Project_${projectId}.snail`
+                `Project_${projectId}.snail`,
             );
         } catch (err) {
             console.error(err);
@@ -159,7 +158,7 @@
         } else {
             readMessages = [].concat(
                 readMessages,
-                messages.map((message) => message.id)
+                messages.map((message) => message.id),
             );
         }
         readMessages = readMessages;
@@ -169,8 +168,8 @@
             !confirm(
                 TranslationHandler.text(
                     "messages.alert.staff.reply.confirm",
-                    currentLang
-                )
+                    currentLang,
+                ),
             )
         ) {
             return;
@@ -288,8 +287,8 @@
                                 {String(
                                     TranslationHandler.text(
                                         "messages.alert.staff.removed.title",
-                                        currentLang
-                                    )
+                                        currentLang,
+                                    ),
                                 ).replace("$1", message.name)}
                             </b>
                         </p>
@@ -352,24 +351,102 @@
                                 lang={currentLang}
                             />
                         </button>
+                    {:else if message.type === "nfe"}
+                        <p>
+                            <b>
+                                {String(
+                                    TranslationHandler.text(
+                                        "messages.alert.staff.nfe.title",
+                                        currentLang,
+                                    ),
+                                ).replace("$1", message.name)}
+                            </b>
+                        </p>
+                        <p>{message.reason}</p>
+                        {#if canAutoTranslate && !autoTranslations[message.id] && !autoTranslationCode.startsWith("en")}
+                            <br />
+                            <button
+                                class="fake-link"
+                                style="display:flex;align-items:center;"
+                                on:click={() =>
+                                    autoTranslate(message.id, message.reason)}
+                            >
+                                <img
+                                    src="/messages/translate.png"
+                                    alt="Translate"
+                                    width="30"
+                                    height="30"
+                                    style="margin-right:6px"
+                                />
+                                <LocalizedText
+                                    text="If the moderator is not speaking your language, you may click here for an auto-translation."
+                                    key="messages.alert.staff.translate1"
+                                    lang={currentLang}
+                                />
+                            </button>
+                            <p>
+                                <LocalizedText
+                                    text="Sorry for not having any human translation available! :("
+                                    key="messages.alert.staff.translate2"
+                                    lang={currentLang}
+                                />
+                            </p>
+                            <br />
+                        {/if}
+                        {#if autoTranslations[message.id]}
+                            <br />
+                            <p>{autoTranslations[message.id]}</p>
+                            <br />
+                        {/if}
+                        <p class="small">
+                            <b>Project ID:</b>
+                            {message.projectId}
+                        </p>
                     {:else if message.type === "featured"}
                         <p>
                             <b>
                                 {String(
                                     TranslationHandler.text(
                                         "messages.alert.featured",
-                                        currentLang
-                                    )
+                                        currentLang,
+                                    ),
                                 ).replace("$1", message.name)}
                             </b> 🌟
+                        </p>
+                    {:else if message.type === "dispute"}
+                        <!--
+                                reply: `${packet.text}`,
+            type: "dispute",
+            replyTo: `${message.reason ? message.reason : ''}\n\n\`\`${message.type} (${message.id})\`\``,
+            projectId: `${message.projectData ? message.projectData.id : '(not applicable)'}`,
+            id: packet.id,
+            user: packet.username, // included for less API calls
+                    -->
+                        <p>
+                            <b>
+                                {String(
+                                    TranslationHandler.text(
+                                        "messages.alert.dispute",
+                                        currentLang,
+                                    ),
+                                ).replace("$1", message.user)}
+                            </b>
+                        </p>
+                        <p>{message.reply}</p>
+                        <p><b>Response to:</b> {message.replyTo}</p>
+                        <p class="small">
+                            <b>ID:</b>
+                            {message.id}
+                            <b>Project ID:</b>
+                            {message.projectId}
                         </p>
                     {:else if message.type === "followerAdded"}
                         <p>
                             {String(
                                 TranslationHandler.text(
                                     "messages.alert.followeradded",
-                                    currentLang
-                                )
+                                    currentLang,
+                                ),
                             ).replace("$1", message.name)}
                         </p>
                     {:else if message.type === "newBadge"}
@@ -377,14 +454,14 @@
                             {String(
                                 TranslationHandler.text(
                                     "messages.alert.badge",
-                                    currentLang
-                                )
+                                    currentLang,
+                                ),
                             ).replace(
                                 "$1",
                                 TranslationHandler.text(
                                     `profile.badge.${message.name}`,
-                                    currentLang
-                                )
+                                    currentLang,
+                                ),
                             )}
                         </p>
                     {:else if message.type === "remix"}
@@ -396,8 +473,8 @@
                                 {String(
                                     TranslationHandler.text(
                                         "messages.alert.remix",
-                                        currentLang
-                                    )
+                                        currentLang,
+                                    ),
                                 )
                                     .replace("$1", "__${{{___1")
                                     .replace("$2", "__${{{___2")
@@ -418,8 +495,8 @@
                                 {String(
                                     TranslationHandler.text(
                                         "messages.alert.staff.restoredproject.title",
-                                        currentLang
-                                    )
+                                        currentLang,
+                                    ),
                                 ).replace("$1", message.name)}
                             </a>
                         </p>

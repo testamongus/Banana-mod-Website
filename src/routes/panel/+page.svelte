@@ -168,6 +168,23 @@
             // refreshProjectMenu();
         });
     }
+    function NFEProject(id) {
+        id ??= Number(projectIdSelection.value);
+        if (isNaN(id)) return;
+        if (!confirm(`Mark "${rejectingName}" as Not for Eveyone?`)) return;
+        if (rejectingTextboxArea.value.length <= 3) {
+            return alert("The action was cancelled.");
+        }
+        ProjectClient.NFEProject(id, rejectingTextboxArea.value).then(() => {
+            rejectionPageOpen = false;
+            // uhhhhhhh apparently we need to do this ig?
+            const newProjects = projects.filter((proj) => proj.id !== id);
+            projects = [];
+            projects = newProjects;
+            // dont need to do this i think
+            // refreshProjectMenu();
+        });
+    }
     let selectedProjectName = "";
     let lastSelectedProjectId = 0;
     function selectProject(id, name) {
@@ -325,6 +342,17 @@
     const restoreRejectedProject = () => {
         if (!confirm("Are you sure you want to restore this project?")) return;
         ProjectClient.restoreRejectedProject(rejectedProjectId)
+            .then(() => {
+                alert("Restored!");
+            })
+            .catch((err) => {
+                console.error(err);
+                alert(`Failed to restore project; ${err}`);
+            });
+    };
+    const restoreNFEProject = () => {
+        if (!confirm("Are you sure you want to restore this project?")) return;
+        ProjectClient.restoreNFEProject(rejectedProjectId)
             .then(() => {
                 alert("Restored!");
             })
@@ -720,6 +748,13 @@
                         }}
                     />
                     <Button
+                        label="Mark as Not For Eveyone"
+                        color="red"
+                        on:click={() => {
+                            NFEProject(rejectingId);
+                        }}
+                    />
+                    <Button
                         label="Cancel"
                         on:click={() => {
                             rejectionPageOpen = false;
@@ -895,6 +930,9 @@
                     <Button on:click={downloadRejectedProject}>Download</Button>
                     <Button color="remix" on:click={restoreRejectedProject}>
                         Restore
+                    </Button>
+                    <Button color="remix" on:click={restoreNFEProject}>
+                        Remove NFE Mark
                     </Button>
                     <div style="margin-right:24px" />
                     <Button color="red" on:click={deleteRejectedProject}>

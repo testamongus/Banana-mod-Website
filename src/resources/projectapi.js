@@ -767,6 +767,60 @@ class ProjectApi {
             })
         })
     }
+    NFEProject(id, reason) {
+        const data = {
+            passcode: this.privateCode,
+            approver: this.username,
+            id,
+            reason,
+        };
+        return new Promise((resolve, reject) => {
+            fetch(`${OriginApiUrl}/api/projects/nfe`, {
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+                method: "POST"
+            }).then(res => {
+                res.json().then(json => {
+                    if (!res.ok) {
+                        reject(json.error);
+                        return;
+                    }
+                    resolve();
+                }).catch(err => {
+                    reject(err);
+                })
+            }).catch(err => {
+                reject(err);
+            })
+        })
+    }
+    restoreNFEProject(id, reason) {
+        const data = {
+            passcode: this.privateCode,
+            approver: this.username,
+            id,
+            reason,
+        };
+        return new Promise((resolve, reject) => {
+            fetch(`${OriginApiUrl}/api/projects/undoNfe`, {
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+                method: "POST"
+            }).then(res => {
+                res.json().then(json => {
+                    if (!res.ok) {
+                        reject(json.error);
+                        return;
+                    }
+                    resolve();
+                }).catch(err => {
+                    reject(err);
+                })
+            }).catch(err => {
+                reject(err);
+            })
+        })
+    }
     attemptRankUp() {
         const data = {
             passcode: this.privateCode,

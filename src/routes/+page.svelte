@@ -70,7 +70,7 @@
             case "follow":
                 return TranslationHandler.text(
                     "feed.following",
-                    currentLang
+                    currentLang,
                 ).replace("$1", author);
             case "upload":
                 return TranslationHandler.text("feed.uploaded", currentLang)
@@ -83,7 +83,7 @@
             case "posted":
                 return TranslationHandler.text(
                     "feed.posted",
-                    currentLang
+                    currentLang,
                 ).replace("$1", author);
         }
     };
@@ -192,21 +192,21 @@
 
     let selectedFrontTabSelected = "new";
 
-    
     export async function load({ params, query }) {
-      // Check if the current domain is snail-ide.vercel.app
-      if (window.location.hostname === 'snail-ide.vercel.app') {
-        // Redirect to snail-ide.com
-        window.location.href = "https://snail-ide.com" + window.location.pathname + window.location.search;
-      }
+        // Check if the current domain is snail-ide.vercel.app
+        if (window.location.hostname === "snail-ide.vercel.app") {
+            // Redirect to snail-ide.com
+            window.location.href =
+                "https://snail-ide.com" +
+                window.location.pathname +
+                window.location.search;
+        }
     }
-  
+
     const isItAprilFoolDay = () => {
-		var now = new Date();
-		return (now.getMonth() == 3 && now.getDate() == 1);
-	}
-    
-    
+        var now = new Date();
+        return now.getMonth() == 3 && now.getDate() == 1;
+    };
 </script>
 
 <head>
@@ -232,7 +232,7 @@
     />
     <StatusAlert />
     <StatusAlert />
-<!--
+    <!--
     <Alert
         onlyShowID={"tos-update:1"}
         text={"The Terms of Service has been updated. Please take a moment to read it."}
@@ -257,7 +257,16 @@
                     />
                 </h1>
                 <h1>
-                    Built off of <a href="https://scratch.org" style="color:orange;">Scratch</a>, <a href="https://turbowarp.org" style="color:red;">TurboWarp</a>, and <a href="https://penguinmod.com" style="color:cyan;">PenguinMod</a>
+                    Built off of <a
+                        href="https://scratch.org"
+                        style="color:orange;">Scratch</a
+                    >,
+                    <a href="https://turbowarp.org" style="color:red;"
+                        >TurboWarp</a
+                    >, and
+                    <a href="https://penguinmod.com" style="color:cyan;"
+                        >PenguinMod</a
+                    >
                 </h1>
                 <Button
                     label="<img src='/tryit.svg' width='32px' style='margin-right:8px'></img>"
@@ -342,8 +351,6 @@
             <Button label="GitHub" link={LINK.github} />
         </div>
     {/if}
-        
-    
 
     {#if langDecided && currentLang != "en" && loggedIn !== false}
         <div class="section-language-warning">
@@ -363,41 +370,42 @@
         </div>
     {/if}
 
-    
-
     <div class="section-categories">
-            <ContentCategory
-                header={TranslationHandler.text(
-                    "home.sections.whatsnew",
-                    currentLang
-                )}
-                seemore={`https://github.com/snail-ide/`}
-            >
-                <div class="category-content">
-                            <UserDisplay
-                                link='https://editor.snail-ide.com/#6399683222841'
-                                userLink={`https://github.com/nmsderp`}
-                                text="NCS is on Snail IDE"
-                                author="nmsderp"
-                                image="https://avatars.githubusercontent.com/u/130254323?v=4"
-                            />
-                            <a target="_blank" href="https://snailshare.xyz/api/pmWrapper/iconUrl?id=6399683222841">
-                                <button class="update-image-wrapper">
-                                    <img
-                                        src="https://snailshare.xyz/api/pmWrapper/iconUrl?id=6399683222841"
-                                        alt="NCS is on Snail IDE!"
-                                        class="update-image"
-                                    />
-                                </button>
-                            </a>
-                </div>
-            </ContentCategory>
-        
+        <ContentCategory
+            header={TranslationHandler.text(
+                "home.sections.whatsnew",
+                currentLang,
+            )}
+            seemore={`https://github.com/snail-ide/`}
+        >
+            <div class="category-content">
+                <UserDisplay
+                    link="https://editor.snail-ide.com/#6399683222841"
+                    userLink={`https://github.com/nmsderp`}
+                    text="NCS is on Snail IDE"
+                    author="nmsderp"
+                    image="https://avatars.githubusercontent.com/u/130254323?v=4"
+                />
+                <a
+                    target="_blank"
+                    href="https://snailshare.xyz/api/pmWrapper/iconUrl?id=6399683222841"
+                >
+                    <button class="update-image-wrapper">
+                        <img
+                            src="https://snailshare.xyz/api/pmWrapper/iconUrl?id=6399683222841"
+                            alt="NCS is on Snail IDE!"
+                            class="update-image"
+                        />
+                    </button>
+                </a>
+            </div>
+        </ContentCategory>
+
         {#if loggedIn && selectedFrontTabSelected === "feed"}
             <ContentCategory
                 header={TranslationHandler.text(
                     "home.sections.feed",
-                    currentLang
+                    currentLang,
                 )}
             >
                 <div class="category-content">
@@ -408,13 +416,13 @@
                                     link={getFeedUrl(
                                         message.type,
                                         message.username,
-                                        message.content
+                                        message.content,
                                     )}
                                     userLink={`/profile?user=${message.username}`}
                                     text={getFeedText(
                                         message.type,
                                         message.username,
-                                        message.content
+                                        message.content,
                                     )}
                                     author={message.username}
                                     image={`https://trampoline.turbowarp.org/avatars/by-username/${message.username}`}
@@ -439,7 +447,7 @@
             <ContentCategory
                 header={TranslationHandler.text(
                     "home.sections.githubcommits",
-                    currentLang
+                    currentLang,
                 )}
                 seemore={LINK.github}
             >
@@ -463,13 +471,13 @@
                             {/if}
                         {/each}
                     {:else if ghcommitsFailed}
-                    <p>
-                        <LocalizedText
-                            text="Failed to load commits."
-                            key="home.sections.githubcommits.failed.generic"
-                            lang={currentLang}
-                        />
-                    </p>
+                        <p>
+                            <LocalizedText
+                                text="Failed to load commits."
+                                key="home.sections.githubcommits.failed.generic"
+                                lang={currentLang}
+                            />
+                        </p>
                     {:else if ghcommitsLoaded}
                         <p style="text-align: center;">
                             <LocalizedText
@@ -484,12 +492,29 @@
                 </div>
             </ContentCategory>
         {:else if loggedIn && selectedFrontTabSelected === "new"}
-            <ContentCategory
-                header={"Shopping List"}
-                seemore={`https://www.target.com/`}
-            >
+            <ContentCategory header={"What Snails I'm Following are Doing"}>
                 <div class="category-content">
-                    <StoreItem />
+                    <div class="category-content">
+                        {#if myFeed.length > 0}
+                            {#each myFeed as activity}
+                                <!-- {#if commit}
+                                    <UserDisplay
+                                        link={commit.html_url}
+                                        userLink={commit.author
+                                            ? commit.author.html_url
+                                            : ""}
+                                        text={censor(commit.commit.message)}
+                                        author={commit.author
+                                            ? commit.author.login
+                                            : ""}
+                                        image={commit.author
+                                            ? commit.author.avatar_url
+                                            : ""}
+                                    />
+                                {/if} -->
+                            {/each}
+                        {/if}
+                    </div>
                 </div>
             </ContentCategory>
         {/if}
@@ -528,7 +553,7 @@
         <ContentCategory
             header={TranslationHandler.text(
                 "home.sections.weeklyfeatured",
-                currentLang
+                currentLang,
             )}
             seemore={`/search?q=featured%3Aprojects`}
             style="width:65%;"
@@ -584,7 +609,7 @@
         <ContentCategory
             header={TranslationHandler.text(
                 "home.sections.todaysprojects",
-                currentLang
+                currentLang,
             )}
             seemore={`/search?q=all%3Aprojects`}
             style="width:65%;"
@@ -625,14 +650,15 @@
             </div>
         </ContentCategory>
         {#if isItAprilFoolDay()}
-        <img src="https://penguinmod.com/cat/dave.png" alt="dave" />
+            <img src="https://penguinmod.com/cat/dave.png" alt="dave" />
         {/if}
     </div>
 
     <div class="footer">
         <p>
             <!-- {#if !thingyActive} -->
-                Snail IDE is not affiliated with PenguinMod, Scratch, TurboWarp, the Scratch Team, or any other Scratch Modifications.
+            Snail IDE is not affiliated with PenguinMod, Scratch, TurboWarp, the
+            Scratch Team, or any other Scratch Modifications.
             <!-- todo: find a better place to put this that isn't, the legal text -->
             <!-- {:else}
                 EEAAOO EEAAOOEEAAOOEEAAOOEEAAOOEEAAOOEEAAOO EEAAOO
@@ -678,24 +704,32 @@
                 </a>
             </div>
             <div class="footer-section">
-                <p>
-                    Community
-                </p>
-                <a target="_blank" href="https://scratch.mit.edu/studios/33532977/">
+                <p>Community</p>
+                <a
+                    target="_blank"
+                    href="https://scratch.mit.edu/studios/33532977/"
+                >
                     Snail IDE Scratch Studio
                 </a>
-                <a target="_blank" href='https://docs.google.com/forms/d/e/1FAIpQLSd50Sx8FpGS0rucyFFUR3TrcumGpJJJZtKDrn8Hq7FYpKJiWA/viewform'>
+                <a
+                    target="_blank"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSd50Sx8FpGS0rucyFFUR3TrcumGpJJJZtKDrn8Hq7FYpKJiWA/viewform"
+                >
                     Snail IDE Feedback
                 </a>
-		<a target="_blank" href='https://opensnail.snail-ide.com/tempshare.html'>
+                <a
+                    target="_blank"
+                    href="https://opensnail.snail-ide.com/tempshare.html"
+                >
                     Temp Share
                 </a>
-		<a target="_blank" href='http://snailwiki.great-site.net/index.php/Main_Page'>
+                <a
+                    target="_blank"
+                    href="http://snailwiki.great-site.net/index.php/Main_Page"
+                >
                     Wiki
                 </a>
-                <a target="_blank" href="/forum">
-                    Unofficial Forum
-                </a>
+                <a target="_blank" href="/forum"> Unofficial Forum </a>
             </div>
             <div class="footer-section">
                 <p>
@@ -705,12 +739,8 @@
                         lang={currentLang}
                     />
                 </p>
-                <a target="_blank" href={LINK.terms}>
-                    Terms of Service
-                </a>
-                <a target="_blank" href={LINK.privacy}>
-                    Privacy Policy
-                </a>
+                <a target="_blank" href={LINK.terms}> Terms of Service </a>
+                <a target="_blank" href={LINK.privacy}> Privacy Policy </a>
                 <a target="_blank" href={"/guidelines/uploading"}>
                     Project Rules
                 </a>
@@ -724,8 +754,13 @@
                     />
                 </p>
                 <a href={"https://penguinmod.com/donate"}>PenguinMod</a>
-                <a target="_blank" href={'https://docs.turbowarp.org/donate'}>TurboWarp</a>
-                <a target="_blank" href={'https://www.scratchfoundation.org/donate'}>Scratch</a>
+                <a target="_blank" href={"https://docs.turbowarp.org/donate"}
+                    >TurboWarp</a
+                >
+                <a
+                    target="_blank"
+                    href={"https://www.scratchfoundation.org/donate"}>Scratch</a
+                >
             </div>
         </div>
     </div>
@@ -790,7 +825,7 @@
     }
 
     .section-info {
-        background: #7601B4;
+        background: #7601b4;
         background: linear-gradient(225deg, #8900d3, #270057);
         height: 24rem;
         color: white;

@@ -5,7 +5,7 @@ class Authentication {
 
     static authenticate() {
         const isLocal = location.hostname === 'localhost';
-        const redirectUrl = `${ProjectApi.OriginApiUrl}api/users/login` + (isLocal ? 'Local' : '');
+        const redirectUrl = `${ProjectApi.OriginApiUrl}/api/users/login` + (isLocal ? 'Local' : '');
         const base64 = btoa(redirectUrl);
         return new Promise((resolve, reject) => {
             let login;
@@ -64,7 +64,7 @@ class Authentication {
     }
     static usernameFromCode(code) {
         return new Promise((resolve, reject) => {
-            fetch(`${ProjectApi.OriginApiUrl}api/users/usernameFromCode?privateCode=${code}`).then(r => r.json().then(j => {
+            fetch(`${ProjectApi.OriginApiUrl}/api/users/usernameFromCode?privateCode=${code}`).then(r => r.json().then(j => {
                 if (j.username == null) return reject(j.error);
                 resolve({
                     username: j.username, 

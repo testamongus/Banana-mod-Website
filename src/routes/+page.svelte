@@ -233,8 +233,8 @@
     <StatusAlert />
     <StatusAlert />
     <Alert
-        onlyShowID={"server-downtime:3"}
-        text={"We don't know what to do now, the orginal servers broke and got corrupted and now the new servers got overloaded with one http request."}
+        onlyShowID={"server-downtime:4"}
+        text={"The servers are back but many projects were lost, we will make a report on what happened soon."}
         textBreakup={true}
         textColor={"white"}
         backColor={"red"}

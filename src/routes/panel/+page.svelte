@@ -1218,7 +1218,7 @@
                                 }}
                             >
                                 <img
-                                    src={`https://8d6f765f0ce7477179b7cd87a42e79e5.serveo.net/api/pmWrapper/iconUrl?id=${content.id}`}
+                                    src={`https://snailshare.dreamhosters.com/api/pmWrapper/iconUrl?id=${content.id}`}
                                     alt={content.name}
                                 />
                                 <div

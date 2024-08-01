@@ -233,11 +233,11 @@
     <StatusAlert />
     <StatusAlert />
     <Alert
-        onlyShowID={"server-downtime:2"}
-        text={"We lost most of our data due to hosting problems, we are now properly self-hosting but many projects have been removed."}
+        onlyShowID={"server-downtime:3"}
+        text={"We don't know what to do now, the orginal servers broke and got corrupted and now the new servers got overloaded with one http request."}
         textBreakup={true}
-        textColor={"black"}
-        backColor={"white"}
+        textColor={"white"}
+        backColor={"red"}
         hasButton={false}
     />
     <StatusAlert />

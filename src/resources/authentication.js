@@ -5,7 +5,7 @@ class Authentication {
 
     static authenticate() {
         const isLocal = location.hostname === 'localhost';
-        const redirectUrl = `${ProjectApi.OriginApiUrl}/api/users/login` + (isLocal ? 'Local' : '');
+        const redirectUrl = `${ProjectApi.OriginApiUrl}api/users/login` + (isLocal ? 'Local' : '');
         const base64 = btoa(redirectUrl);
         return new Promise((resolve, reject) => {
             let login;

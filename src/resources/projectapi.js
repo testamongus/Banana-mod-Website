@@ -1,4 +1,4 @@
-let OriginApiUrl = "https://snailshare.xyz";
+let OriginApiUrl = "https://8d6f765f0ce7477179b7cd87a42e79e5.serveo.net/";
 // OriginApiUrl = "http://localhost:8080";
 
 class ProjectApi {
@@ -39,7 +39,7 @@ class ProjectApi {
             }
     
             // Make a request to the server-side endpoint
-            fetch(`https://snailshare.xyz/api/users/usernameFromCode?privateCode=${privateCode}`)
+            fetch(`https://8d6f765f0ce7477179b7cd87a42e79e5.serveo.net/api/users/usernameFromCode?privateCode=${privateCode}`)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error(`Failed to fetch username. Status: ${response.status}`);

@@ -233,11 +233,11 @@
     <StatusAlert />
     <StatusAlert />
     <Alert
-        onlyShowID={"server-downtime:1"}
-        text={"We lost all of our data due to hosting problems. Please wait some time and the servers will be back up eventually."}
+        onlyShowID={"server-downtime:2"}
+        text={"We lost most of our data due to hosting problems, we are now properly self-hosting but many projects have been removed."}
         textBreakup={true}
-        textColor={"white"}
-        backColor={"red"}
+        textColor={"black"}
+        backColor={"white"}
         hasButton={false}
     />
     <StatusAlert />

@@ -234,7 +234,7 @@
     <StatusAlert />
     <Alert
         onlyShowID={"server-downtime:1"}
-        text={"We messed up and lost all of our data. Please wait some time and the servers will be back up eventually. This is likely the fault of our hosting provider, serv00."}
+        text={"We lost all of our data due to hosting problems. Please wait some time and the servers will be back up eventually."}
         textBreakup={true}
         textColor={"white"}
         backColor={"red"}

@@ -1,4 +1,4 @@
-let OriginApiUrl = "https://snailshare.dreamhosters.com/";
+let OriginApiUrl = "https://snailshare.dreamhosters.com";
 // OriginApiUrl = "http://localhost:8080";
 
 class ProjectApi {

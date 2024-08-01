@@ -234,7 +234,7 @@
     <StatusAlert />
     <Alert
         onlyShowID={"server-downtime:4"}
-        text={"The servers are back but many projects were lost, we will make a report on what happened soon."}
+        text={"The servers are almost back but many projects were lost, we will make a report on what happened soon."}
         textBreakup={true}
         textColor={"white"}
         backColor={"red"}

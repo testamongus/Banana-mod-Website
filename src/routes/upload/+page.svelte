@@ -871,7 +871,6 @@
                             lang={currentLang}
                         />
                     </label>
-                    <p>Please add a thumbnail, uploading will not work if you don't. On certain devices you may not be able to upload, this is a known issue.</p>
                 </div>
             </div>
             <div style="display:flex;flex-direction:row;margin-top:48px">

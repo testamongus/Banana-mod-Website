@@ -237,7 +237,7 @@
         text={"we kinda lost all of our database lol. give us some time and the servers will be back up eventually"}
         textBreakup={true}
         textColor={"white"}
-        backColor={"#6200EA"}
+        backColor={"red"}
         hasButton={false}
     />
     <StatusAlert />

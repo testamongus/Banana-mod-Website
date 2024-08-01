@@ -105,6 +105,7 @@
     "messages.alert.staff.translate2": "Sorry for not having any human translation available! :(",
     "messages.alert.staff.dispute": "If you feel this action was wrong, please reply here.",
     "messages.alert.staff.moderatorreply": "Reply from a moderator:",
+    "messages.alert.staff.moderatormessage": "Message from a moderator:",
     "messages.alert.staff.reply": "Reply",
     "messages.alert.staff.reply.confirm": "Send this to the admins? All admins will see it.",
     "account.title": "My Account",

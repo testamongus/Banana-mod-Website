@@ -303,7 +303,6 @@
     };
     const replyToMessage = () => {
         if (!messageReplyInfo.username) return alert("No user specified.");
-        if (!messageReplyInfo.id) return alert("Message ID is not specified.");
         if (!messageReplyInfo.text)
             return alert("No message text was specified.");
         if (
@@ -967,7 +966,7 @@
                 <input
                     type="text"
                     size="50"
-                    placeholder="Message ID..."
+                    placeholder="Message ID... (Optional)"
                     bind:value={messageReplyInfo.id}
                 />
                 <p>Type reply:</p>

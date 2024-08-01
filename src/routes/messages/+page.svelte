@@ -565,6 +565,31 @@
                                 <br />
                             {/if}
                         </p>
+                    {:else if message.type === "modMessage"}
+                        <h4>
+                            <LocalizedText
+                                text="Message from a moderator:"
+                                key="messages.alert.staff.moderatormessage"
+                                lang={currentLang}
+                            />
+                        </h4>
+                        <p>
+                            {message.reason}
+                            {#if canAutoTranslate && !autoTranslationCode.startsWith("en")}
+                                <br />
+                                <p style="display:flex;align-items:center;">
+                                    <img
+                                        src="/messages/translate.png"
+                                        alt="Translate"
+                                        width="30"
+                                        height="30"
+                                        style="margin-right:6px"
+                                    />
+                                    <AutoLocalizedText text={message.reason} />
+                                </p>
+                                <br />
+                            {/if}
+                        </p>
                     {:else}
                         <!-- what is this? -->
                         <p>

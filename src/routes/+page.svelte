@@ -232,19 +232,15 @@
     />
     <StatusAlert />
     <StatusAlert />
-    <!--
     <Alert
-        onlyShowID={"tos-update:1"}
-        text={"The Terms of Service has been updated. Please take a moment to read it."}
+        onlyShowID={"server-downtime:1"}
+        text={"we kinda lost all of our database lol. give us some time and the servers will be back up eventually"}
         textBreakup={true}
         textColor={"white"}
         backColor={"#6200EA"}
-        hasButton={true}
-        buttonText={"Read"}
-        buttonHref={"https://www.snail-ide.com/terms"}
+        hasButton={false}
     />
     <StatusAlert />
--->
 
     {#if loggedIn === false}
         <div class="section-info">

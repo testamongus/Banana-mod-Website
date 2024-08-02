@@ -217,7 +217,6 @@
 
 <div class="main">
     <NavigationMargin />
-    <StatusAlert />
     <Alert
         onlyShowID={"donatee:_1"}
         text={"Snail IDE is a powerful free-to-use visual coding website/game engine based off of PenguinMod."}
@@ -231,7 +230,6 @@
         buttonHref={"https://snail-ide.js.org/editor.html"}
     />
     <StatusAlert />
-    <StatusAlert />
     <Alert
         onlyShowID={"server-downtime:4"}
         text={"The servers are back but many projects were lost, we will make a report on what happened soon."}
@@ -240,7 +238,6 @@
         backColor={"orange"}
         hasButton={false}
     />
-    <StatusAlert />
 
     {#if loggedIn === false}
         <div class="section-info">

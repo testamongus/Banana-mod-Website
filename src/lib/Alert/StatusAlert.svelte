@@ -1,7 +1,7 @@
 <script>
     import { onMount } from "svelte";
     import Alert from "./Alert.svelte";
-    import LINK from "../../resources/urls.js";
+    import ProjectApi from "../../resources/projectapi.js";
 
     let currentStatus = {
         loading: true,
@@ -10,29 +10,33 @@
     };
 
     onMount(() => {
-        fetch(`${LINK.basicApi}status`).then((res) => {
-            if (!res.ok) return;
+        fetch(`${ProjectApi.OriginApiUrl}/api/warnings`).then((res) => {
             res.json().then((status) => {
-                // currently multiple updates are not supported
-                currentStatus = {
-                    type: "empty",
-                    text: "",
-                    ...status,
-                    loading: false,
+                if (!res.ok) {
+                    currentStatus.text = 'A server error has occured. If this happens again, please inform an admin of this problem.'
+                    currentStatus.type = 'error';
+                    return;
                 };
-            });
-        });
+                // currently multiple updates are not supported
+                if (status.warnings > 0) {
+                    currentStatus.text = 'A server warning has occured. Please inform an admin of this problem.'
+                    currentStatus.type = 'warning';
+                };
+            })
+        }).catch((err) => {
+                currentStatus.text = 'A server error has occured, if this happens again, please inform an admin of this problem.'
+                currentStatus.type = 'error';
+            });;
     });
 </script>
 
 {#if currentStatus.type !== "empty"}
     <Alert
         text={currentStatus.text}
-        backColor="#ffd900"
-        textColor="black"
-        hasButton={true}
+        backColor={currentStatus.type === 'error' ? 'red' : "#ffd900"}
+        textColor={currentStatus.type === 'error' ? 'white' : "black"}
         buttonText="Details"
-        buttonHref={"https://status.penguinmod.com/"}
-        buttonTooLight={true}
+        buttonTooLight={currentStatus.type !== 'error'},
+        dismissable={currentStatus.type !== 'error'}
     />
 {/if}

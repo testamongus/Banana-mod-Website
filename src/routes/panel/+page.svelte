@@ -18,12 +18,15 @@
 
     function unixToDisplayDate(unix) {
         return `${new Date(Number(unix)).toDateString()} at ${new Date(
-            Number(unix)
+            Number(unix),
         ).toLocaleTimeString()}`;
     }
 
     let loggedIn = null;
     let projectIdSelection;
+
+    let setUsername;
+    let setPrivateCode;
 
     function kickOut() {
         location.href = location.origin + "/bx-tv1.mp4";
@@ -43,6 +46,8 @@
                         kickOut();
                         return;
                     }
+                    setUsername = username;
+                    setPrivateCode = privateCode;
                     ProjectClient.setUsername(username);
                     ProjectClient.setPrivateCode(privateCode);
                     loggedIn = true;
@@ -112,7 +117,7 @@
     };
     const closeUserReports = (idOrName, user) => {
         const confirmed = prompt(
-            'Are you sure you have looked at all reports and possibly acted upon them?\nType "ok" to close all reports from this user.'
+            'Are you sure you have looked at all reports and possibly acted upon them?\nType "ok" to close all reports from this user.',
         );
         if (confirmed !== "ok") return;
         const type = dropdownSelectMenu.value;
@@ -127,7 +132,9 @@
 
     function openMenu(type) {
         ProjectClient.getTypeWithReports(type).then((projectsWithReports) => {
-            contentWithReports = projectsWithReports.filter(content => content.exists);
+            contentWithReports = projectsWithReports.filter(
+                (content) => content.exists,
+            );
         });
         // get approved projects anyways cuz we need to update list
         // todo: getProjects is paged breh what we do?
@@ -264,7 +271,7 @@
                                 : {};
                             inspectMenuDetails.extensionData = extensionData;
                             inspectMenuDetails.extensionUrls = JSON.parse(
-                                JSON.stringify(extensionData)
+                                JSON.stringify(extensionData),
                             );
                             inspectMenuDetails.downloading = false;
                             // get all urls
@@ -280,7 +287,7 @@
                                             extensionData[extensionId] = code;
                                             resetInspectMenu();
                                         });
-                                    }
+                                    },
                                 );
                             }
                         })
@@ -307,14 +314,14 @@
             return alert("No message text was specified.");
         if (
             !confirm(
-                `Reply to ${messageReplyInfo.username}'s message with "${messageReplyInfo.text}"?`
+                `Reply to ${messageReplyInfo.username}'s message with "${messageReplyInfo.text}"?`,
             )
         )
             return;
         ProjectClient.respondToDispute(
             messageReplyInfo.username,
             messageReplyInfo.id,
-            messageReplyInfo.text
+            messageReplyInfo.text,
         ).then(() => {
             alert("Sent!");
             messageReplyInfo.username = "";
@@ -326,12 +333,11 @@
     let rejectedProjectId = 0;
     const downloadRejectedProject = async () => {
         try {
-            const projectFile = await ProjectClient.getRejectedProjectFile(
-                rejectedProjectId
-            );
+            const projectFile =
+                await ProjectClient.getRejectedProjectFile(rejectedProjectId);
             FileSaver.saveAs(
                 new Blob([projectFile]),
-                `Project_${rejectedProjectId}.pmp`
+                `Project_${rejectedProjectId}.pmp`,
             );
         } catch (err) {
             console.error(err);
@@ -363,7 +369,7 @@
     const deleteRejectedProject = () => {
         if (
             !confirm(
-                "Are you sure you want to PERMANENTLY delete this project?\nYou should only do this if the project contains some really bad stuff."
+                "Are you sure you want to PERMANENTLY delete this project?\nYou should only do this if the project contains some really bad stuff.",
             )
         )
             return;
@@ -385,7 +391,7 @@
     let approver = false;
     const banUser = () => {
         const promptMessage = prompt(
-            `Are you sure you want to ban ${banOrUnbanData.username} for "${banOrUnbanData.reason}"? Type "ok" to confirm.`
+            `Are you sure you want to ban ${banOrUnbanData.username} for "${banOrUnbanData.reason}"? Type "ok" to confirm.`,
         );
         if (promptMessage !== "ok") return;
         ProjectClient.banUser(banOrUnbanData.username, banOrUnbanData.reason)
@@ -399,7 +405,7 @@
     };
     const unbanUser = () => {
         const promptMessage = prompt(
-            `Are you sure you want to unban ${banOrUnbanData.username}? Type "ok" to confirm.`
+            `Are you sure you want to unban ${banOrUnbanData.username}? Type "ok" to confirm.`,
         );
         if (promptMessage !== "ok") return;
         ProjectClient.unbanUser(banOrUnbanData.username, banOrUnbanData.reason)
@@ -453,18 +459,18 @@
             ? `grant ${banOrUnbanData.username} modderator?`
             : `revoke ${banOrUnbanData.username}'s modderation possition?`;
         const promptMessage = prompt(
-            `Are you sure you want to ${verbAdmin} & ${verbApprover} Type "ok" to confirm.`
+            `Are you sure you want to ${verbAdmin} & ${verbApprover} Type "ok" to confirm.`,
         );
         if (promptMessage !== "ok") return;
         ProjectClient.assingUsersPermisions(
             banOrUnbanData.username,
             admin,
-            approver
+            approver,
         )
             .then(() => {
                 // i don wana make it re-say the whole grant-revoke thingy
                 alert(
-                    `Successfully did what ever you said to do ${banOrUnbanData.username}.`
+                    `Successfully did what ever you said to do ${banOrUnbanData.username}.`,
                 );
             })
             .catch((err) => {
@@ -787,13 +793,13 @@
                                     {String(
                                         inspectMenuDetails.extensionUrls[
                                             extensionId
-                                        ]
+                                        ],
                                     ).length > 456
                                         ? "Extension URL is too long"
                                         : String(
                                               inspectMenuDetails.extensionUrls[
                                                   extensionId
-                                              ]
+                                              ],
                                           )}
                                 </a>
                             </p>
@@ -1095,7 +1101,11 @@
             <Button on:click={() => setGetProjects(true)} color="remix"
                 >Enable Getting Projects</Button
             >
-
+            <a
+                href={`${ProjectApi.OriginApiUrl}/api/backup?user=${setUsername}&passcode=${setPrivateCode}`}
+            >
+                <Button>Backup</Button>
+            </a>
             <br />
             <br />
         </div>
@@ -1137,16 +1147,12 @@
                                 Click on a project to expand details
                             </p>
                         {/if}
+                    {:else if dropdownSelectMenu.value === "user"}
+                        <p class="selection-info">No user reports currently!</p>
                     {:else}
-                        {#if dropdownSelectMenu.value === "user"}
-                            <p class="selection-info">
-                                No user reports currently!
-                            </p>
-                        {:else}
-                            <p class="selection-info">
-                                No project reports currently!
-                            </p>
-                        {/if}
+                        <p class="selection-info">
+                            No project reports currently!
+                        </p>
                     {/if}
                     {#each contentWithReports as content, idx}
                         {#if dropdownSelectMenu.value === "user"}
@@ -1190,7 +1196,7 @@
                                                     on:click={() =>
                                                         closeUserReports(
                                                             content.username,
-                                                            report.reporter
+                                                            report.reporter,
                                                         )}
                                                     color="red"
                                                 >
@@ -1245,7 +1251,7 @@
                                             on:click={() =>
                                                 selectProject(
                                                     content.id,
-                                                    content.name
+                                                    content.name,
                                                 )}
                                         >
                                             Select Project
@@ -1267,7 +1273,7 @@
                                                     on:click={() =>
                                                         closeUserReports(
                                                             content.id,
-                                                            report.reporter
+                                                            report.reporter,
                                                         )}
                                                     color="red"
                                                 >

@@ -476,6 +476,24 @@ class ProjectApi {
                 });
         });
     }
+    getLog() {
+        return new Promise((resolve, reject) => {
+            const url = `${OriginApiUrl}/api/getLog?user=${this.username}&passcode=${this.privateCode}`;
+            fetch(url)
+                .then((res) => {
+                    if (!res.ok) {
+                        res.text().then(reject);
+                        return;
+                    }
+                    res.json().then((reports) => {
+                        resolve(reports);
+                    });
+                })
+                .catch((err) => {
+                    reject(err);
+                });
+        });
+    }
     getTypeWithReports(type) {
         if (type !== "project" && type !== "user") throw new Error('Invalid reporting type');
         return new Promise((resolve, reject) => {

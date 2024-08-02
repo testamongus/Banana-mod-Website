@@ -111,6 +111,7 @@
         reportDetails = Object.create({});
         switch (dropdownSelectMenu.value) {
             case "user":
+            case "log":
             case "project":
                 return openMenu(dropdownSelectMenu.value);
         }
@@ -131,6 +132,12 @@
     };
 
     function openMenu(type) {
+        if (dropdownSelectMenu.value === "log") {
+            ProjectClient.getLog().then((log) => {
+                contentWithReports = log;
+            });
+            return;
+        }
         ProjectClient.getTypeWithReports(type).then((projectsWithReports) => {
             contentWithReports = projectsWithReports.filter(
                 (content) => content.exists,
@@ -1121,6 +1128,7 @@
                     <option value="" disabled />
                     <option value="user">User Reports</option>
                     <option value="project">Project Reports</option>
+                    <option value="log">Log</option>
                     <option value="" disabled />
                     <optgroup label="Moderation">
                         <option value="" disabled>
@@ -1142,17 +1150,19 @@
                             <p class="selection-info">
                                 Click on a user to expand details
                             </p>
-                        {:else}
+                        {:else if dropdownSelectMenu.value === "project"}
                             <p class="selection-info">
                                 Click on a project to expand details
                             </p>
                         {/if}
                     {:else if dropdownSelectMenu.value === "user"}
                         <p class="selection-info">No user reports currently!</p>
-                    {:else}
+                    {:else if dropdownSelectMenu.value === "project"}
                         <p class="selection-info">
                             No project reports currently!
                         </p>
+                    {:else if dropdownSelectMenu.value === "log"}
+                        <p class="selection-info">No logs.</p>
                     {/if}
                     {#each contentWithReports as content, idx}
                         {#if dropdownSelectMenu.value === "user"}
@@ -1210,7 +1220,7 @@
                                     {/if}
                                 </div>
                             {/if}
-                        {:else if content.exists}
+                        {:else if dropdownSelectMenu.value === "user"}
                             <button
                                 class="reports-user-button reports-project-button"
                                 on:click={() => {
@@ -1287,6 +1297,16 @@
                                     {/if}
                                 </div>
                             {/if}
+                        {:else if dropdownSelectMenu.value === "log"}
+                            <!-- not a report but idc -->
+                            <div class="log-item">
+                                <b>
+                                    {content.type}
+                                </b>
+                                <span>
+                                    {content.message}
+                                </span>
+                            </div>
                         {/if}
                     {/each}
                 {/if}
@@ -1388,6 +1408,17 @@
         width: 32px;
         height: 32px;
         border-radius: 4px;
+    }
+    .log-item {
+        margin: 4px;
+        padding: 4px;
+        border: rgba(0, 0, 0, 0.25) 1px solid;
+        border-radius: 4px;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: calc(max-content, 32px);
     }
     .reports-project-button img {
         width: 48px;

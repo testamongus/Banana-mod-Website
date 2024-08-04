@@ -358,7 +358,7 @@
                             <p class="small" style="margin-block:4px">
                                 {#if fullProfile.admin === true}
                                     <LocalizedText
-                                        text="The Ultimate Snail"
+                                        text="The Immortal Snail"
                                         key="profile.ranking.admin"
                                         lang={currentLang}
                                     />

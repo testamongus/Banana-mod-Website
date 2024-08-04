@@ -1165,138 +1165,138 @@
                         <p class="selection-info">No logs.</p>
                     {/if}
                     {#each contentWithReports as content, idx}
-                        {#if dropdownSelectMenu.value === "user"}
-                            <button
-                                class="reports-user-button"
-                                on:click={() => {
-                                    loadReportDetails(content.username);
-                                    if (selectedReportDetailed === idx) {
-                                        selectedReportDetailed = -1;
-                                        return;
-                                    }
-                                    selectedReportDetailed = idx;
-                                }}
-                            >
-                                <img
-                                    src={`https://trampoline.turbowarp.org/avatars/by-username/${content.username}`}
-                                    alt={content.username}
-                                />
-                                <div class="reports-user-content">
-                                    <p style="font-weight: bold;">
-                                        {content.username}
-                                    </p>
-                                    <p>{content.reports} reports</p>
-                                </div>
-                            </button>
-                            {#if selectedReportDetailed === idx}
-                                <div class="reports-generic-details">
-                                    {#if !reportDetails[content.username]}
-                                        <LoadingSpinner />
-                                    {:else}
-                                        <h3>View reports by</h3>
-                                        {#each reportDetails[content.username] as report}
-                                            <details>
-                                                <summary>
-                                                    {report.reporter}
-                                                </summary>
-                                                <p>
-                                                    {report.ids.length} reports
-                                                </p>
-                                                <Button
-                                                    on:click={() =>
-                                                        closeUserReports(
-                                                            content.username,
-                                                            report.reporter,
-                                                        )}
-                                                    color="red"
-                                                >
-                                                    Close Reports
-                                                </Button>
-                                                <p style="white-space:pre-wrap">
-                                                    {report.reason}
-                                                </p>
-                                            </details>
-                                        {/each}
-                                    {/if}
-                                </div>
-                            {/if}
-                        {:else if dropdownSelectMenu.value === "user"}
-                            <button
-                                class="reports-user-button reports-project-button"
-                                on:click={() => {
-                                    loadReportDetails(content.id);
-                                    if (selectedReportDetailed === idx) {
-                                        selectedReportDetailed = -1;
-                                        return;
-                                    }
-                                    selectedReportDetailed = idx;
-                                }}
-                            >
-                                <img
-                                    src={`https://snailshare.dreamhosters.com/api/pmWrapper/iconUrl?id=${content.id}`}
-                                    alt={content.name}
-                                />
-                                <div
-                                    class="reports-user-content reports-project-content"
-                                >
-                                    <p style="font-weight: bold;">
-                                        {content.name}
-                                    </p>
-                                    <p>
-                                        by {content.author} | {content.reports} reports
-                                    </p>
-                                </div>
-                            </button>
-                            {#if selectedReportDetailed === idx}
-                                <div class="reports-generic-details">
-                                    <p>
-                                        View project at
-                                        <a
-                                            href={`https://editor.snail-ide.com/#${content.id}`}
-                                        >
-                                            {`https://editor.snail-ide.com/#${content.id}`}
-                                        </a>
-                                        or
-                                        <button
+                    {#if dropdownSelectMenu.value === "user"}
+                    <button
+                        class="reports-user-button"
+                        on:click={() => {
+                            loadReportDetails(content.username);
+                            if (selectedReportDetailed === idx) {
+                                selectedReportDetailed = -1;
+                                return;
+                            }
+                            selectedReportDetailed = idx;
+                        }}
+                    >
+                        <img
+                            src={`https://trampoline.turbowarp.org/avatars/by-username/${content.username}`}
+                            alt={content.username}
+                        />
+                        <div class="reports-user-content">
+                            <p style="font-weight: bold;">
+                                {content.username}
+                            </p>
+                            <p>{content.reports} reports</p>
+                        </div>
+                    </button>
+                    {#if selectedReportDetailed === idx}
+                        <div class="reports-generic-details">
+                            {#if !reportDetails[content.username]}
+                                <LoadingSpinner />
+                            {:else}
+                                <h3>View reports by</h3>
+                                {#each reportDetails[content.username] as report}
+                                    <details>
+                                        <summary>
+                                            {report.reporter}
+                                        </summary>
+                                        <p>
+                                            {report.ids.length} reports
+                                        </p>
+                                        <Button
                                             on:click={() =>
-                                                selectProject(
-                                                    content.id,
-                                                    content.name,
+                                                closeUserReports(
+                                                    content.username,
+                                                    report.reporter,
                                                 )}
+                                            color="red"
                                         >
-                                            Select Project
-                                        </button>
-                                    </p>
-                                    {#if !reportDetails[content.id]}
-                                        <LoadingSpinner />
-                                    {:else}
-                                        <h3>View reports by</h3>
-                                        {#each reportDetails[content.id] as report}
-                                            <details>
-                                                <summary>
-                                                    {report.reporter}
-                                                </summary>
-                                                <p>
-                                                    {report.ids.length} reports
-                                                </p>
-                                                <Button
-                                                    on:click={() =>
-                                                        closeUserReports(
-                                                            content.id,
-                                                            report.reporter,
-                                                        )}
-                                                    color="red"
-                                                >
-                                                    Close Reports
-                                                </Button>
-                                                <p style="white-space:pre-wrap">
-                                                    {report.reason}
-                                                </p>
-                                            </details>
-                                        {/each}
-                                    {/if}
-                                </div>
+                                            Close Reports
+                                        </Button>
+                                        <p style="white-space:pre-wrap">
+                                            {report.reason}
+                                        </p>
+                                    </details>
+                                {/each}
                             {/if}
+                        </div>
+                    {/if}
+                {:else if content.exists}
+                    <button
+                        class="reports-user-button reports-project-button"
+                        on:click={() => {
+                            loadReportDetails(content.id);
+                            if (selectedReportDetailed === idx) {
+                                selectedReportDetailed = -1;
+                                return;
+                            }
+                            selectedReportDetailed = idx;
+                        }}
+                    >
+                        <img
+                            src={`https://snailshare.dreamhosters.com/api/pmWrapper/iconUrl?id=${content.id}`}
+                            alt={content.name}
+                        />
+                        <div
+                            class="reports-user-content reports-project-content"
+                        >
+                            <p style="font-weight: bold;">
+                                {content.name}
+                            </p>
+                            <p>
+                                by {content.author} | {content.reports} reports
+                            </p>
+                        </div>
+                    </button>
+                    {#if selectedReportDetailed === idx}
+                        <div class="reports-generic-details">
+                            <p>
+                                View project at
+                                <a
+                                    href={`https://editor.snail-ide.com/#${content.id}`}
+                                >
+                                    {`https://editor.snail-ide.com/#${content.id}`}
+                                </a>
+                                or
+                                <button
+                                    on:click={() =>
+                                        selectProject(
+                                            content.id,
+                                            content.name,
+                                        )}
+                                >
+                                    Select Project
+                                </button>
+                            </p>
+                            {#if !reportDetails[content.id]}
+                                <LoadingSpinner />
+                            {:else}
+                                <h3>View reports by</h3>
+                                {#each reportDetails[content.id] as report}
+                                    <details>
+                                        <summary>
+                                            {report.reporter}
+                                        </summary>
+                                        <p>
+                                            {report.ids.length} reports
+                                        </p>
+                                        <Button
+                                            on:click={() =>
+                                                closeUserReports(
+                                                    content.id,
+                                                    report.reporter,
+                                                )}
+                                            color="red"
+                                        >
+                                            Close Reports
+                                        </Button>
+                                        <p style="white-space:pre-wrap">
+                                            {report.reason}
+                                        </p>
+                                    </details>
+                                {/each}
+                            {/if}
+                        </div>
+                    {/if}
                         {:else if dropdownSelectMenu.value === "log"}
                             <!-- not a report but idc -->
                             <div class="log-item">

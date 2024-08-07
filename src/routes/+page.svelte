@@ -239,7 +239,6 @@
         buttonText={"Read"}
         buttonHref={"https://snail-ide.vercel.app/important.txt"}
         backColor={"orange"}
-        hasButton={false}
     />
 
     {#if loggedIn === false}

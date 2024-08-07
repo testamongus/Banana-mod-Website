@@ -1,0 +1,6 @@
+*PLEASE DO NOT ATTACK ANY NAMES MENTIONED IN HERE, IT WAS OUR FAULT*
+Hey, this is from the lead developer, and I need to talk for a moment. Snail IDE recently had a major loss of data due to an issue with FTP and our server host (serv00.) This has caused most projects to be wiped from the server, we are sincerely sorry about this. So this won't happen again we have made some changes.
+
+*The servers will be backed up every once and a while
+*We have switched to Dreamhost which will work much better
+There is one more thing that must be said, updates will slow down a little. I love this project, but I want to work on other things and school is starting back up, so you will see less updates than usual. When I say updates, I do mean major updates so there won't be as many updates that aren't server related or very minor, but we will still make larger updates every few months. Now this is coming from my (nmsderp) point of view, if other developers want to make cool stuff they can if they want.

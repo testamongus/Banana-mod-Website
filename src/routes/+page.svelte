@@ -231,10 +231,13 @@
     />
     <StatusAlert />
     <Alert
-        onlyShowID={"server-downtime:4"}
-        text={"The servers are back but many projects were lost, we will make a report on what happened soon."}
+        onlyShowID={"server-downtime:5"}
+        text={"We have made a report on what happened."}
         textBreakup={true}
         textColor={"white"}
+        hasButton={true}
+        buttonText={"Read"}
+        buttonHref={"https://snail-ide.vercel.app/important.txt"}
         backColor={"orange"}
         hasButton={false}
     />

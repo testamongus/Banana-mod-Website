@@ -110,6 +110,7 @@
     "messages.alert.staff.reply.confirm": "Send this to the admins? All admins will see it.",
     "account.title": "My Account",
     "account.info.name": "Logged in as",
+    "profile.followers.all": "Followers",
     "account.settings.title": "Settings",
     "account.settings.showliked": "Show my liked projects on my profile",
     "account.settings.showfeatured": "Show the projects I have voted to be featured on my profile",

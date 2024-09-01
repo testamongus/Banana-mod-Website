@@ -3,7 +3,7 @@
     import Authentication from "../../resources/authentication.js";
     import ProjectApi from "../../resources/projectapi.js";
     import EmojiList from "../../resources/emojis.js";
-    import Swal from 'sweetalert2';
+    import Swal from "sweetalert2";
 
     const ProjectClient = new ProjectApi();
 
@@ -35,7 +35,7 @@
         if (projectName === "") {
             projectName = TranslationHandler.text(
                 "uploading.project.title.default",
-                currentLang
+                currentLang,
             );
         }
     });
@@ -118,7 +118,7 @@
                 // exit if not found
                 loadingExternal = false;
                 console.warn(
-                    "External import stopped; parent window not found"
+                    "External import stopped; parent window not found",
                 );
                 return;
             }
@@ -129,7 +129,7 @@
                         {
                             p4: data,
                         },
-                        importLocation
+                        importLocation,
                     );
                 } catch (e) {
                     console.warn("Cannot post message", e);
@@ -198,7 +198,7 @@
         projectData = projectUri;
         projectInputName.innerText = TranslationHandler.text(
             "uploading.project.ownfile.picked",
-            currentLang
+            currentLang,
         )
             .replace("$2", floatTo2Decimals(file.size / 1250000))
             .replace("$1", file.name);
@@ -215,38 +215,27 @@
         })
             .then((projectId) => {
                 Swal.fire({
-                    title: 'Project Successfuly Uploaded!',
+                    title: "Project Successfuly Uploaded!",
                     text: "Click the button below to view your project.",
                     confirmButtonText: "Take me to my project",
                     icon: "success",
                     allowOutsideClick: false,
                     preConfirm: () => {
                         window.location.href = `${LINK.base}#${projectId}`;
-                    }
-                })
-                
+                    },
+                });
             })
             .catch((err) => {
                 const message = TranslationHandler.text(
                     `uploading.error.${String(err).toLowerCase()}}`,
-                    currentLang
+                    currentLang,
                 );
-                if (!message) {
-                    if (String(err).toLowerCase().includes("unknown") && setThumbnail) {
-                        return Swal.fire({
-                            icon: 'error',
-                            title: "Error uploading project",
-                            text: 'Thumbnail not chosen'
-                        })
-                    } else {
-                        return Swal.fire({
-                            icon: 'error',
-                            title: 'Error uploading project',
-                            text: `Friendly message: ${message ?? 'Unknown error'} | Technical message: ${String(err)}`
-                        })
-                    }
-                }
-                    
+
+                return Swal.fire({
+                    icon: "error",
+                    title: "Error uploading project",
+                    text: `Friendly message: ${message ?? "Unknown error. If this happens again, send all the information about the situation you know, the techical message or the error from the console if you can access it, and your project if applicable to @o97doge. Do NOT be rude, as otherwise you will be ignored."} | Technical message: ${String(err)}`,
+                });
             });
     }
 
@@ -351,7 +340,7 @@
                             uri: projectImage,
                         },
                     },
-                    e.origin
+                    e.origin,
                 );
                 e.source.postMessage(
                     {
@@ -361,7 +350,7 @@
                             name: projectName,
                         },
                     },
-                    e.origin
+                    e.origin,
                 );
                 e.source.postMessage(
                     {
@@ -375,7 +364,7 @@
                             },
                         },
                     },
-                    e.origin
+                    e.origin,
                 );
                 e.source.postMessage(
                     {
@@ -383,7 +372,7 @@
                             type: "finished",
                         },
                     },
-                    e.origin
+                    e.origin,
                 );
             }
         });
@@ -409,48 +398,50 @@
     // EMOJIS eae
 
     const emojiPickerRandomEmojis = [
-        'angel',
-        'angry',
-        'annoyed',
-        'bigsad',
-        'cute',
-        'disappointed',
-        'happy',
-        'idk',
-        'meh',
-        'salute',
-        'shocked',
-        'sobbing',
-        'worried',
-        'investigate',
-        'grimacing',
-        'confusedthinking',
-        'cool',
+        "angel",
+        "angry",
+        "annoyed",
+        "bigsad",
+        "cute",
+        "disappointed",
+        "happy",
+        "idk",
+        "meh",
+        "salute",
+        "shocked",
+        "sobbing",
+        "worried",
+        "investigate",
+        "grimacing",
+        "confusedthinking",
+        "cool",
     ];
-    let emojiPickerRandomEmoji = '';
-    let emojiSearchQuery = '';
+    let emojiPickerRandomEmoji = "";
+    let emojiSearchQuery = "";
     let emojiSearchBar;
     let lastSelectedFormArea;
     const pickRandomEmojiPickerDisplay = () => {
-        emojiPickerRandomEmoji = emojiPickerRandomEmojis
-            [Math.round(Math.random() * (emojiPickerRandomEmojis.length - 1))];
+        emojiPickerRandomEmoji =
+            emojiPickerRandomEmojis[
+                Math.round(Math.random() * (emojiPickerRandomEmojis.length - 1))
+            ];
     };
     pickRandomEmojiPickerDisplay();
 
     let emojiPickerListUpdate = 0;
     const allowEmojiDrop = (ev) => {
         const data = ev.dataTransfer.getData("emoji");
-        if (data && typeof data === 'string') {
+        if (data && typeof data === "string") {
             ev.preventDefault();
         }
-    }
+    };
     const useEmojiDrag = (ev, name) => {
         ev.dataTransfer.setData("emoji", name);
-    }
+    };
     const handleEmojiDrop = (ev) => {
         const data = ev.dataTransfer.getData("emoji");
-        if (data && typeof data === 'string') {
-            ev.dataTransfer.setData("emoji", '');
+        if (data && typeof data === "string") {
+            ev.dataTransfer.setData("emoji", "");
             ev.preventDefault();
         } else {
             return;
@@ -461,7 +452,7 @@
             emojiSearchQuery = emojiSearchBar.value;
         }
         emojiPickerListUpdate++;
-    }
+    };
     const placeEmojiInTextbox = (emoji) => {
         if (!lastSelectedFormArea) return;
         lastSelectedFormArea.value += `:${emoji}:`;
@@ -473,13 +464,13 @@
 
     let emojiPickerOpened = false;
     onMount(() => {
-        components.projectName.addEventListener('click', (e) => {
+        components.projectName.addEventListener("click", (e) => {
             lastSelectedFormArea = e.target;
         });
-        components.projectInstructions.addEventListener('click', (e) => {
+        components.projectInstructions.addEventListener("click", (e) => {
             lastSelectedFormArea = e.target;
         });
-        components.projectNotes.addEventListener('click', (e) => {
+        components.projectNotes.addEventListener("click", (e) => {
             lastSelectedFormArea = e.target;
         });
         EmojiList.fetch().finally(() => {
@@ -505,7 +496,7 @@
             <p style="text-align: center;">
                 {@html TranslationHandler.text(
                     "project.importing",
-                    currentLang
+                    currentLang,
                 )}
             </p>
         </div>
@@ -534,7 +525,7 @@
                             showdate={true}
                             on:click={window.open(
                                 generateExportEditPageForId(project.id),
-                                "_blank"
+                                "_blank",
                             )}
                         />
                     {/each}
@@ -702,7 +693,7 @@
                     on:dragstart={(ev) => {
                         useEmojiDrag(ev, emojiPickerRandomEmoji);
                     }}
-                >
+                />
             </button>
             <div class="emoji-picker-list" data-opened={emojiPickerOpened}>
                 <div class="emoji-picker-search-container">
@@ -722,7 +713,7 @@
                         placeholder="..."
                         bind:value={emojiSearchQuery}
                         bind:this={emojiSearchBar}
-                    >
+                    />
                 </div>
                 <div class="emoji-picker-emoji-container">
                     {#key emojiPickerListUpdate}
@@ -738,24 +729,20 @@
                             </p>
                         {:else}
                             {#each EmojiList.emojis as emoji}
-                                {#if
-                                    !emojiSearchQuery
-                                    || String(emoji).includes(
-                                        emojiSearchQuery
+                                {#if !emojiSearchQuery || String(emoji).includes(emojiSearchQuery
                                             .toLowerCase()
-                                            .replace(/[^a-z]+/gmi, '')
-                                    )
-                                }
+                                            .replace(/[^a-z]+/gim, ""))}
                                     <button
                                         class="emoji-picker-emoji"
-                                        on:click={() => placeEmojiInTextbox(emoji)}
+                                        on:click={() =>
+                                            placeEmojiInTextbox(emoji)}
                                     >
                                         <img
                                             src={`https://snail-ide-object-libraries.vercel.app/files/emojis/${emoji}.png`}
                                             alt={`:${emoji}:`}
                                             title={`:${emoji}:`}
                                             draggable="false"
-                                        >
+                                        />
                                     </button>
                                 {/if}
                             {/each}
@@ -778,7 +765,7 @@
                         type="text"
                         placeholder={TranslationHandler.text(
                             "uploading.project.title.default",
-                            currentLang
+                            currentLang,
                         )}
                         bind:this={components.projectName}
                         on:dragover={allowEmojiDrop}
@@ -795,7 +782,7 @@
                     <textarea
                         placeholder={TranslationHandler.text(
                             "uploading.project.instructions.default",
-                            currentLang
+                            currentLang,
                         )}
                         bind:this={components.projectInstructions}
                         on:dragover={allowEmojiDrop}
@@ -811,7 +798,7 @@
                     <textarea
                         placeholder={TranslationHandler.text(
                             "uploading.project.notes.default",
-                            currentLang
+                            currentLang,
                         )}
                         bind:this={components.projectNotes}
                         on:dragover={allowEmojiDrop}
@@ -881,8 +868,8 @@
                                 {String(
                                     TranslationHandler.text(
                                         "uploading.remix.selected",
-                                        currentLang
-                                    )
+                                        currentLang,
+                                    ),
                                 ).replace("$1", remixingProjectName)}
                             </p>
                         {/if}

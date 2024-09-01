@@ -187,7 +187,7 @@
     "uploading.error.formaterrorremixmustbeprojectidasnumber": "Remix Format Error. Report to dumorando.",
     "uploading.error.cannotusethisextensionforthisrank": "You cannot upload this project yet as it contains custom extensions or certain blocked extensions. Please try another project and or wait a couple days to be able to rank up your account to trustable.",
     "uploading.error.illegalwordsused": "Words or phrases were used that are not allowed in Snail IDE. Please check through your project's details for any inappropriate words or phrases.",
-    "uploading.error.report": "Impossible situation. Report to Mr_rudy. Details: $1",
+    "uploading.error.report": "A server error has occured. If this happens again, send all the information about the situation you know, and your project if applicable to @o97doge. Do NOT be rude, as otherwise you will be ignored.",
     "uploading.error.unknown": "Unknown error. The file may be too large or something unexpected happened. Full error: $1",
     "editing.header": "Edit",
     "editing.header.detail": "Editing $1",

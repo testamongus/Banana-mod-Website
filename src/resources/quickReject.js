@@ -27,7 +27,7 @@ const data = {
     "Contains loud sounds": "Your project was rejected because it contains loud sounds above the boundary in the sound editor. You must place a loud sound warning either as a warning screen or remove the loud sounds entirely.",
     "Piracy": "Your project was rejected because it contains or enables downloading of stolen copyrighted or paid content. This is a serious offense and you may get your account banned or limited.",
     "Unsafe Chat": "Your project was rejected because it uses a chat system, please only use prebuilt messages for chat. Even if it is moderated, it will be removed.",
-    "Only consists of an image": "Your project was rejected because uploading a project based on a single image is not allowed as they take storage space up without any clear purpose. Try adding other content to your project(s) next time. Please (re)read the Project Uploading & Updating guidelines, they are *not* the same as PenguinMod's Project Uploading & Updating guidelines.",
+    "Only consists of an image": "Your project was removed because it only contains a single image. Unfortunately, to save on storage space, we have to remove projects with only a single image. This was a rule set in place by the previous server host. To make sure you don't get any more warnings in the future, we ask you to (re)read the Project Uploading & Updating guidelines.",
 };
 
 const getTopLevel = () => {

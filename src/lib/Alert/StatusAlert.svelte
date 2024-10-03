@@ -30,6 +30,13 @@
     });
 </script>
 
+<Alert
+    text="We're aware of the uploading issues with files over 1MB and we're trying to fix it."
+    onlyShowID={"uploading_issues:1"}
+    buttonText="Forum Ppost"
+    buttonHref="https://forum.snail-ide.com/d/129-were-trying-to-fix-the-uploading-issues-of-files-over-1mb"
+    dismissable={true}
+/>
 {#if currentStatus.type !== "empty"}
     <Alert
         text={currentStatus.text}

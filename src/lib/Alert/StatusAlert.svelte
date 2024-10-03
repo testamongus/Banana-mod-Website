@@ -31,9 +31,11 @@
 </script>
 
 <Alert
+    backColor={"#ffd900"}
+    textColor={"black"}
     text="We're aware of the uploading issues with files over 1MB and we're trying to fix it."
     onlyShowID={"uploading_issues:1"}
-    buttonText="Forum Ppost"
+    buttonText="Forum Post"
     buttonHref="https://forum.snail-ide.com/d/129-were-trying-to-fix-the-uploading-issues-of-files-over-1mb"
     dismissable={true}
 />

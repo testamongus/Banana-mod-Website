@@ -31,6 +31,7 @@
 </script>
 
 <Alert
+    hasButton={true}
     backColor={"#ffd900"}
     textColor={"black"}
     text="We're aware of the uploading issues with files over 1MB and we're trying to fix it."

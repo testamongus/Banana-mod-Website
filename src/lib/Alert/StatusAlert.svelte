@@ -34,6 +34,7 @@
     hasButton={true}
     backColor={"#ffd900"}
     textColor={"black"}
+    buttonTooLight={true},
     text="We're aware of the uploading issues with files over 1MB and we're trying to fix it."
     onlyShowID={"uploading_issues:1"}
     buttonText="Forum Post"

@@ -31,14 +31,10 @@
 </script>
 
 <Alert
-    hasButton={true}
-    backColor={"#ffd900"}
+    backColor={"lightgreen"}
     textColor={"black"}
-    buttonTooLight={true},
-    text="We're aware of the uploading issues with files over 1MB and we're trying to fix it."
-    onlyShowID={"uploading_issues:1"}
-    buttonText="Forum Post"
-    buttonHref="https://forum.snail-ide.com/d/129-were-trying-to-fix-the-uploading-issues-of-files-over-1mb"
+    text="The uploading issue semms to be fixed! Many thanks to the DreamHost team for being so helpful."
+    onlyShowID={"uploading_issues:2"}
     dismissable={true}
 />
 {#if currentStatus.type !== "empty"}

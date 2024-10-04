@@ -231,14 +231,11 @@
     />
     <StatusAlert />
     <Alert
-        onlyShowID={"server-downtime:5"}
-        text={"We have made a report on what happened."}
-        textBreakup={true}
-        textColor={"white"}
-        hasButton={true}
-        buttonText={"Read"}
-        buttonHref={"https://snail-ide.vercel.app/important.txt"}
-        backColor={"orange"}
+        backColor={"lightgreen"}
+        textColor={"black"}
+        text="The uploading issue seems to be fixed! Many thanks to the DreamHost team for being so helpful."
+        onlyShowID={"uploading_issues:2"}
+        dismissable={true}
     />
 
     {#if loggedIn === false}

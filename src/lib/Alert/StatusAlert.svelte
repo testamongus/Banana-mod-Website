@@ -30,13 +30,6 @@
     });
 </script>
 
-<Alert
-    backColor={"lightgreen"}
-    textColor={"black"}
-    text="The uploading issue seems to be fixed! Many thanks to the DreamHost team for being so helpful."
-    onlyShowID={"uploading_issues:2"}
-    dismissable={true}
-/>
 {#if currentStatus.type !== "empty"}
     <Alert
         text={currentStatus.text}

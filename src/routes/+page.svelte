@@ -233,8 +233,11 @@
     <Alert
         backColor={"lightgreen"}
         textColor={"black"}
-        text="The uploading issue seems to be fixed! Many thanks to the DreamHost team for being so helpful."
-        onlyShowID={"uploading_issues:2"}
+        text="The lead developer of Snail IDE has created a Linux distro, its currently just a beta."
+        onlyShowID={"boronos:1"}
+        hasButton={true}
+        buttonText={"Try it"}
+        buttonHref={"https://boronos.nmsderp.xyz/"}
         dismissable={true}
     />
 

@@ -225,12 +225,15 @@
                     },
                 });
             })
-            .catch((err) => {
+            .catch(
+                /**
+                 * @param {Error} err
+                 */
+                (err) => {
                 const message = TranslationHandler.text(
-                    `uploading.error.${String(err).toLowerCase()}}`,
+                    `uploading.error.${String(err).toLowerCase()}`,
                     currentLang,
                 );
-
                 return Swal.fire({
                     icon: "error",
                     title: "Error uploading project",

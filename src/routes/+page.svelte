@@ -39,10 +39,12 @@
     let ghcommitsLoaded = false;
     let projectsLoaded = false;
     let projectsFailed = false;
+    let spookyFailed = false;
 
     let projects = {
         today: [],
         featured: [],
+        spooky: []
     };
 
     let thingyActive = false;
@@ -131,6 +133,20 @@
             })
             .catch(() => {
                 projectsFailed = true;
+            });
+        fetch(`${LINK.projects}api/projects/search?page=0&includes=%23spooky`)
+            .then((response) => {
+                response
+                    .json()
+                        .then((projectListResult) => {
+                            projects.spooky = projectListResult.projects;
+                        })
+                        .catch(() => {
+                            spookyFailed = true;
+                        });
+            })
+            .catch(() => {
+                spookyFailed = true;
             });
     });
 
@@ -576,6 +592,62 @@
                         </p>
                     </div>
                 {:else if projectsFailed === true}
+                    <div
+                        style="display:flex;flex-direction:column;align-items: center;width: 100%;"
+                    >
+                        <img
+                            src="/penguins/server.svg"
+                            alt="Server Penguin"
+                            style="width: 15rem"
+                        />
+                        <p>
+                            <LocalizedText
+                                text="Whoops! Our server's having some problems. Try again later. Or if you're on a school computer, https://snailshare.xyz may be blocked. You can still make a project."
+                                key="home.server.error"
+                                lang={currentLang}
+                            />
+                            <Button link={LINK.editor}>
+                                <LocalizedText
+                                    text="Create a project"
+                                    key="home.footer.sections.website.createAProject"
+                                    lang={currentLang}
+                                />
+                            </Button>
+                        </p>
+                    </div>
+                {:else}
+                    <LoadingSpinner />
+                {/if}
+            </div>
+        </ContentCategory>
+        <ContentCategory
+            header={TranslationHandler.text(
+                "home.sections.spookyprojects",
+                currentLang,
+            )}
+            seemore={`/search?q=%23spooky`}
+            style="width:65%;"
+            stylec="height: 244px;"
+        >
+            <div class="project-list">
+                {#if projects.spooky.length > 0}
+                    {#each projects.spooky as project}
+                        <Project {...project} />
+                    {/each}
+                {:else if projectsLoaded === true}
+                    <div
+                        style="display:flex;flex-direction:column;align-items: center;width: 100%;"
+                    >
+                        <PenguinConfusedSVG width="8rem" />
+                        <p>
+                            <LocalizedText
+                                text="Nothing found. You can help feature projects by clicking the yellow checkmark below them."
+                                key="home.none.featured"
+                                lang={currentLang}
+                            />
+                        </p>
+                    </div>
+                {:else if spookyFailed === true}
                     <div
                         style="display:flex;flex-direction:column;align-items: center;width: 100%;"
                     >

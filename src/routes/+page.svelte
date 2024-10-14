@@ -225,7 +225,7 @@
     };
     const isItSpooky = () => {
         var now = new Date();
-        return now.getMonth() == 10;
+        return now.getMonth() == 9;
     };
 </script>
 

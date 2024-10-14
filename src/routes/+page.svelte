@@ -207,6 +207,10 @@
         var now = new Date();
         return now.getMonth() == 3 && now.getDate() == 1;
     };
+    const isItSpooky = () => {
+        var now = new Date();
+        return now.getMonth() == 10;
+    };
 </script>
 
 <head>
@@ -231,14 +235,13 @@
     />
     <StatusAlert />
     <Alert
-        backColor={"lightgreen"}
+        backColor={"orange"}
         textColor={"black"}
-        text="The lead developer of Snail IDE has created a Linux distro, its currently just a beta."
-        onlyShowID={"boronos:1"}
+        text="Happy Halloween! Give your spooky projects some attention with this new feature!"
+        onlyShowID={"halloween:11"}
         hasButton={true}
         buttonText={"Try it"}
-        buttonHref={"https://boronos.nmsderp.xyz/"}
-        dismissable={true}
+        buttonHref={"https://snail-ide.com/spooky.mp4"}
     />
 
     {#if loggedIn === false}
@@ -375,7 +378,7 @@
         >
             <div class="category-content">
                 <UserDisplay
-                    link="https://editor.snail-ide.com/#6399683222841"
+                    link="https://snail-ide.com/spooky.mp4"
                     userLink={`https://github.com/nmsderp`}
                     text="NCS is on Snail IDE"
                     author="nmsderp"
@@ -383,11 +386,11 @@
                 />
                 <a
                     target="_blank"
-                    href="https://snailshare.xyz/api/pmWrapper/iconUrl?id=6399683222841"
+                    href="https://snail-ide.com/spooky.mp4"
                 >
                     <button class="update-image-wrapper">
                         <img
-                            src="https://snailshare.xyz/api/pmWrapper/iconUrl?id=6399683222841"
+                            src="https://snail-ide.com/spookynews.PNG"
                             alt="NCS is on Snail IDE!"
                             class="update-image"
                         />
@@ -646,6 +649,9 @@
         </ContentCategory>
         {#if isItAprilFoolDay()}
             <img src="https://penguinmod.com/cat/dave.png" alt="dave" />
+        {/if}
+        {#if isItSpooky()}
+            <img src="https://snail-ide.com/pumpkin.png" alt="pumpkin" />
         {/if}
     </div>
 

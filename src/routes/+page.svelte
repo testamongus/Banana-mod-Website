@@ -396,7 +396,7 @@
                 <UserDisplay
                     link="https://snail-ide.com/spooky.mp4"
                     userLink={`https://github.com/nmsderp`}
-                    text="NCS is on Snail IDE"
+                    text="Try out this new Halloween feature!"
                     author="nmsderp"
                     image="https://avatars.githubusercontent.com/u/130254323?v=4"
                 />

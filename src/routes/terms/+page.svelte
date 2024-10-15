@@ -58,7 +58,7 @@
                 >https://editor.snail-ide.com</a
             >,
             <a href="https://snail-ide.js.org">https://snail-ide.js.org</a>,
-            <a href="https://snailshare.xyz">https://snailshare.xyz</a>, and
+            <a href="https://snailshare.dreamhosters.com">https://snailshare.dreamhosters.com</a>, and
             any other snail-ide.com subdomains.
         </p>
         <p>
@@ -74,7 +74,7 @@
                 >https://editor.snail-ide.com</a
             >,
             <a href="https://snail-ide.js.org">https://snail-ide.js.org</a>,
-            <a href="https://snailshare.xyz">https://snailshare.xyz</a>, and
+            <a href="https://snailshare.dreamhosters.com">https://snailshare.dreamhosters.com</a>, and
             any other snail-ide.com subdomains are hereinafter known as "Snail
             IDE".
         </p>

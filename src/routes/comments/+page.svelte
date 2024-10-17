@@ -18,7 +18,7 @@
   
     const fetchComments = () => {
       if (project) {
-        fetch(`https://snailshare.xyz/api/getCommentsForProject?project=${project}`)
+        fetch(`https://snailshare.dreamhosters.com/api/getCommentsForProject?project=${project}`)
           .then(response => response.json())
           .then(data => {
             if (data.error) {
@@ -48,7 +48,7 @@
         project: project
       };
   
-      fetch('https://snailshare.xyz/api/postComment', {
+      fetch('https://snailshare.dreamhosters.com/api/postComment', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

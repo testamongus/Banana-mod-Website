@@ -602,7 +602,7 @@
                         />
                         <p>
                             <LocalizedText
-                                text="Whoops! Our server's having some problems. Try again later. Or if you're on a school computer, https://snailshare.xyz may be blocked. You can still make a project."
+                                text="Whoops! Our server's having some problems. Try again later. Or if you're on a school computer, https://snailshare.dreamhosters.com may be blocked. You can still make a project."
                                 key="home.server.error"
                                 lang={currentLang}
                             />
@@ -658,7 +658,7 @@
                         />
                         <p>
                             <LocalizedText
-                                text="Whoops! Our server's having some problems. Try again later. Or if you're on a school computer, https://snailshare.xyz may be blocked. You can still make a project."
+                                text="Whoops! Our server's having some problems. Try again later. Or if you're on a school computer, https://snailshare.dreamhosters.com may be blocked. You can still make a project."
                                 key="home.server.error"
                                 lang={currentLang}
                             />
@@ -701,7 +701,7 @@
                         />
                         <p>
                             <LocalizedText
-                                text="Whoops! Our server's having some problems. Try again later. Or if you're on a school computer, https://snailshare.xyz may be blocked. You can still make a project."
+                                text="Whoops! Our server's having some problems. Try again later. Or if you're on a school computer, https://snailshare.dreamhosters.com may be blocked. You can still make a project."
                                 key="home.server.error"
                                 lang={currentLang}
                             />

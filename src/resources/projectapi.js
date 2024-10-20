@@ -689,6 +689,32 @@ class ProjectApi {
             });
         });
     }
+    givecoins(username) {
+        return new Promise((resolve, reject) => {
+            const data = {
+                username: this.username,
+                passcode: this.privateCode,
+                target: username,
+            };
+            fetch(`${OriginApiUrl}/api/users/givecoins`, {
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+                method: "POST"
+            }).then(res => {
+                res.json().then(json => {
+                    if (!res.ok) {
+                        reject(json.error);
+                        return;
+                    }
+                    resolve();
+                }).catch(err => {
+                    reject(err);
+                });
+            }).catch(err => {
+                reject(err);
+            });
+        });
+    }
     reportContent(type, nameOrId, reason) {
         if (type !== "project" && type !== "user") throw new Error('Invalid reporting type');
         return new Promise((resolve, reject) => {

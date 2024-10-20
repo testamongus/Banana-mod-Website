@@ -424,6 +424,20 @@
                 alert(`Failed to unban user; ${err}`);
             });
     };
+    const givecoins = () => {
+        const promptMessage = prompt(
+            `Are you sure you want to give 25 coins ${banOrUnbanData.username}? Type "ok" to confirm.`,
+        );
+        if (promptMessage !== "ok") return;
+        ProjectClient.givecoins(banOrUnbanData.username, banOrUnbanData.reason)
+            .then(() => {
+                alert(`Gave 25 coins to ${banOrUnbanData.username}.`);
+            })
+            .catch((err) => {
+                console.error(err);
+                alert(`Failed to give coins to user; ${err}`);
+            });
+    };
 
     let areBadgesLoadedForVisibility = false;
     let currentUserBadges = {};
@@ -1040,6 +1054,7 @@
                 </label>
                 <div class="user-action-row">
                     <Button on:click={unbanUser}>Unban User</Button>
+                    <Button on:click={givecoins}>Give Coins To User</Button>
                     <Button color="red" on:click={banUser}>Ban User</Button>
                     <Button on:click={setUsersPerms}>Assign User Perms</Button>
                 </div>

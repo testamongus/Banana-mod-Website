@@ -249,16 +249,6 @@
         buttonText={"Try it"}
         buttonHref={"https://snail-ide.js.org/editor.html"}
     />
-    <StatusAlert />
-    <Alert
-        backColor={"orange"}
-        textColor={"black"}
-        text="Happy Halloween! Give your spooky projects some attention with this new feature!"
-        onlyShowID={"halloween:11"}
-        hasButton={true}
-        buttonText={"Try it"}
-        buttonHref={"https://snail-ide.com/spooky.mp4"}
-    />
 
     {#if loggedIn === false}
         <div class="section-info">
@@ -592,62 +582,6 @@
                         </p>
                     </div>
                 {:else if projectsFailed === true}
-                    <div
-                        style="display:flex;flex-direction:column;align-items: center;width: 100%;"
-                    >
-                        <img
-                            src="/penguins/server.svg"
-                            alt="Server Penguin"
-                            style="width: 15rem"
-                        />
-                        <p>
-                            <LocalizedText
-                                text="Whoops! Our server's having some problems. Try again later. Or if you're on a school computer, https://snailshare.dreamhosters.com may be blocked. You can still make a project."
-                                key="home.server.error"
-                                lang={currentLang}
-                            />
-                            <Button link={LINK.editor}>
-                                <LocalizedText
-                                    text="Create a project"
-                                    key="home.footer.sections.website.createAProject"
-                                    lang={currentLang}
-                                />
-                            </Button>
-                        </p>
-                    </div>
-                {:else}
-                    <LoadingSpinner />
-                {/if}
-            </div>
-        </ContentCategory>
-        <ContentCategory
-            header={TranslationHandler.text(
-                "home.sections.spookyprojects",
-                currentLang,
-            )}
-            seemore={`/search?q=%23spooky`}
-            style="width:65%;"
-            stylec="height: 244px;"
-        >
-            <div class="project-list">
-                {#if projects.spooky.length > 0}
-                    {#each projects.spooky as project}
-                        <Project {...project} />
-                    {/each}
-                {:else if projectsLoaded === true}
-                    <div
-                        style="display:flex;flex-direction:column;align-items: center;width: 100%;"
-                    >
-                        <PenguinConfusedSVG width="8rem" />
-                        <p>
-                            <LocalizedText
-                                text="Nothing found. You can help feature projects by clicking the yellow checkmark below them."
-                                key="home.none.featured"
-                                lang={currentLang}
-                            />
-                        </p>
-                    </div>
-                {:else if spookyFailed === true}
                     <div
                         style="display:flex;flex-direction:column;align-items: center;width: 100%;"
                     >

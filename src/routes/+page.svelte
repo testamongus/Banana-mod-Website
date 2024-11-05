@@ -253,7 +253,7 @@
         onlyShowID={"minecraft:_1"}
         text={"We made a free for all survival Minecraft server, come join!"}
         textBreakup={true}
-        backColor={orange}
+        backColor={"orange"}
         textColor={"white"}
         hasButton={true}
         buttonText={"Join"}

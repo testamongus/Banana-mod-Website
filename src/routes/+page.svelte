@@ -256,7 +256,7 @@
         backColor={"green"}
         textColor={"white"}
         hasButton={true}
-        buttonText={"Join"}
+        buttonText={"Test"}
         buttonHref={"https://forum.snail-ide.com/d/174-snail-ide-editor-modern-penguinmod-studio-snail-ide-update-in-development"}
     />
 

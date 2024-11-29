@@ -251,7 +251,7 @@
     />
     <Alert
         onlyShowID={"merge-upstream:_1"}
-        text={"We are porting Snail IDE to modern PenguinMod Studio, and we are releasing a seperate website for you to test your projects with."}
+        text={"We are porting Snail IDE to be based on modern PenguinMod Studio, and we are releasing a seperate website for you to test your projects with."}
         textBreakup={true}
         backColor={"green"}
         textColor={"white"}

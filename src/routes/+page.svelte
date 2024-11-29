@@ -250,14 +250,14 @@
         buttonHref={"https://snail-ide.js.org/editor.html"}
     />
     <Alert
-        onlyShowID={"minecraft:_1"}
-        text={"We made a free for all survival Minecraft server, come join!"}
+        onlyShowID={"merge-upstream:_1"}
+        text={"We are porting Snail IDE to modern PenguinMod Studio, and we are releasing a seperate website for you to test your projects with."}
         textBreakup={true}
-        backColor={"orange"}
+        backColor={"green"}
         textColor={"white"}
         hasButton={true}
         buttonText={"Join"}
-        buttonHref={"https://snail-ide.com/minecraft.html"}
+        buttonHref={"https://forum.snail-ide.com/d/174-snail-ide-editor-modern-penguinmod-studio-snail-ide-update-in-development"}
     />
 
     {#if loggedIn === false}

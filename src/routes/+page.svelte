@@ -257,7 +257,7 @@
         textColor={"white"}
         hasButton={true}
         buttonText={"Try It"}
-        buttonHref={"https://snail-ide.com/wiki"}
+        buttonHref={"https://snailide.miraheze.org/wiki/Main_Page"}
     />
 
     {#if loggedIn === false}
@@ -742,7 +742,7 @@
                 </a>
                 <a
                     target="_blank"
-                    href="https://snail-ide.com/wiki"
+                    href="https://snailide.miraheze.org/wiki/Main_Page"
                 >
                     Wiki
                 </a>

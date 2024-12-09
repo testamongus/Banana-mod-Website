@@ -257,7 +257,7 @@
         textColor={"white"}
         hasButton={true}
         buttonText={"Try It"}
-        buttonHref={"https://snail-ide.com/wiki}
+        buttonHref={"https://snail-ide.com/wiki"}
     />
 
     {#if loggedIn === false}

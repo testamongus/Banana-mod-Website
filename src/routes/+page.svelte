@@ -250,14 +250,14 @@
         buttonHref={"https://snail-ide.js.org/editor.html"}
     />
     <Alert
-        onlyShowID={"merge-upstream:_1"}
-        text={"We are porting Snail IDE to be based on modern PenguinMod Studio, and we are releasing a seperate website for you to test your projects with."}
+        onlyShowID={"wikinew:_1"}
+        text={"Community member Medians has created a new, safer wiki for Snail IDE come check it out!"}
         textBreakup={true}
         backColor={"green"}
         textColor={"white"}
         hasButton={true}
-        buttonText={"Test"}
-        buttonHref={"https://forum.snail-ide.com/d/174-snail-ide-editor-modern-penguinmod-studio-snail-ide-update-in-development"}
+        buttonText={"Try It"}
+        buttonHref={"https://snail-ide.com/wiki}
     />
 
     {#if loggedIn === false}
@@ -742,7 +742,7 @@
                 </a>
                 <a
                     target="_blank"
-                    href="http://snailwiki.great-site.net/index.php/Main_Page"
+                    href="https://snail-ide.com/wiki"
                 >
                     Wiki
                 </a>

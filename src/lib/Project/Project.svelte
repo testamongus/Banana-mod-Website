@@ -35,41 +35,19 @@
             }
         });
     };
-    // ignore this terrible halloween code
     const formatProjectTitle = (_title) => {
-    const title = xmlEscape(String(_title));
-    const emojiRegex = /:(\w+):/g;
-
-    const formattedTitle = title.replace(emojiRegex, (match) => {
-        const emojiName = match.replace(/\:/gmi, "");
-        return `<img
-            src="https://snail-ide-object-libraries.vercel.app/files/emojis/${emojiName}.png"
-            alt=":${emojiName}:"
-            title=":${emojiName}:"
-            style="width:1.2rem; vertical-align: middle;"
-        >`;
-    });
-
-    const halloweenMessage = title.includes("#spooky")
-        ? `<div style="
-             color: orange;
-        ">
-            🎃 Happy Halloween!
-        </div>`
-        : "";
-
-    return `
-        <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
-            <div style="word-break: break-word; text-align: center; width: 100%;">
-                ${halloweenMessage}
-                ${formattedTitle}
-            </div>
-        </div>
-    `;
-};
-
-
-
+        const title = xmlEscape(String(_title));
+        const emojiRegex = /:(\w+):/g;
+        return title.replace(emojiRegex, (match) => {
+            const emojiName = match.replace(/\:/gmi, "");
+            return `<img
+                src="https://snail-ide-object-libraries.vercel.app/files/emojis/${emojiName}.png"
+                alt=":${emojiName}:"
+                title=":${emojiName}:"
+                style="width:1.2rem;vertical-align: middle;"
+            >`;
+        });
+    };
 
     // translation
     let currentLang = "en";

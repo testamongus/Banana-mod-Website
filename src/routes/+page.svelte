@@ -743,7 +743,6 @@
                 >
                     Wiki
                 </a>
-                <a target="_blank" href="/forum"> Unofficial Forum </a>
             </div>
             <div class="footer-section">
                 <p>

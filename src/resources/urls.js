@@ -4,17 +4,17 @@ export default {
     /**
      * PenguinMod's normal page
      */
-    base: "https://editor.snail-ide.com",
+    base: "https://snail-ide.js.org",
 
     /**
      * PenguinMod's editor page
      */
-    editor: "https://editor.snail-ide.com/editor.html",
+    editor: "https://snail-ide.js.org/editor.html",
 
     /**
      * PenguinMod's credits page
      */
-    credits: "https://editor.snail-ide.com/credits.html",
+    credits: "https://snail-ide.js.org/credits.html",
 
     /**
      * PenguinMod's terms of service page
@@ -24,7 +24,7 @@ export default {
     /**
      * PenguinMod's privacy policy page
      */
-    privacy: "https://editor.snail-ide.com/privacy.html",
+    privacy: "https://snail-ide.js.org/privacy.html",
 
     /**
      * PenguinMod's guideline pages for services
@@ -33,7 +33,7 @@ export default {
         /**
          * PenguinMod's project uploading guidelines
          */
-        projects: "https://editor.snail-ide.com/PenguinMod-Guidelines/PROJECTS"
+        projects: "https://snail-ide.js.org/PenguinMod-Guidelines/PROJECTS"
     },
 
     /**
@@ -57,7 +57,7 @@ export default {
     /**
      * PenguinMod's home page
      */
-    home: "https://snail-ide.com",
+    home: "https://snailshare.vercel.app",
 
     /**
      * PenguinMod's packager page

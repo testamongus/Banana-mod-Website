@@ -250,14 +250,11 @@
         buttonHref={"https://snail-ide.js.org/editor.html"}
     />
     <Alert
-        onlyShowID={"wikinew:_1"}
-        text={"Community member Medians has created a new, safer wiki for Snail IDE come check it out!"}
+        onlyShowID={"downtime:_1"}
+        text={"We are working on getting Snail IDE back up, we have to go back to our old domains."}
         textBreakup={true}
-        backColor={"green"}
+        backColor={"red"}
         textColor={"white"}
-        hasButton={true}
-        buttonText={"Try It"}
-        buttonHref={"https://snailide.miraheze.org/wiki/Main_Page"}
     />
 
     {#if loggedIn === false}

@@ -251,7 +251,7 @@
     />
     <Alert
         onlyShowID={"downtime:_1"}
-        text={"We are working on getting Snail IDE back up, we have to go back to our old domains."}
+        text={"The server is running into some issues. We are stopping the server to do a backup before debugging."}
         textBreakup={true}
         backColor={"red"}
         textColor={"white"}
